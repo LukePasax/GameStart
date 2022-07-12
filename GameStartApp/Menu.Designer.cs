@@ -45,7 +45,7 @@ namespace GameStartApp
             this.gamestart_logicDataSet = new GameStartApp.gamestart_logicDataSet();
             this.tabBranches = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.BtnAddBranch = new System.Windows.Forms.Button();
+            this.BtnBranchAdd = new System.Windows.Forms.Button();
             this.CBBranchesManager = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtBranchesCivic = new System.Windows.Forms.TextBox();
@@ -62,6 +62,10 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filialeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabEmployee = new System.Windows.Forms.TabPage();
+            this.BtnEmpAdd = new System.Windows.Forms.Button();
+            this.TxtEmpCivic = new System.Windows.Forms.TextBox();
+            this.TxtEmpStreet = new System.Windows.Forms.TextBox();
+            this.TxtEmpCity = new System.Windows.Forms.TextBox();
             this.DateEmpBirth = new System.Windows.Forms.DateTimePicker();
             this.TxtEmpCod = new System.Windows.Forms.TextBox();
             this.TxtEmpSurname = new System.Windows.Forms.TextBox();
@@ -77,12 +81,38 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idFilialeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dipendenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TabProduct = new System.Windows.Forms.TabPage();
+            this.GVProduct = new System.Windows.Forms.DataGridView();
+            this.IdProdotto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prezzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipologia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodottoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TabSale = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BtnSaleDispOnline = new System.Windows.Forms.Button();
+            this.BtnSaleDispStore = new System.Windows.Forms.Button();
+            this.GVSaleStore = new System.Windows.Forms.DataGridView();
+            this.acquistoonlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.acquistoinnegozioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.clienteTableAdapter();
             this.filialeTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.filialeTableAdapter();
             this.dipendenteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.dipendenteTableAdapter();
-            this.TxtEmpCity = new System.Windows.Forms.TextBox();
-            this.TxtEmpStreet = new System.Windows.Forms.TextBox();
-            this.TxtEmpCivic = new System.Windows.Forms.TextBox();
+            this.prodottoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.prodottoTableAdapter();
+            this.acquisto_in_negozioTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_in_negozioTableAdapter();
+            this.dettaglivenditaTableAdapter1 = new GameStartApp.gamestart_logicDataSetTableAdapters.dettaglivenditaTableAdapter();
+            this.acquisto_onlineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_onlineTableAdapter();
+            this.idVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodFiscaleDipendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodFiscaleCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPromozioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GVSaleOnline = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodFiscale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnSaleAdd = new System.Windows.Forms.Button();
             this.tabBranch.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
@@ -94,17 +124,30 @@ namespace GameStartApp
             this.TabEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).BeginInit();
+            this.TabProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).BeginInit();
+            this.TabSale.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVSaleStore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVSaleOnline)).BeginInit();
             this.SuspendLayout();
             // 
             // tabBranch
             // 
+            this.tabBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabBranch.Controls.Add(this.tabClient);
             this.tabBranch.Controls.Add(this.tabBranches);
             this.tabBranch.Controls.Add(this.TabEmployee);
+            this.tabBranch.Controls.Add(this.TabProduct);
+            this.tabBranch.Controls.Add(this.TabSale);
             this.tabBranch.Location = new System.Drawing.Point(12, 12);
             this.tabBranch.Name = "tabBranch";
             this.tabBranch.SelectedIndex = 0;
-            this.tabBranch.Size = new System.Drawing.Size(2100, 1031);
+            this.tabBranch.Size = new System.Drawing.Size(1618, 909);
             this.tabBranch.TabIndex = 0;
             // 
             // tabClient
@@ -114,7 +157,7 @@ namespace GameStartApp
             this.tabClient.Location = new System.Drawing.Point(10, 47);
             this.tabClient.Name = "tabClient";
             this.tabClient.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClient.Size = new System.Drawing.Size(2080, 974);
+            this.tabClient.Size = new System.Drawing.Size(1598, 852);
             this.tabClient.TabIndex = 0;
             this.tabClient.Text = "Clients";
             this.tabClient.UseVisualStyleBackColor = true;
@@ -131,7 +174,12 @@ namespace GameStartApp
             // 
             // GVClient
             // 
+            this.GVClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GVClient.AutoGenerateColumns = false;
+            this.GVClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVClient.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.GVClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeDataGridViewTextBoxColumn,
@@ -147,7 +195,7 @@ namespace GameStartApp
             this.GVClient.RowHeadersVisible = false;
             this.GVClient.RowHeadersWidth = 92;
             this.GVClient.RowTemplate.Height = 37;
-            this.GVClient.Size = new System.Drawing.Size(1500, 962);
+            this.GVClient.Size = new System.Drawing.Size(1028, 840);
             this.GVClient.TabIndex = 0;
             // 
             // nomeDataGridViewTextBoxColumn
@@ -156,7 +204,6 @@ namespace GameStartApp
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.Width = 225;
             // 
             // cognomeDataGridViewTextBoxColumn
             // 
@@ -164,7 +211,6 @@ namespace GameStartApp
             this.cognomeDataGridViewTextBoxColumn.HeaderText = "Cognome";
             this.cognomeDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.cognomeDataGridViewTextBoxColumn.Name = "cognomeDataGridViewTextBoxColumn";
-            this.cognomeDataGridViewTextBoxColumn.Width = 225;
             // 
             // dataNascitaDataGridViewTextBoxColumn
             // 
@@ -172,7 +218,6 @@ namespace GameStartApp
             this.dataNascitaDataGridViewTextBoxColumn.HeaderText = "DataNascita";
             this.dataNascitaDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.dataNascitaDataGridViewTextBoxColumn.Name = "dataNascitaDataGridViewTextBoxColumn";
-            this.dataNascitaDataGridViewTextBoxColumn.Width = 225;
             // 
             // codFiscaleDataGridViewTextBoxColumn
             // 
@@ -180,7 +225,6 @@ namespace GameStartApp
             this.codFiscaleDataGridViewTextBoxColumn.HeaderText = "CodFiscale";
             this.codFiscaleDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.codFiscaleDataGridViewTextBoxColumn.Name = "codFiscaleDataGridViewTextBoxColumn";
-            this.codFiscaleDataGridViewTextBoxColumn.Width = 225;
             // 
             // cittàDataGridViewTextBoxColumn
             // 
@@ -188,7 +232,6 @@ namespace GameStartApp
             this.cittàDataGridViewTextBoxColumn.HeaderText = "Città";
             this.cittàDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.cittàDataGridViewTextBoxColumn.Name = "cittàDataGridViewTextBoxColumn";
-            this.cittàDataGridViewTextBoxColumn.Width = 225;
             // 
             // viaDataGridViewTextBoxColumn
             // 
@@ -196,7 +239,6 @@ namespace GameStartApp
             this.viaDataGridViewTextBoxColumn.HeaderText = "Via";
             this.viaDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.viaDataGridViewTextBoxColumn.Name = "viaDataGridViewTextBoxColumn";
-            this.viaDataGridViewTextBoxColumn.Width = 225;
             // 
             // nCivicoDataGridViewTextBoxColumn
             // 
@@ -204,7 +246,6 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn.HeaderText = "nCivico";
             this.nCivicoDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.nCivicoDataGridViewTextBoxColumn.Name = "nCivicoDataGridViewTextBoxColumn";
-            this.nCivicoDataGridViewTextBoxColumn.Width = 225;
             // 
             // clienteBindingSource
             // 
@@ -219,7 +260,7 @@ namespace GameStartApp
             // tabBranches
             // 
             this.tabBranches.Controls.Add(this.label5);
-            this.tabBranches.Controls.Add(this.BtnAddBranch);
+            this.tabBranches.Controls.Add(this.BtnBranchAdd);
             this.tabBranches.Controls.Add(this.CBBranchesManager);
             this.tabBranches.Controls.Add(this.label4);
             this.tabBranches.Controls.Add(this.TxtBranchesCivic);
@@ -232,7 +273,7 @@ namespace GameStartApp
             this.tabBranches.Location = new System.Drawing.Point(10, 47);
             this.tabBranches.Name = "tabBranches";
             this.tabBranches.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBranches.Size = new System.Drawing.Size(2080, 974);
+            this.tabBranches.Size = new System.Drawing.Size(1598, 852);
             this.tabBranches.TabIndex = 1;
             this.tabBranches.Text = "Branches";
             this.tabBranches.UseVisualStyleBackColor = true;
@@ -246,17 +287,19 @@ namespace GameStartApp
             this.label5.TabIndex = 10;
             this.label5.Text = "Manager";
             // 
-            // BtnAddBranch
+            // BtnBranchAdd
             // 
-            this.BtnAddBranch.Location = new System.Drawing.Point(6, 216);
-            this.BtnAddBranch.Name = "BtnAddBranch";
-            this.BtnAddBranch.Size = new System.Drawing.Size(408, 55);
-            this.BtnAddBranch.TabIndex = 9;
-            this.BtnAddBranch.Text = "Add Branch";
-            this.BtnAddBranch.UseVisualStyleBackColor = true;
+            this.BtnBranchAdd.Location = new System.Drawing.Point(6, 216);
+            this.BtnBranchAdd.Name = "BtnBranchAdd";
+            this.BtnBranchAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnBranchAdd.TabIndex = 9;
+            this.BtnBranchAdd.Text = "Add Branch";
+            this.BtnBranchAdd.UseVisualStyleBackColor = true;
             // 
             // CBBranchesManager
             // 
+            this.CBBranchesManager.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBBranchesManager.BackColor = System.Drawing.Color.Azure;
             this.CBBranchesManager.FormattingEnabled = true;
             this.CBBranchesManager.Location = new System.Drawing.Point(6, 173);
             this.CBBranchesManager.Name = "CBBranchesManager";
@@ -324,7 +367,12 @@ namespace GameStartApp
             // 
             // GVBranches
             // 
+            this.GVBranches.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GVBranches.AutoGenerateColumns = false;
+            this.GVBranches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVBranches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.GVBranches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVBranches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idFilialeDataGridViewTextBoxColumn,
@@ -338,7 +386,7 @@ namespace GameStartApp
             this.GVBranches.RowHeadersVisible = false;
             this.GVBranches.RowHeadersWidth = 92;
             this.GVBranches.RowTemplate.Height = 37;
-            this.GVBranches.Size = new System.Drawing.Size(1500, 962);
+            this.GVBranches.Size = new System.Drawing.Size(1029, 840);
             this.GVBranches.TabIndex = 0;
             // 
             // idFilialeDataGridViewTextBoxColumn
@@ -347,7 +395,6 @@ namespace GameStartApp
             this.idFilialeDataGridViewTextBoxColumn.HeaderText = "IdFiliale";
             this.idFilialeDataGridViewTextBoxColumn.MinimumWidth = 11;
             this.idFilialeDataGridViewTextBoxColumn.Name = "idFilialeDataGridViewTextBoxColumn";
-            this.idFilialeDataGridViewTextBoxColumn.Width = 225;
             // 
             // codFiscaleDataGridViewTextBoxColumn1
             // 
@@ -355,7 +402,6 @@ namespace GameStartApp
             this.codFiscaleDataGridViewTextBoxColumn1.HeaderText = "CodFiscale";
             this.codFiscaleDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.codFiscaleDataGridViewTextBoxColumn1.Name = "codFiscaleDataGridViewTextBoxColumn1";
-            this.codFiscaleDataGridViewTextBoxColumn1.Width = 225;
             // 
             // cittàDataGridViewTextBoxColumn1
             // 
@@ -363,7 +409,6 @@ namespace GameStartApp
             this.cittàDataGridViewTextBoxColumn1.HeaderText = "Città";
             this.cittàDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.cittàDataGridViewTextBoxColumn1.Name = "cittàDataGridViewTextBoxColumn1";
-            this.cittàDataGridViewTextBoxColumn1.Width = 225;
             // 
             // viaDataGridViewTextBoxColumn1
             // 
@@ -371,7 +416,6 @@ namespace GameStartApp
             this.viaDataGridViewTextBoxColumn1.HeaderText = "Via";
             this.viaDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.viaDataGridViewTextBoxColumn1.Name = "viaDataGridViewTextBoxColumn1";
-            this.viaDataGridViewTextBoxColumn1.Width = 225;
             // 
             // nCivicoDataGridViewTextBoxColumn1
             // 
@@ -379,7 +423,6 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn1.HeaderText = "nCivico";
             this.nCivicoDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.nCivicoDataGridViewTextBoxColumn1.Name = "nCivicoDataGridViewTextBoxColumn1";
-            this.nCivicoDataGridViewTextBoxColumn1.Width = 225;
             // 
             // filialeBindingSource
             // 
@@ -388,6 +431,7 @@ namespace GameStartApp
             // 
             // TabEmployee
             // 
+            this.TabEmployee.Controls.Add(this.BtnEmpAdd);
             this.TabEmployee.Controls.Add(this.TxtEmpCivic);
             this.TabEmployee.Controls.Add(this.TxtEmpStreet);
             this.TabEmployee.Controls.Add(this.TxtEmpCity);
@@ -400,10 +444,40 @@ namespace GameStartApp
             this.TabEmployee.Location = new System.Drawing.Point(10, 47);
             this.TabEmployee.Name = "TabEmployee";
             this.TabEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.TabEmployee.Size = new System.Drawing.Size(2080, 974);
+            this.TabEmployee.Size = new System.Drawing.Size(1598, 852);
             this.TabEmployee.TabIndex = 2;
             this.TabEmployee.Text = "Employees";
             this.TabEmployee.UseVisualStyleBackColor = true;
+            // 
+            // BtnEmpAdd
+            // 
+            this.BtnEmpAdd.Location = new System.Drawing.Point(7, 335);
+            this.BtnEmpAdd.Name = "BtnEmpAdd";
+            this.BtnEmpAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnEmpAdd.TabIndex = 11;
+            this.BtnEmpAdd.Text = "Add Employee";
+            this.BtnEmpAdd.UseVisualStyleBackColor = true;
+            // 
+            // TxtEmpCivic
+            // 
+            this.TxtEmpCivic.Location = new System.Drawing.Point(6, 293);
+            this.TxtEmpCivic.Name = "TxtEmpCivic";
+            this.TxtEmpCivic.Size = new System.Drawing.Size(408, 35);
+            this.TxtEmpCivic.TabIndex = 10;
+            // 
+            // TxtEmpStreet
+            // 
+            this.TxtEmpStreet.Location = new System.Drawing.Point(7, 252);
+            this.TxtEmpStreet.Name = "TxtEmpStreet";
+            this.TxtEmpStreet.Size = new System.Drawing.Size(408, 35);
+            this.TxtEmpStreet.TabIndex = 9;
+            // 
+            // TxtEmpCity
+            // 
+            this.TxtEmpCity.Location = new System.Drawing.Point(6, 211);
+            this.TxtEmpCity.Name = "TxtEmpCity";
+            this.TxtEmpCity.Size = new System.Drawing.Size(408, 35);
+            this.TxtEmpCity.TabIndex = 8;
             // 
             // DateEmpBirth
             // 
@@ -445,7 +519,12 @@ namespace GameStartApp
             // 
             // GVEmployee
             // 
+            this.GVEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GVEmployee.AutoGenerateColumns = false;
+            this.GVEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.GVEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeDataGridViewTextBoxColumn1,
@@ -462,7 +541,7 @@ namespace GameStartApp
             this.GVEmployee.RowHeadersVisible = false;
             this.GVEmployee.RowHeadersWidth = 92;
             this.GVEmployee.RowTemplate.Height = 37;
-            this.GVEmployee.Size = new System.Drawing.Size(1500, 962);
+            this.GVEmployee.Size = new System.Drawing.Size(1018, 840);
             this.GVEmployee.TabIndex = 0;
             // 
             // nomeDataGridViewTextBoxColumn1
@@ -471,7 +550,6 @@ namespace GameStartApp
             this.nomeDataGridViewTextBoxColumn1.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
-            this.nomeDataGridViewTextBoxColumn1.Width = 225;
             // 
             // cognomeDataGridViewTextBoxColumn1
             // 
@@ -479,7 +557,6 @@ namespace GameStartApp
             this.cognomeDataGridViewTextBoxColumn1.HeaderText = "Cognome";
             this.cognomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.cognomeDataGridViewTextBoxColumn1.Name = "cognomeDataGridViewTextBoxColumn1";
-            this.cognomeDataGridViewTextBoxColumn1.Width = 225;
             // 
             // dataNascitaDataGridViewTextBoxColumn1
             // 
@@ -487,7 +564,6 @@ namespace GameStartApp
             this.dataNascitaDataGridViewTextBoxColumn1.HeaderText = "DataNascita";
             this.dataNascitaDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.dataNascitaDataGridViewTextBoxColumn1.Name = "dataNascitaDataGridViewTextBoxColumn1";
-            this.dataNascitaDataGridViewTextBoxColumn1.Width = 225;
             // 
             // codFiscaleDataGridViewTextBoxColumn2
             // 
@@ -495,7 +571,6 @@ namespace GameStartApp
             this.codFiscaleDataGridViewTextBoxColumn2.HeaderText = "CodFiscale";
             this.codFiscaleDataGridViewTextBoxColumn2.MinimumWidth = 11;
             this.codFiscaleDataGridViewTextBoxColumn2.Name = "codFiscaleDataGridViewTextBoxColumn2";
-            this.codFiscaleDataGridViewTextBoxColumn2.Width = 225;
             // 
             // cittàDataGridViewTextBoxColumn2
             // 
@@ -503,7 +578,6 @@ namespace GameStartApp
             this.cittàDataGridViewTextBoxColumn2.HeaderText = "Città";
             this.cittàDataGridViewTextBoxColumn2.MinimumWidth = 11;
             this.cittàDataGridViewTextBoxColumn2.Name = "cittàDataGridViewTextBoxColumn2";
-            this.cittàDataGridViewTextBoxColumn2.Width = 225;
             // 
             // viaDataGridViewTextBoxColumn2
             // 
@@ -511,7 +585,6 @@ namespace GameStartApp
             this.viaDataGridViewTextBoxColumn2.HeaderText = "Via";
             this.viaDataGridViewTextBoxColumn2.MinimumWidth = 11;
             this.viaDataGridViewTextBoxColumn2.Name = "viaDataGridViewTextBoxColumn2";
-            this.viaDataGridViewTextBoxColumn2.Width = 225;
             // 
             // nCivicoDataGridViewTextBoxColumn2
             // 
@@ -519,7 +592,6 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn2.HeaderText = "nCivico";
             this.nCivicoDataGridViewTextBoxColumn2.MinimumWidth = 11;
             this.nCivicoDataGridViewTextBoxColumn2.Name = "nCivicoDataGridViewTextBoxColumn2";
-            this.nCivicoDataGridViewTextBoxColumn2.Width = 225;
             // 
             // idFilialeDataGridViewTextBoxColumn1
             // 
@@ -527,12 +599,157 @@ namespace GameStartApp
             this.idFilialeDataGridViewTextBoxColumn1.HeaderText = "IdFiliale";
             this.idFilialeDataGridViewTextBoxColumn1.MinimumWidth = 11;
             this.idFilialeDataGridViewTextBoxColumn1.Name = "idFilialeDataGridViewTextBoxColumn1";
-            this.idFilialeDataGridViewTextBoxColumn1.Width = 225;
             // 
             // dipendenteBindingSource
             // 
             this.dipendenteBindingSource.DataMember = "dipendente";
             this.dipendenteBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // TabProduct
+            // 
+            this.TabProduct.Controls.Add(this.GVProduct);
+            this.TabProduct.Location = new System.Drawing.Point(10, 47);
+            this.TabProduct.Name = "TabProduct";
+            this.TabProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.TabProduct.Size = new System.Drawing.Size(1598, 852);
+            this.TabProduct.TabIndex = 3;
+            this.TabProduct.Text = "Products";
+            this.TabProduct.UseVisualStyleBackColor = true;
+            // 
+            // GVProduct
+            // 
+            this.GVProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVProduct.AutoGenerateColumns = false;
+            this.GVProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.GVProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdProdotto,
+            this.dataGridViewTextBoxColumn1,
+            this.Prezzo,
+            this.Tipologia});
+            this.GVProduct.DataSource = this.prodottoBindingSource;
+            this.GVProduct.Location = new System.Drawing.Point(574, 6);
+            this.GVProduct.Name = "GVProduct";
+            this.GVProduct.RowHeadersVisible = false;
+            this.GVProduct.RowHeadersWidth = 92;
+            this.GVProduct.RowTemplate.Height = 37;
+            this.GVProduct.Size = new System.Drawing.Size(1018, 840);
+            this.GVProduct.TabIndex = 1;
+            // 
+            // IdProdotto
+            // 
+            this.IdProdotto.DataPropertyName = "IdProdotto";
+            this.IdProdotto.HeaderText = "IdProdotto";
+            this.IdProdotto.MinimumWidth = 11;
+            this.IdProdotto.Name = "IdProdotto";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Prezzo
+            // 
+            this.Prezzo.DataPropertyName = "Prezzo";
+            this.Prezzo.HeaderText = "Prezzo";
+            this.Prezzo.MinimumWidth = 11;
+            this.Prezzo.Name = "Prezzo";
+            // 
+            // Tipologia
+            // 
+            this.Tipologia.DataPropertyName = "Tipologia";
+            this.Tipologia.HeaderText = "Tipologia";
+            this.Tipologia.MinimumWidth = 11;
+            this.Tipologia.Name = "Tipologia";
+            // 
+            // prodottoBindingSource
+            // 
+            this.prodottoBindingSource.DataMember = "prodotto";
+            this.prodottoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // TabSale
+            // 
+            this.TabSale.Controls.Add(this.BtnSaleAdd);
+            this.TabSale.Controls.Add(this.GVSaleOnline);
+            this.TabSale.Controls.Add(this.label7);
+            this.TabSale.Controls.Add(this.BtnSaleDispOnline);
+            this.TabSale.Controls.Add(this.BtnSaleDispStore);
+            this.TabSale.Controls.Add(this.GVSaleStore);
+            this.TabSale.Location = new System.Drawing.Point(10, 47);
+            this.TabSale.Name = "TabSale";
+            this.TabSale.Padding = new System.Windows.Forms.Padding(3);
+            this.TabSale.Size = new System.Drawing.Size(1598, 852);
+            this.TabSale.TabIndex = 4;
+            this.TabSale.Text = "Sales";
+            this.TabSale.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(193, 40);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Operations";
+            // 
+            // BtnSaleDispOnline
+            // 
+            this.BtnSaleDispOnline.Location = new System.Drawing.Point(300, 7);
+            this.BtnSaleDispOnline.Name = "BtnSaleDispOnline";
+            this.BtnSaleDispOnline.Size = new System.Drawing.Size(268, 58);
+            this.BtnSaleDispOnline.TabIndex = 4;
+            this.BtnSaleDispOnline.Text = "Display Online";
+            this.BtnSaleDispOnline.UseVisualStyleBackColor = true;
+            this.BtnSaleDispOnline.Click += new System.EventHandler(this.BtnSaleDispOnline_Click);
+            // 
+            // BtnSaleDispStore
+            // 
+            this.BtnSaleDispStore.Location = new System.Drawing.Point(7, 7);
+            this.BtnSaleDispStore.Name = "BtnSaleDispStore";
+            this.BtnSaleDispStore.Size = new System.Drawing.Size(268, 58);
+            this.BtnSaleDispStore.TabIndex = 3;
+            this.BtnSaleDispStore.Text = "Display in store";
+            this.BtnSaleDispStore.UseVisualStyleBackColor = true;
+            this.BtnSaleDispStore.Click += new System.EventHandler(this.BtnSaleDispStore_Click);
+            // 
+            // GVSaleStore
+            // 
+            this.GVSaleStore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVSaleStore.AutoGenerateColumns = false;
+            this.GVSaleStore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVSaleStore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVSaleStore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idVenditaDataGridViewTextBoxColumn,
+            this.CodFiscaleDipendente,
+            this.CodFiscaleCliente,
+            this.dataVenditaDataGridViewTextBoxColumn,
+            this.idPromozioneDataGridViewTextBoxColumn});
+            this.GVSaleStore.DataSource = this.acquistoinnegozioBindingSource;
+            this.GVSaleStore.Location = new System.Drawing.Point(574, 6);
+            this.GVSaleStore.Name = "GVSaleStore";
+            this.GVSaleStore.RowHeadersVisible = false;
+            this.GVSaleStore.RowHeadersWidth = 92;
+            this.GVSaleStore.RowTemplate.Height = 37;
+            this.GVSaleStore.Size = new System.Drawing.Size(1018, 840);
+            this.GVSaleStore.TabIndex = 2;
+            // 
+            // acquistoonlineBindingSource
+            // 
+            this.acquistoonlineBindingSource.DataMember = "acquisto_online";
+            this.acquistoonlineBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // acquistoinnegozioBindingSource
+            // 
+            this.acquistoinnegozioBindingSource.DataMember = "acquisto_in_negozio";
+            this.acquistoinnegozioBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // clienteTableAdapter
             // 
@@ -546,32 +763,123 @@ namespace GameStartApp
             // 
             this.dipendenteTableAdapter.ClearBeforeFill = true;
             // 
-            // TxtEmpCity
+            // prodottoTableAdapter
             // 
-            this.TxtEmpCity.Location = new System.Drawing.Point(6, 211);
-            this.TxtEmpCity.Name = "TxtEmpCity";
-            this.TxtEmpCity.Size = new System.Drawing.Size(408, 35);
-            this.TxtEmpCity.TabIndex = 8;
+            this.prodottoTableAdapter.ClearBeforeFill = true;
             // 
-            // TxtEmpStreet
+            // acquisto_in_negozioTableAdapter
             // 
-            this.TxtEmpStreet.Location = new System.Drawing.Point(7, 252);
-            this.TxtEmpStreet.Name = "TxtEmpStreet";
-            this.TxtEmpStreet.Size = new System.Drawing.Size(408, 35);
-            this.TxtEmpStreet.TabIndex = 9;
+            this.acquisto_in_negozioTableAdapter.ClearBeforeFill = true;
             // 
-            // TxtEmpCivic
+            // dettaglivenditaTableAdapter1
             // 
-            this.TxtEmpCivic.Location = new System.Drawing.Point(6, 293);
-            this.TxtEmpCivic.Name = "TxtEmpCivic";
-            this.TxtEmpCivic.Size = new System.Drawing.Size(408, 35);
-            this.TxtEmpCivic.TabIndex = 10;
+            this.dettaglivenditaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // acquisto_onlineTableAdapter
+            // 
+            this.acquisto_onlineTableAdapter.ClearBeforeFill = true;
+            // 
+            // idVenditaDataGridViewTextBoxColumn
+            // 
+            this.idVenditaDataGridViewTextBoxColumn.DataPropertyName = "IdVendita";
+            this.idVenditaDataGridViewTextBoxColumn.HeaderText = "IdVendita";
+            this.idVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.idVenditaDataGridViewTextBoxColumn.Name = "idVenditaDataGridViewTextBoxColumn";
+            // 
+            // CodFiscaleDipendente
+            // 
+            this.CodFiscaleDipendente.DataPropertyName = "CodFiscaleDipendente";
+            this.CodFiscaleDipendente.HeaderText = "CodFiscaleDipendente";
+            this.CodFiscaleDipendente.MinimumWidth = 11;
+            this.CodFiscaleDipendente.Name = "CodFiscaleDipendente";
+            // 
+            // CodFiscaleCliente
+            // 
+            this.CodFiscaleCliente.DataPropertyName = "CodFiscaleCliente";
+            this.CodFiscaleCliente.HeaderText = "CodFiscaleCliente";
+            this.CodFiscaleCliente.MinimumWidth = 11;
+            this.CodFiscaleCliente.Name = "CodFiscaleCliente";
+            // 
+            // dataVenditaDataGridViewTextBoxColumn
+            // 
+            this.dataVenditaDataGridViewTextBoxColumn.DataPropertyName = "DataVendita";
+            this.dataVenditaDataGridViewTextBoxColumn.HeaderText = "DataVendita";
+            this.dataVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataVenditaDataGridViewTextBoxColumn.Name = "dataVenditaDataGridViewTextBoxColumn";
+            // 
+            // idPromozioneDataGridViewTextBoxColumn
+            // 
+            this.idPromozioneDataGridViewTextBoxColumn.DataPropertyName = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn.HeaderText = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.idPromozioneDataGridViewTextBoxColumn.Name = "idPromozioneDataGridViewTextBoxColumn";
+            // 
+            // GVSaleOnline
+            // 
+            this.GVSaleOnline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVSaleOnline.AutoGenerateColumns = false;
+            this.GVSaleOnline.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVSaleOnline.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVSaleOnline.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.CodFiscale,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.GVSaleOnline.DataSource = this.acquistoonlineBindingSource;
+            this.GVSaleOnline.Location = new System.Drawing.Point(574, 6);
+            this.GVSaleOnline.Name = "GVSaleOnline";
+            this.GVSaleOnline.RowHeadersVisible = false;
+            this.GVSaleOnline.RowHeadersWidth = 92;
+            this.GVSaleOnline.RowTemplate.Height = 37;
+            this.GVSaleOnline.Size = new System.Drawing.Size(1018, 840);
+            this.GVSaleOnline.TabIndex = 6;
+            this.GVSaleOnline.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdVendita";
+            this.dataGridViewTextBoxColumn2.HeaderText = "IdVendita";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // CodFiscale
+            // 
+            this.CodFiscale.DataPropertyName = "CodFiscale";
+            this.CodFiscale.HeaderText = "CodFiscale";
+            this.CodFiscale.MinimumWidth = 11;
+            this.CodFiscale.Name = "CodFiscale";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DataVendita";
+            this.dataGridViewTextBoxColumn5.HeaderText = "DataVendita";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "IdPromozione";
+            this.dataGridViewTextBoxColumn6.HeaderText = "IdPromozione";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // BtnSaleAdd
+            // 
+            this.BtnSaleAdd.Location = new System.Drawing.Point(7, 139);
+            this.BtnSaleAdd.Name = "BtnSaleAdd";
+            this.BtnSaleAdd.Size = new System.Drawing.Size(561, 50);
+            this.BtnSaleAdd.TabIndex = 7;
+            this.BtnSaleAdd.Text = "Add Sale";
+            this.BtnSaleAdd.UseVisualStyleBackColor = true;
+            this.BtnSaleAdd.Click += new System.EventHandler(this.BtnSaleAdd_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2117, 1055);
+            this.ClientSize = new System.Drawing.Size(1892, 1001);
             this.Controls.Add(this.tabBranch);
             this.Name = "Menu";
             this.Text = "Form1";
@@ -590,6 +898,15 @@ namespace GameStartApp
             this.TabEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).EndInit();
+            this.TabProduct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GVProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).EndInit();
+            this.TabSale.ResumeLayout(false);
+            this.TabSale.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVSaleStore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVSaleOnline)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -627,7 +944,7 @@ namespace GameStartApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtBranchesStreet;
         private System.Windows.Forms.ComboBox CBBranchesManager;
-        private System.Windows.Forms.Button BtnAddBranch;
+        private System.Windows.Forms.Button BtnBranchAdd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage TabEmployee;
         private System.Windows.Forms.Label label6;
@@ -649,6 +966,36 @@ namespace GameStartApp
         private System.Windows.Forms.TextBox TxtEmpCivic;
         private System.Windows.Forms.TextBox TxtEmpStreet;
         private System.Windows.Forms.TextBox TxtEmpCity;
+        private System.Windows.Forms.Button BtnEmpAdd;
+        private System.Windows.Forms.TabPage TabProduct;
+        private System.Windows.Forms.DataGridView GVProduct;
+        private System.Windows.Forms.BindingSource prodottoBindingSource;
+        private gamestart_logicDataSetTableAdapters.prodottoTableAdapter prodottoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProdotto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prezzo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipologia;
+        private System.Windows.Forms.TabPage TabSale;
+        private System.Windows.Forms.DataGridView GVSaleStore;
+        private System.Windows.Forms.BindingSource acquistoinnegozioBindingSource;
+        private gamestart_logicDataSetTableAdapters.acquisto_in_negozioTableAdapter acquisto_in_negozioTableAdapter;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnSaleDispOnline;
+        private System.Windows.Forms.Button BtnSaleDispStore;
+        private gamestart_logicDataSetTableAdapters.dettaglivenditaTableAdapter dettaglivenditaTableAdapter1;
+        private System.Windows.Forms.BindingSource acquistoonlineBindingSource;
+        private gamestart_logicDataSetTableAdapters.acquisto_onlineTableAdapter acquisto_onlineTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVenditaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodFiscaleDipendente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodFiscaleCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataVenditaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPromozioneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView GVSaleOnline;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodFiscale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button BtnSaleAdd;
     }
 }
 

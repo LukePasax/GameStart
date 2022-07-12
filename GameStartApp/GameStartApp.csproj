@@ -123,6 +123,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSaleStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSaleStore.Designer.cs">
+      <DependentUpon>AddSaleStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataContext1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +147,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddSaleStore.resx">
+      <DependentUpon>AddSaleStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
