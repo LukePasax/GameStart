@@ -3780,7 +3780,7 @@ namespace GamestartLogicContext
         /// <summary>
         /// There are no comments for DataConsegna in the schema.
         /// </summary>
-        [Column(Storage = "_DataConsegna", CanBeNull = false, DbType = "DATE NOT NULL", UpdateCheck = UpdateCheck.Never)]
+        [Column(Storage = "_DataConsegna", CanBeNull = true, DbType = "DATE NOT NULL", UpdateCheck = UpdateCheck.Never)]
         public System.DateTime DataConsegna
         {
             get
@@ -3857,7 +3857,7 @@ namespace GamestartLogicContext
         /// <summary>
         /// There are no comments for IdSpedizione in the schema.
         /// </summary>
-        [Column(Storage = "_IdSpedizione", CanBeNull = false, DbType = "BIGINT NOT NULL", IsPrimaryKey = true)]
+        [Column(Storage = "_IdSpedizione", CanBeNull = false, DbType = "BIGINT AUTO_INCREMENT", IsPrimaryKey = true)]
         public long IdSpedizione
         {
             get

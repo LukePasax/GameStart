@@ -96,7 +96,7 @@ namespace GameStartApp
                     .FirstOrDefault();
                 acquisto.IdVendita = ctx.AcquistoInNegozios.OrderByDescending(a => a.IdVendita).Select(a => a.IdVendita)
                     .FirstOrDefault() + 1;
-                if (CBSaleStorePromotion.Enabled && CBSaleStorePromotion.SelectedItem != null)
+                if (CBSaleStorePromotion.Visible && CBSaleStorePromotion.SelectedItem != null)
                 {
                     acquisto.Promozione = ctx.Promoziones.Where(p => p.IdPromozione == (int)CBSaleStorePromotion.SelectedItem)
                         .FirstOrDefault();
