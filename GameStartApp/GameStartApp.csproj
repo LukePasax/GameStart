@@ -123,6 +123,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSaleOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSaleOnline.Designer.cs">
+      <DependentUpon>AddSaleOnline.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSaleStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddSaleOnline.resx">
+      <DependentUpon>AddSaleOnline.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSaleStore.resx">
       <DependentUpon>AddSaleStore.cs</DependentUpon>
     </EmbeddedResource>

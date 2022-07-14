@@ -50,17 +50,21 @@ namespace GameStartApp
                     }
                 }
             }
-            if (present)
+            var quantity = Int32.TryParse(TxtSaleOnlineProdN.Text, out int q ) ? q : -1;
+            if (quantity > 0)
             {
-                int tot = (int)GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value;
-                GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value = tot + Int32.Parse(TxtSaleOnlineProdN.Text);
-            }
-            else
-            {
-                index = GVSaleOnlineProduct.Rows.Add();
-                GVSaleOnlineProduct.Rows[index].Cells["Id"].Value = long.Parse((String)CBSaleOnlineProdId.SelectedItem);
-                GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value = Int32.Parse(TxtSaleOnlineProdN.Text);
-                _first = false;
+                if (present)
+                {
+                    int tot = (int)GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value;
+                    GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value = tot + quantity;
+                }
+                else
+                {
+                    index = GVSaleOnlineProduct.Rows.Add();
+                    GVSaleOnlineProduct.Rows[index].Cells["Id"].Value = long.Parse((String)CBSaleOnlineProdId.SelectedItem);
+                    GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value = quantity;
+                    _first = false;
+                }
             }
         }
 
@@ -118,7 +122,7 @@ namespace GameStartApp
                         .FirstOrDefault();
                     dettagli.NProdotti = (int)GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value;
                     dettagli.IdDettagli = ctx.Dettaglivenditas.OrderByDescending(d => d.IdDettagli)
-                        .Select(d => d.IdDettagli).FirstOrDefault() + 1;
+                        .Select(d => d.IdDettagli).FirstOrDefault() + index +1;
                     ctx.Dettaglivenditas.InsertOnSubmit(dettagli);
                 }
                 ctx.SubmitChanges();

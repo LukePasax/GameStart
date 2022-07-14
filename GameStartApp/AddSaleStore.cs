@@ -51,17 +51,21 @@ namespace GameStartApp
                     }
                 }
             }
-            if (present)
+            var quantity = Int32.TryParse(TxtSaleStoreProdN.Text, out int q) ? q : -1;
+            if (quantity > 0)
             {
-                int tot = (int) GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value;
-                GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value = tot + Int32.Parse(TxtSaleStoreProdN.Text);
-            }
-            else
-            {
-                index = GVSaleStoreProduct.Rows.Add();
-                GVSaleStoreProduct.Rows[index].Cells["Id"].Value = long.Parse((String)CBSaleStoreProdId.SelectedItem);
-                GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value = Int32.Parse(TxtSaleStoreProdN.Text);
-                _first = false;
+                if (present)
+                {
+                    int tot = (int)GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value;
+                    GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value = tot + Int32.Parse(TxtSaleStoreProdN.Text);
+                }
+                else
+                {
+                    index = GVSaleStoreProduct.Rows.Add();
+                    GVSaleStoreProduct.Rows[index].Cells["Id"].Value = long.Parse((String)CBSaleStoreProdId.SelectedItem);
+                    GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value = Int32.Parse(TxtSaleStoreProdN.Text);
+                    _first = false;
+                }
             }
         }
 
