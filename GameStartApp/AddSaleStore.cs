@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GamestartLogicContext;
 
@@ -92,20 +87,28 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                var acquisto = new AcquistoInNegozio();
-                acquisto.DataVendita = DateSaleStore.Value;
-                acquisto.Cliente = ctx.Clientes.Where(c => c.CodFiscale == (String) CBSaleStoreCodClient.SelectedItem)
-                    .FirstOrDefault();
-                acquisto.Dipendente = ctx.Dipendentes.Where(d => d.CodFiscale == (String)CBSaleStoreCodEmp.SelectedItem)
-                    .FirstOrDefault();
-                acquisto.IdVendita = ctx.AcquistoInNegozios.OrderByDescending(a => a.IdVendita).Select(a => a.IdVendita)
-                    .FirstOrDefault() + 1;
+                var acquisto = new AcquistoInNegozio
+                {
+                    DataVendita = DateSaleStore.Value,
+                    Cliente = ctx.Clientes.Where(c => c.CodFiscale == (String)CBSaleStoreCodClient.SelectedItem)
+                    .FirstOrDefault(),
+                    Dipendente = ctx.Dipendentes.Where(d => d.CodFiscale == (String)CBSaleStoreCodEmp.SelectedItem)
+                    .FirstOrDefault(),
+                    IdVendita = ctx.AcquistoInNegozios.OrderByDescending(a => a.IdVendita).Select(a => a.IdVendita)
+                    .FirstOrDefault() + 1
+                };
                 if (CBSaleStorePromotion.Visible && CBSaleStorePromotion.SelectedItem != null)
                 {
                     var promozione = ctx.Promoziones.Where(p => p.IdPromozione == (int)CBSaleStorePromotion.SelectedItem)
-                       .FirstOrDefault();
+                        .FirstOrDefault();
                     acquisto.Promozione = promozione;
-                    promozione.Abbonamento.Add(ctx.Abbonamentos.Where(a => a.CodFiscale == acquisto.CodFiscaleCliente).Single());
+                    var abbonamento = ctx.Abbonamentos.Where(a => a.CodFiscale == acquisto.CodFiscaleCliente).Single();
+                    var offerta = new Offerta
+                    {
+                        Abbonamento = abbonamento,
+                        Promozione = promozione,
+                        IdOfferta = ctx.Offertas.Select(o => o.IdOfferta).OrderByDescending(o => o).FirstOrDefault() + 1
+                    };
                 } else
                 {
                     acquisto.Promozione = null;
@@ -113,14 +116,16 @@ namespace GameStartApp
                 ctx.AcquistoInNegozios.InsertOnSubmit(acquisto);
                 for (int index = 0; index < GVSaleStoreProduct.Rows.Count; index ++)
                 {
-                    var dettagli = new Dettaglivendita();
-                    dettagli.AcquistoInNegozio = acquisto;
-                    dettagli.AcquistoOnline = null;
-                    dettagli.Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == (int)GVSaleStoreProduct.Rows[index].Cells["Id"].Value)
-                        .FirstOrDefault();
-                    dettagli.NProdotti = (int) GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value;
-                    dettagli.IdDettagli = ctx.Dettaglivenditas.OrderByDescending(d => d.IdDettagli)
-                        .Select(d => d.IdDettagli).FirstOrDefault() + 1;
+                    var dettagli = new Dettaglivendita
+                    {
+                        AcquistoInNegozio = acquisto,
+                        AcquistoOnline = null,
+                        Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == (int)GVSaleStoreProduct.Rows[index].Cells["Id"].Value)
+                        .FirstOrDefault(),
+                        NProdotti = (int)GVSaleStoreProduct.Rows[index].Cells["Quantity"].Value,
+                        IdDettagli = ctx.Dettaglivenditas.OrderByDescending(d => d.IdDettagli)
+                        .Select(d => d.IdDettagli).FirstOrDefault() + 1
+                    };
                     ctx.Dettaglivenditas.InsertOnSubmit(dettagli);
                 }
                 ctx.SubmitChanges();

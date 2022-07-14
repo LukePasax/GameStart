@@ -1,167 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Database Name="gamestart_logic" EntityNamespace="GamestartLogicContext" ContextNamespace="GamestartLogicContext" Class="GamestartLogicDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="0a1f87de-04ba-4aaa-9b6e-802837853b7c" Provider="Devart.Data.MySql.Linq.Provider.MySqlDataProvider, Devart.Data.MySql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+<Database Name="gamestart_logic" EntityNamespace="GamestartLogicContext" ContextNamespace="GamestartLogicContext" Class="GamestartLogicDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="0f9a21cf-076f-469b-b636-5293bb3f5ad8" Provider="Devart.Data.MySql.Linq.Provider.MySqlDataProvider, Devart.Data.MySql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
   <Connection Mode="ConnectionString" ConnectionString="User Id=root;Password=banana76;Host=localhost;Database=gamestart_logic;Persist Security Info=True" Provider="Devart.Data.MySql" />
   <Table Name="gamestart_logic.abbonamento" Member="Abbonamentos">
-    <Type Name="Abbonamento" ed:Guid="a955e757-7aa6-47c6-8cfd-7588de331355">
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="b3719cbd-73df-4020-8722-8735bd85d6f0" />
-      <Column Name="DataInizio" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="52796f1b-47b4-4255-bea3-cd456e352599" />
-      <Column Name="IdAbbonamento" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="14ee586b-37de-4c2e-bd84-c1e5a90ace32" />
-      <Column Name="`ValiditÃ `" Member="ValiditÃ" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7fcbe0bd-5ed2-4342-87cc-a5f178ebd4af" />
-      <Association Name="Cliente_Abbonamento" ed:AssociationGuid="bd029bbb-c70b-4805-a3cd-5d6820eb8378" Member="Cliente" ed:Guid="ada42c6d-ee2a-4470-9184-9e59f5f15af8" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Abbonamento_Torneo" ed:AssociationGuid="4c1e8308-44ff-4545-9fa4-2da582d4051a" Member="Torneo" ed:Guid="a9381d63-2b5d-4464-b3ec-a0fc0ad0d9d5" ThisKey="IdAbbonamento" OtherKey="IdFiliale,DataTorneo" Type="Torneo" LinkTableName="gamestart_logic.accesso" LinkThisKey="IdAbbonamento" LinkOtherKey="IdFiliale,DataTorneo" Cardinality="Many" />
-      <Association Name="Abbonamento_Promozione" ed:AssociationGuid="febcea9f-bf03-4e09-94d1-d35a7aff4c19" Member="Promozione" ed:Guid="105450f8-212c-405e-93c3-e0cb5a96e6d2" ThisKey="IdAbbonamento" OtherKey="IdPromozione" Type="Promozione" LinkTableName="gamestart_logic.offerta" LinkThisKey="IdAbbonamento" LinkOtherKey="IdPromozione" Cardinality="Many" />
+    <Type Name="Abbonamento" ed:Guid="95bdb4d4-eff4-4f17-9ea4-89bcc0f68605">
+      <Column Name="IdAbbonamento" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="d35b2716-abf1-481b-9fb9-367922a1037a" />
+      <Column Name="DataInizio" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="01231eb9-e331-4c44-b745-a0fbb0d73924" />
+      <Column Name="`ValiditÃ `" Member="ValiditÃ" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="bcd33f15-a6ec-4799-b83b-80b7dd90ffa5" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="b7baffd6-e801-40fe-8fbd-81a8fd820bd2" />
+      <Association Name="Cliente_Abbonamento" ed:AssociationGuid="c7aaa5db-6843-41f9-b394-9a3cb935eecc" Member="Cliente" ed:Guid="55877900-1365-4fed-9b5d-f56dde5774b3" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Abbonamento_Offerta" ed:AssociationGuid="4fe6b34e-4bab-4e78-a9c9-ecb791c82991" Member="Offerta" ed:Guid="23dbf6ee-4e44-4402-99b7-35ddc5abb3c9" ThisKey="IdAbbonamento" OtherKey="IdAbbonamento" Type="Offerta" />
+      <Association Name="Abbonamento_Torneo" ed:AssociationGuid="5f391d05-c2a8-4b41-b563-60cdcce2c245" Member="Torneo" ed:Guid="d5098263-ae01-43bb-a1d0-eee948783efd" ThisKey="IdAbbonamento" OtherKey="IdFiliale,DataTorneo" Type="Torneo" LinkTableName="gamestart_logic.accesso" LinkThisKey="IdAbbonamento" LinkOtherKey="IdFiliale,DataTorneo" Cardinality="Many" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.acquisto_in_negozio" Member="AcquistoInNegozios">
-    <Type Name="AcquistoInNegozio" ed:Guid="fcb65632-1745-45e5-975d-7ad26739e4b1">
-      <Column Name="CodFiscaleCliente" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="d6c34d41-e64e-4e5e-8756-55429ba8c229" />
-      <Column Name="CodFiscaleDipendente" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="1e962a56-7f6f-4c3f-b7a8-3e39e26696cc" />
-      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="dc83903c-7e49-4c67-bd84-b9cd99017fdf" />
-      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6715e52f-46de-4577-8be0-c17adf8a2ffd" />
-      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="28e2e44e-5639-457d-aeaa-bd6b06518ff1" />
-      <Association Name="Promozione_AcquistoInNegozio" ed:AssociationGuid="df147086-8ac8-4306-9804-c3f586861fcb" Member="Promozione" ed:Guid="1f210014-c356-4fad-9df5-7ceafe4e14e5" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Promozione" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Dipendente_AcquistoInNegozio" ed:AssociationGuid="2744cef7-5861-47f1-a977-57c7872bf827" Member="Dipendente" ed:Guid="83efd8e7-2e95-4025-b751-dddb92fdf132" ThisKey="CodFiscaleDipendente" OtherKey="CodFiscale" Type="Dipendente" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Cliente_AcquistoInNegozio" ed:AssociationGuid="f78e4e8e-1e05-4baa-8150-bead7ca8357f" Member="Cliente" ed:Guid="2f9583c7-be27-4cd9-b3b2-ef99cc25b551" ThisKey="CodFiscaleCliente" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="AcquistoInNegozio_Dettaglivendita" ed:AssociationGuid="8f217683-c1c5-4bbd-acf4-0cd62b847e80" Member="Dettaglivendita" ed:Guid="f6061e4f-490e-4a9a-aea3-03bac5bd5632" ThisKey="IdVendita" OtherKey="IdVenditaNegozio" Type="Dettaglivendita" />
+    <Type Name="AcquistoInNegozio" ed:Guid="a7a1ea60-625d-42cf-bc09-7d986de8f0a5">
+      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7a4b6d5b-4e7e-4dbd-aef0-7c5005dc5832" />
+      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="77e7069d-0f3b-426c-a98b-febfaaa5cde5" />
+      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ec6ea676-f3fe-4c9e-ba63-64fd2e82fa8b" />
+      <Column Name="CodFiscaleDipendente" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="311e8886-6fe5-4f25-9e34-dd8107a0bb95" />
+      <Column Name="CodFiscaleCliente" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ecd2232a-72a8-46c8-bbc7-161501e0df3d" />
+      <Association Name="Promozione_AcquistoInNegozio" ed:AssociationGuid="455853c1-d53a-4847-a095-ffd4af49b39f" Member="Promozione" ed:Guid="6f3b312e-ecbf-4241-b066-aad93e76503f" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Promozione" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Dipendente_AcquistoInNegozio" ed:AssociationGuid="a6333300-1631-4ccc-8166-0c8df63ccdf7" Member="Dipendente" ed:Guid="33064b63-803e-4ec0-918a-d26b753807ee" ThisKey="CodFiscaleDipendente" OtherKey="CodFiscale" Type="Dipendente" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Cliente_AcquistoInNegozio" ed:AssociationGuid="4f91d2e0-02df-4909-a917-04f5be5b0234" Member="Cliente" ed:Guid="62d297ef-60c4-453e-956d-db1d01e87c64" ThisKey="CodFiscaleCliente" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="AcquistoInNegozio_Dettaglivendita" ed:AssociationGuid="55b9d87c-69aa-4c0a-a0f0-d62d74094d55" Member="Dettaglivendita" ed:Guid="b0e152a9-f7df-4fe6-a0ee-7eac0c7634b1" ThisKey="IdVendita" OtherKey="IdVenditaNegozio" Type="Dettaglivendita" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.acquisto_online" Member="AcquistoOnlines">
-    <Type Name="AcquistoOnline" ed:Guid="2c50db45-ee85-4a7a-8d3a-405bfe6b3d80">
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="7f0aeb4e-5cd9-4aab-b8f0-1120ef60a033" />
-      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="36d01619-5c97-4ae8-a8d5-e2c8492cb00c" />
-      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c4de5618-be0a-4a63-ac35-35307f3480ab" />
-      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a3a5b631-ece7-4acb-803d-e2fd716b6778" />
-      <Association Name="Promozione_AcquistoOnline" ed:AssociationGuid="1a3a0c10-4b2e-4812-9931-d88ed9b12c54" Member="Promozione" ed:Guid="92b7b9ca-9dae-4719-bf6d-5909e6864bad" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Promozione" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Cliente_AcquistoOnline" ed:AssociationGuid="caff3c72-64f0-436c-b239-8b5620158f63" Member="Cliente" ed:Guid="b8b2734e-1ad6-43a0-9366-f77a9258f146" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="AcquistoOnline_Dettaglivendita" ed:AssociationGuid="38d5d851-4cc9-4344-889e-ebd1e9a3385d" Member="Dettaglivendita" ed:Guid="8c1c5567-bd14-43ed-a09c-bdc88065aedd" ThisKey="IdVendita" OtherKey="IdVenditaOnline" Type="Dettaglivendita" />
-      <Association Name="AcquistoOnline_Spedizione" ed:AssociationGuid="a203a33e-0a09-49b6-8fa4-f8585cb8aed7" Member="Spedizione" ed:Guid="b1750bc5-a817-4cfa-bda3-f48efd0c588a" ThisKey="IdVendita" OtherKey="IdVendita" Type="Spedizione" />
+    <Type Name="AcquistoOnline" ed:Guid="0dfaef58-4a5d-4100-b3f8-c87471119a48">
+      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a21010a8-e427-4bd5-a3ea-149e9dfef1be" />
+      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4df2f7fd-0211-4ebb-a3da-1583f02f273f" />
+      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f5bf8388-d208-4377-82be-83d81398c21f" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="c7f8dd92-0437-4a1b-ac4d-37c72c5c9bec" />
+      <Association Name="Promozione_AcquistoOnline" ed:AssociationGuid="c1c332ac-d8f7-48d9-965b-2948521f9c9e" Member="Promozione" ed:Guid="df8480c8-3cce-4931-9f5a-80894968ca55" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Promozione" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Cliente_AcquistoOnline" ed:AssociationGuid="c5e813b9-3b6c-4e40-881a-e3950a166f80" Member="Cliente" ed:Guid="44c98153-f156-4b75-b6a9-4dd494e1d9aa" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="AcquistoOnline_Dettaglivendita" ed:AssociationGuid="c36b4c8e-baff-42c4-a7a2-bfae7bd0a568" Member="Dettaglivendita" ed:Guid="08f074bb-c2f8-41aa-8e37-295de0bbed02" ThisKey="IdVendita" OtherKey="IdVenditaOnline" Type="Dettaglivendita" />
+      <Association Name="AcquistoOnline_Spedizione" ed:AssociationGuid="18c6e3ee-4d00-4553-8098-f7da097026b6" Member="Spedizione" ed:Guid="3c457484-feaf-4065-8b96-7bc50a1648f6" ThisKey="IdVendita" OtherKey="IdVendita" Type="Spedizione" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.cliente" Member="Clientes">
-    <Type Name="Cliente" ed:Guid="cdaa3bb7-15c3-45a6-9f3c-203b6bf69fc5">
-      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="0686e92e-be97-40b1-ae4c-1384f4e99ca9" />
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="e9c4c68f-4054-4168-b9d4-a6451d7e9fb5" />
-      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ef9cd9a8-b936-430a-bc63-78676b84f69c" />
-      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3f0a8d48-0b23-4d76-bced-2b829a77cb67" />
-      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="3b6024f1-d32b-411d-b0b3-89d4bfd9e1db" />
-      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="eee8c7bd-8e69-4207-9f76-b3535eab21a4" />
-      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="9098c32e-9c80-48cf-a90b-f12f9ea5057d" />
-      <Association Name="Cliente_Abbonamento" ed:AssociationGuid="bd029bbb-c70b-4805-a3cd-5d6820eb8378" Member="Abbonamento" ed:Guid="4d8962fe-51eb-40b7-ab36-bdef745d29fb" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Abbonamento" />
-      <Association Name="Cliente_AcquistoInNegozio" ed:AssociationGuid="f78e4e8e-1e05-4baa-8150-bead7ca8357f" Member="AcquistoInNegozio" ed:Guid="52b7a3bf-3782-4730-b180-f2103d7d1546" ThisKey="CodFiscale" OtherKey="CodFiscaleCliente" Type="AcquistoInNegozio" />
-      <Association Name="Cliente_AcquistoOnline" ed:AssociationGuid="caff3c72-64f0-436c-b239-8b5620158f63" Member="AcquistoOnline" ed:Guid="8b2f0b5e-ab75-4abb-89f6-8a3edf209da8" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="AcquistoOnline" />
-      <Association Name="Cliente_Preordine" ed:AssociationGuid="3df10d8f-3edd-440c-b087-f0865bfb538b" Member="Preordine" ed:Guid="a932c355-c0c1-4068-8772-7bf10d452605" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Preordine" />
+    <Type Name="Cliente" ed:Guid="6551282f-1351-4baf-81ba-837bf5e77e4a">
+      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="10679d2a-d575-4d11-bb49-09023ab2c9c3" />
+      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="f90d3ea4-774f-4300-8529-8fa695e92964" />
+      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="47609970-1d95-48f1-8432-e493b6ad60a5" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="9d7b2804-27df-4c1f-b609-7efee966353d" />
+      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="6578aa62-20fc-488f-9834-4357860157a7" />
+      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="66ad3194-b3ce-4eec-9842-2efa8c65fdb8" />
+      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="4605a28d-afe5-4cfd-ace6-0c70053ea890" />
+      <Association Name="Cliente_Abbonamento" ed:AssociationGuid="c7aaa5db-6843-41f9-b394-9a3cb935eecc" Member="Abbonamento" ed:Guid="3a382457-ccfc-4ca9-bf69-7a4bf9c0210a" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Abbonamento" />
+      <Association Name="Cliente_AcquistoInNegozio" ed:AssociationGuid="4f91d2e0-02df-4909-a917-04f5be5b0234" Member="AcquistoInNegozio" ed:Guid="597dada1-fe5b-4069-b0ff-720fcd32e0bd" ThisKey="CodFiscale" OtherKey="CodFiscaleCliente" Type="AcquistoInNegozio" />
+      <Association Name="Cliente_AcquistoOnline" ed:AssociationGuid="c5e813b9-3b6c-4e40-881a-e3950a166f80" Member="AcquistoOnline" ed:Guid="9a65478c-45de-4d24-a415-2f7210b41f07" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="AcquistoOnline" />
+      <Association Name="Cliente_Preordine" ed:AssociationGuid="b257047d-84e9-49be-b56d-497c3fb7edbc" Member="Preordine" ed:Guid="82c6a934-0ac7-4184-b1db-d2ed52699f62" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Preordine" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.corriere" Member="Corrieres">
-    <Type Name="Corriere" ed:Guid="90e64a96-1277-4900-9878-de1e0d4e1313">
-      <Column Name="Agenzia" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="efa19167-35f7-4e8a-bc97-6cc66ceac3ca" />
-      <Column Name="IdCorriere" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="81ab51d5-1083-456b-936e-617362098ae9" />
-      <Association Name="Corriere_Spedizione" ed:AssociationGuid="4382b998-51e4-4dc3-8744-40af6e269ea8" Member="Spedizione" ed:Guid="fbbf7454-5edb-4e24-926c-5f011d53e7ac" ThisKey="IdCorriere" OtherKey="IdCorriere" Type="Spedizione" />
+    <Type Name="Corriere" ed:Guid="036728f4-b23f-4d61-804f-580e390253d7">
+      <Column Name="IdCorriere" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="98b1c440-47ae-4486-9b90-0ef38e9f5413" />
+      <Column Name="Agenzia" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="35170bb6-ca87-4e5f-b8cf-7276f4754b49" />
+      <Association Name="Corriere_Spedizione" ed:AssociationGuid="e383d1f2-7456-436c-8ed0-63cf9227dd12" Member="Spedizione" ed:Guid="8791b585-86d5-49a9-93bc-550c257a2948" ThisKey="IdCorriere" OtherKey="IdCorriere" Type="Spedizione" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.dettaglivendita" Member="Dettaglivenditas">
-    <Type Name="Dettaglivendita" ed:Guid="6748c45e-cbc4-4132-846d-757b14df1c8d">
-      <Column Name="IdDettagli" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="c64a5799-41bb-4633-a6a6-8da6ed7bb342" />
-      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="bb5b29cc-cda7-48c4-a021-204c1566d56b" />
-      <Column Name="IdVenditaNegozio" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="eee0cf89-c931-4c00-9b2e-ca4d4fdbb391" />
-      <Column Name="IdVenditaOnline" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9682033a-c525-4ef6-aba3-7aade1720765" />
-      <Column Name="nProdotti" Member="NProdotti" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="553954e0-a4d7-415e-900f-66f91fa313df" />
-      <Association Name="AcquistoInNegozio_Dettaglivendita" ed:AssociationGuid="8f217683-c1c5-4bbd-acf4-0cd62b847e80" Member="AcquistoInNegozio" ed:Guid="afc3b30a-8199-4dfb-ac56-d996a51a0daf" ThisKey="IdVenditaNegozio" OtherKey="IdVendita" Type="AcquistoInNegozio" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="AcquistoOnline_Dettaglivendita" ed:AssociationGuid="38d5d851-4cc9-4344-889e-ebd1e9a3385d" Member="AcquistoOnline" ed:Guid="cc2cc6b2-2569-4024-8b36-685c645b9058" ThisKey="IdVenditaOnline" OtherKey="IdVendita" Type="AcquistoOnline" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Prodotto_Dettaglivendita" ed:AssociationGuid="97216e11-785c-4a9a-81fa-203b877a0719" Member="Prodotto" ed:Guid="432f3a2d-4ed2-4bd4-9c78-b7cf444d57ab" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Prodotto" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Dettaglivendita" ed:Guid="1d557eec-133b-46a6-8f75-e2dc1e4c1c77">
+      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="31ed8772-d4a5-41d3-9573-4e1a7d6bc137" />
+      <Column Name="nProdotti" Member="NProdotti" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c4e5cf28-6d0b-4dec-955e-bcfafd16516e" />
+      <Column Name="IdVenditaNegozio" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="28c65c9a-39fb-4f41-b9df-6e6094fd0d85" />
+      <Column Name="IdVenditaOnline" Type="System.Int64" DbType="BIGINT NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c12a2946-8c0f-405a-ac2c-8be2908b100d" />
+      <Column Name="IdDettagli" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="a1444ba8-b99b-4ce2-b548-d686e430691f" />
+      <Association Name="AcquistoInNegozio_Dettaglivendita" ed:AssociationGuid="55b9d87c-69aa-4c0a-a0f0-d62d74094d55" Member="AcquistoInNegozio" ed:Guid="a9e29fb7-f8d4-46e5-83d9-eb283e65360c" ThisKey="IdVenditaNegozio" OtherKey="IdVendita" Type="AcquistoInNegozio" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="AcquistoOnline_Dettaglivendita" ed:AssociationGuid="c36b4c8e-baff-42c4-a7a2-bfae7bd0a568" Member="AcquistoOnline" ed:Guid="b0e907a8-d77c-46f1-ac94-cace7617abd6" ThisKey="IdVenditaOnline" OtherKey="IdVendita" Type="AcquistoOnline" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Prodotto_Dettaglivendita" ed:AssociationGuid="7cd7e2a0-67f8-486b-bf31-7e2e0dd2ea9f" Member="Prodotto" ed:Guid="9f81dc58-8727-4098-a6a6-732960a51921" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Prodotto" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.dipendente" Member="Dipendentes">
-    <Type Name="Dipendente" ed:Guid="bcba0cc6-9e5c-45cc-9fd4-4bb435e82dd8">
-      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="cf709866-b546-48cd-b61e-961f6ce915af" />
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="a4fec439-da81-4af4-a2a9-2482e8096918" />
-      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="2afd1f6c-a1f4-4a76-8b1d-27962a9c4cbe" />
-      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2b222bb0-5f07-4f7a-90fb-7a63ef6be544" />
-      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a41894b1-5a34-4eb3-8055-f097c763a375" />
-      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="30275e86-8428-4261-aef2-5f1b7d013cd7" />
-      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="1ffeed85-3740-4280-b5b3-d3257e6ab012" />
-      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="39ee91f2-1d7d-4555-ab0f-3b0df1a63f75" />
-      <Association Name="Dipendente_AcquistoInNegozio" ed:AssociationGuid="2744cef7-5861-47f1-a977-57c7872bf827" Member="AcquistoInNegozio" ed:Guid="6b95b7b9-776b-4df9-a9a7-a33f2de1f504" ThisKey="CodFiscale" OtherKey="CodFiscaleDipendente" Type="AcquistoInNegozio" />
-      <Association Name="Filiale_Dipendente" ed:AssociationGuid="b80343ca-57fb-466d-a23a-eb255f3f134d" Member="Filiale" ed:Guid="dab9de5a-4676-48f9-bb73-139480779c0e" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Filiale" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Dipendente" ed:Guid="216ebfff-2f38-4ac9-9e42-176de45bc976">
+      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="9444b863-90ad-4de8-a247-bfe655d04d0a" />
+      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="aa9dc81b-7b34-4b32-a6eb-2a84cea8a259" />
+      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f4ed8811-9dac-4d9f-9601-6e544e7fb084" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="3a6b881b-3b9f-486e-8cbf-8505de82b013" />
+      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="ee77dcde-2d19-4494-81e2-6d5f78c27a08" />
+      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="a9eba894-ea8c-4584-9718-4d2337aacb6b" />
+      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="ae2345d7-436d-49e4-87ec-caa4172e4ff5" />
+      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a47b8a15-dd26-4760-ade2-8d784cd0b25d" />
+      <Association Name="Dipendente_AcquistoInNegozio" ed:AssociationGuid="a6333300-1631-4ccc-8166-0c8df63ccdf7" Member="AcquistoInNegozio" ed:Guid="0d3e078c-e106-4a6c-9310-dca6ef8357d4" ThisKey="CodFiscale" OtherKey="CodFiscaleDipendente" Type="AcquistoInNegozio" />
+      <Association Name="Filiale_Dipendente" ed:AssociationGuid="1eea0a46-661a-4bde-bf4f-bd964239a511" Member="Filiale" ed:Guid="7ba0d1bb-e2e8-4079-a9f3-68f36fbc8f6d" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Filiale" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.filiale" Member="Filiales">
-    <Type Name="Filiale" ed:Guid="24498757-fd03-4e23-a15c-23e8b302944f">
-      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="d00a388f-1f5c-4ed9-b45b-96c0ad37a677" />
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="966c2265-c8f4-4cab-b04f-ffb0fcc30da5" />
-      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="905fc612-71da-4846-af07-272774345095" />
-      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="313c82cf-2a3f-4b51-b69a-bfad4356108f" />
-      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="a9171e1d-c1da-490a-b960-81e9cf3b3b96" />
-      <Association Name="Filiale_Dipendente" ed:AssociationGuid="b80343ca-57fb-466d-a23a-eb255f3f134d" Member="Dipendente" ed:Guid="b3790e23-5e36-40dc-922f-d9882e215929" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Dipendente" />
-      <Association Name="Gestore_Filiale" ed:AssociationGuid="0863c255-4b01-4952-bd13-1ca6c60911ec" Member="Gestore" ed:Guid="b91ddc47-0398-4255-9f00-70bdfad37b43" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Gestore" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Filiale_Torneo" ed:AssociationGuid="b5466f46-8f2e-4819-81b7-dd202a209419" Member="Torneo" ed:Guid="595d6921-c5c6-48bc-a853-5d495466be81" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Torneo" />
+    <Type Name="Filiale" ed:Guid="652fd904-9a2d-4131-8b4e-ff27597a4b7f">
+      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="72acc3bd-0ba9-446f-834b-5bbe50d4606e" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="2f0b70ea-60c0-4798-9580-0a339421a5b1" />
+      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="8a19ff18-19eb-4f9f-89a1-240a85590dc6" />
+      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="3cb3529b-cb69-4b9a-8834-e31395542568" />
+      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="36062f36-bd20-4d1c-aa53-d139c617d260" />
+      <Association Name="Filiale_Dipendente" ed:AssociationGuid="1eea0a46-661a-4bde-bf4f-bd964239a511" Member="Dipendente" ed:Guid="d1cb8f50-66ae-42ea-bee5-7131910d32f9" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Dipendente" />
+      <Association Name="Gestore_Filiale" ed:AssociationGuid="bdc95b3b-f4c6-4f83-aab7-3b6f91480cd1" Member="Gestore" ed:Guid="895a2809-cb6a-4938-be50-f8f1dc9f245f" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Gestore" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Filiale_Torneo" ed:AssociationGuid="abb758d3-9bed-48cc-91f2-89dc0994f1f2" Member="Torneo" ed:Guid="56f1d229-7e89-4fc1-881e-477da70b64c2" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Torneo" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.gestore" Member="Gestores">
-    <Type Name="Gestore" ed:Guid="c82d0aaf-3b6f-481d-97e9-54774d603d9f">
-      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="97551ea6-fe50-45f3-8280-ea10a91c218e" />
-      <Column Name="CodFiscale" Type="System.String" DbType="VARCHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="e3b9982c-f1f3-453f-967e-2bdf36f297e2" />
-      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="54468628-4287-445b-961e-463b509ec78c" />
-      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c8422066-bc27-4eea-864d-de69cb4a0e79" />
-      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="b5fbf37e-c0f9-43c0-8115-4018088bf9eb" />
-      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="f9858d85-4663-4a4f-9f79-9eee21bfb9da" />
-      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="01079272-6b02-4871-a1b8-6af8f27535c2" />
-      <Association Name="Gestore_Filiale" ed:AssociationGuid="0863c255-4b01-4952-bd13-1ca6c60911ec" Member="Filiale" ed:Guid="c2c88eb3-e6d2-4eec-999b-3bff6770b2d8" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Filiale" />
+    <Type Name="Gestore" ed:Guid="b44e035c-a75e-4095-bdaf-d323741595ae">
+      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="91e24e4b-d1f0-48f1-9fa4-f58126f023a1" />
+      <Column Name="Cognome" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="3ac0670b-57f1-4c95-8caa-b031981fc06b" />
+      <Column Name="DataNascita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3706bae5-5a0f-4765-b973-bc8fb437f793" />
+      <Column Name="CodFiscale" Type="System.String" DbType="VARCHAR(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="f5f05950-f005-49b4-9af7-0c39877480dc" />
+      <Column Name="`CittÃ `" Member="CittÃ" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="1988ad8f-d432-4642-bd98-3fb1818f37f6" />
+      <Column Name="Via" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="3328ebce-70af-4350-b7e1-81cc5a04c95a" />
+      <Column Name="nCivico" Member="NCivico" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="69719fa8-5103-4921-a7bd-9d1b1e90fbc1" />
+      <Association Name="Gestore_Filiale" ed:AssociationGuid="bdc95b3b-f4c6-4f83-aab7-3b6f91480cd1" Member="Filiale" ed:Guid="38525bb6-87ca-4547-9510-1b8de8292083" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Filiale" />
+    </Type>
+  </Table>
+  <Table Name="gamestart_logic.offerta" Member="Offertas">
+    <Type Name="Offerta" ed:Guid="d0b65b5c-f4d6-45ce-8d68-962e443281ed">
+      <Column Name="IdAbbonamento" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="85f1284e-7697-4e69-8bf7-ad4f6ff7def9" />
+      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="97051e14-f926-4898-a1fd-aa129a98035e" />
+      <Column Name="IdOfferta" Type="System.Int32" DbType="INT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="6257d2b5-5fa5-48a7-92a8-d1c0fc7809ac" />
+      <Association Name="Abbonamento_Offerta" ed:AssociationGuid="4fe6b34e-4bab-4e78-a9c9-ecb791c82991" Member="Abbonamento" ed:Guid="76452d30-0c5b-4196-8da3-8306cb33c2b2" ThisKey="IdAbbonamento" OtherKey="IdAbbonamento" Type="Abbonamento" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Promozione_Offerta" ed:AssociationGuid="7d09f8ca-6b4b-4abb-8d96-211c7d29d816" Member="Promozione" ed:Guid="61e063c1-0227-482a-b972-88e764c7510c" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Promozione" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.preordine" Member="Preordines">
-    <Type Name="Preordine" ed:Guid="15c16290-b08e-44fb-898a-274248d19991">
-      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="946b977b-9ed5-4e3c-99f2-3d1739b011d5" />
-      <Column Name="DataUscitaProdotto" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2138b5f9-a9d5-4304-8edf-62f0e5d0d973" />
-      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="e941e10b-84bd-4cb3-9ce3-a7a5b793bedf" />
-      <Column Name="IdPreordine" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="3abcc3ef-a869-438f-a108-b30687611302" />
-      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c781aedb-1ca7-4004-8f2c-56ad1b541d07" />
-      <Association Name="Cliente_Preordine" ed:AssociationGuid="3df10d8f-3edd-440c-b087-f0865bfb538b" Member="Cliente" ed:Guid="e327506f-eaf5-4599-ba6a-3f0682224d2c" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Prodotto_Preordine" ed:AssociationGuid="05c1032b-6713-4a43-ac9c-be6ab2eaeefc" Member="Prodotto" ed:Guid="4e9adae0-5782-4f51-8110-a5780256c43d" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Prodotto" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Preordine" ed:Guid="aeefc0ce-8e90-4bbc-bfb5-773e75b532b1">
+      <Column Name="IdPreordine" Type="System.Int64" AutoSync="OnInsert" DbType="BIGINT NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="91054f99-60c5-416c-82c8-bfcecb93f097" />
+      <Column Name="DataVendita" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="64d30346-a1e8-42be-b62b-efef0c4e617c" />
+      <Column Name="DataUscitaProdotto" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2b0c182a-69f6-43cd-9a6d-eb4f1421236a" />
+      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="4e02afc2-8b23-4ba0-871e-6ffa597606a3" />
+      <Column Name="CodFiscale" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="773e09be-0821-4c6f-813c-75901c440954" />
+      <Association Name="Cliente_Preordine" ed:AssociationGuid="b257047d-84e9-49be-b56d-497c3fb7edbc" Member="Cliente" ed:Guid="2d719982-9253-44ac-8eba-d80f827ee898" ThisKey="CodFiscale" OtherKey="CodFiscale" Type="Cliente" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Prodotto_Preordine" ed:AssociationGuid="2b248f61-a1d0-4798-a681-4fe6afc8fdaa" Member="Prodotto" ed:Guid="bda7dd66-b329-42cb-b4cc-30edb3e9c6df" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Prodotto" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.prodotto" Member="Prodottos">
-    <Type Name="Prodotto" ed:Guid="852de6ce-4ae7-4fb2-9e1c-d43e34bb7d23">
-      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="b9ef5341-2d43-4699-8f9d-f85ec205caa3" />
-      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="23f27622-6157-4718-8415-2fee47539d0b" />
-      <Column Name="Prezzo" Type="System.Double" DbType="DOUBLE(50,0) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="50" Scale="0" ed:ValidateRequired="true" ed:Guid="fd03789a-b890-4761-8f20-21375c911948" />
-      <Column Name="Tipologia" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="3ca1e0b8-5b80-4b82-a320-d6e7b0bd7604" />
-      <Association Name="Prodotto_Dettaglivendita" ed:AssociationGuid="97216e11-785c-4a9a-81fa-203b877a0719" Member="Dettaglivendita" ed:Guid="7b4cd88a-a08d-4541-823d-21e05440b728" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Dettaglivendita" />
-      <Association Name="Prodotto_Preordine" ed:AssociationGuid="05c1032b-6713-4a43-ac9c-be6ab2eaeefc" Member="Preordine" ed:Guid="617174f0-7e21-4727-8acc-e3206a49fbaa" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Preordine" />
+    <Type Name="Prodotto" ed:Guid="6334817d-b68a-4272-a652-6998bc18c773">
+      <Column Name="IdProdotto" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="c43b569d-1340-4a95-b8d6-bcbb93b33bb6" />
+      <Column Name="Prezzo" Type="System.Double" DbType="DOUBLE(50,0) NOT NULL" CanBeNull="false" UpdateCheck="Never" Precision="50" Scale="0" ed:ValidateRequired="true" ed:Guid="ee33b842-1a22-41f8-bb4c-98f6c184ff90" />
+      <Column Name="Tipologia" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="b180687a-8bc8-4a00-8914-8340ad39cebd" />
+      <Column Name="Nome" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="bacf6c39-85bb-4977-b49e-6f6101ee7854" />
+      <Association Name="Prodotto_Dettaglivendita" ed:AssociationGuid="7cd7e2a0-67f8-486b-bf31-7e2e0dd2ea9f" Member="Dettaglivendita" ed:Guid="3f0569ca-9201-42ee-95bf-fb2cbc2b8e0e" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Dettaglivendita" />
+      <Association Name="Prodotto_Preordine" ed:AssociationGuid="2b248f61-a1d0-4798-a681-4fe6afc8fdaa" Member="Preordine" ed:Guid="f09aaf91-d83e-465d-85cf-bb9c756d1147" ThisKey="IdProdotto" OtherKey="IdProdotto" Type="Preordine" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.promozione" Member="Promoziones">
-    <Type Name="Promozione" ed:Guid="60d47b9f-7fc7-45b8-9a15-4dc184118d0b">
-      <Column Name="DataFine" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ed8a1b1e-49dc-4c53-aa0e-b3117d86ce02" />
-      <Column Name="DataInizio" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b180c7a2-5945-403d-ae65-34903747e486" />
-      <Column Name="Descrizione" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="65d440de-37fb-4762-bb95-3058b1203ee6" />
-      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="144ef4b5-76f2-4973-9baa-c294886000cc" />
-      <Column Name="Sconto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="941e0b70-9e17-401a-86ae-2ba8ffd61df0" />
-      <Association Name="Abbonamento_Promozione" ed:AssociationGuid="febcea9f-bf03-4e09-94d1-d35a7aff4c19" Member="Abbonamento" ed:Guid="9045b112-6c16-4731-a8fc-a4d3cd7c1eed" ThisKey="IdPromozione" OtherKey="IdAbbonamento" Type="Abbonamento" LinkTableName="gamestart_logic.offerta" LinkThisKey="IdPromozione" LinkOtherKey="IdAbbonamento" IsForeignKey="true" Cardinality="Many" />
-      <Association Name="Promozione_AcquistoInNegozio" ed:AssociationGuid="df147086-8ac8-4306-9804-c3f586861fcb" Member="AcquistoInNegozio" ed:Guid="838fdf84-f380-4a4d-bccf-9b355f223a93" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="AcquistoInNegozio" />
-      <Association Name="Promozione_AcquistoOnline" ed:AssociationGuid="1a3a0c10-4b2e-4812-9931-d88ed9b12c54" Member="AcquistoOnline" ed:Guid="e72693df-d6bd-4c30-bf2b-602d31030190" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="AcquistoOnline" />
+    <Type Name="Promozione" ed:Guid="253af610-4fcb-495c-b4b3-2610b7bcccbe">
+      <Column Name="Descrizione" Type="System.String" DbType="CHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="7aed3ed0-c38a-46e1-be3f-d61bd7074163" />
+      <Column Name="IdPromozione" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="38c5f1d7-e6d3-4e6c-933d-40eb76e6d18d" />
+      <Column Name="Sconto" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="cfb4b494-6fa3-4bcc-964d-05d635fb1194" />
+      <Column Name="DataInizio" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="93c1cf5d-851a-4277-813b-f5a8a9ce729a" />
+      <Column Name="DataFine" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="afa2f802-1b8b-4057-ba10-ac708e5ddfcf" />
+      <Association Name="Promozione_AcquistoInNegozio" ed:AssociationGuid="455853c1-d53a-4847-a095-ffd4af49b39f" Member="AcquistoInNegozio" ed:Guid="e147382c-07ae-49e7-bb03-e1419d4f8087" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="AcquistoInNegozio" />
+      <Association Name="Promozione_AcquistoOnline" ed:AssociationGuid="c1c332ac-d8f7-48d9-965b-2948521f9c9e" Member="AcquistoOnline" ed:Guid="b2ab3174-0b54-429c-8470-323e3b652edd" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="AcquistoOnline" />
+      <Association Name="Promozione_Offerta" ed:AssociationGuid="7d09f8ca-6b4b-4abb-8d96-211c7d29d816" Member="Offerta" ed:Guid="3815c48b-b876-470c-8bca-4d92b6d068a5" ThisKey="IdPromozione" OtherKey="IdPromozione" Type="Offerta" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.spedizione" Member="Spediziones">
-    <Type Name="Spedizione" ed:Guid="3e2a32d2-2281-413d-b5de-830af6086fe1">
-      <Column Name="DataConsegna" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f01954ae-1bf1-43e1-9bc0-e890199b4427" />
-      <Column Name="DataOrdinazione" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="d19e5caf-6826-4aba-accd-2468d447966b" />
-      <Column Name="IdCorriere" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="b8a18423-13c0-4f24-922b-335d381d5a7a" />
-      <Column Name="IdSpedizione" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="060a3b2f-fc1d-41c6-8964-ab87a24657c3" />
-      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="13771396-821a-4eb0-aa82-918214e72384" />
-      <Association Name="AcquistoOnline_Spedizione" ed:AssociationGuid="a203a33e-0a09-49b6-8fa4-f8585cb8aed7" Member="AcquistoOnline" ed:Guid="6e27d8cc-506e-4b5e-b0d9-49d606071245" ThisKey="IdVendita" OtherKey="IdVendita" Type="AcquistoOnline" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Corriere_Spedizione" ed:AssociationGuid="4382b998-51e4-4dc3-8744-40af6e269ea8" Member="Corriere" ed:Guid="7c8782bc-82b5-4e1e-a26b-b6aa67f0807c" ThisKey="IdCorriere" OtherKey="IdCorriere" Type="Corriere" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Spedizione" ed:Guid="2e59d111-94d4-4fbe-8d78-1f63df2387aa">
+      <Column Name="IdVendita" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a34ae4bc-2b49-460a-8c02-14bd224106c8" />
+      <Column Name="DataOrdinazione" Type="System.DateTime" DbType="DATE NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="260501bc-deef-4c32-a444-f95281d8c097" />
+      <Column Name="IdSpedizione" Type="System.Int64" AutoSync="OnInsert" DbType="BIGINT NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="fe78b517-d500-4a0c-a3b2-fff14cd33518" />
+      <Column Name="DataConsegna" Type="System.DateTime" DbType="DATE NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="cf2e3438-1d3c-4580-805b-038e15d7e35e" />
+      <Column Name="IdCorriere" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="21b50bbe-36ee-46a3-bd7c-2778a3cf3ce8" />
+      <Association Name="AcquistoOnline_Spedizione" ed:AssociationGuid="18c6e3ee-4d00-4553-8098-f7da097026b6" Member="AcquistoOnline" ed:Guid="d45f0029-f7cc-4790-81a7-db85aebe571b" ThisKey="IdVendita" OtherKey="IdVendita" Type="AcquistoOnline" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Corriere_Spedizione" ed:AssociationGuid="e383d1f2-7456-436c-8ed0-63cf9227dd12" Member="Corriere" ed:Guid="85a2fc16-2f45-4188-83f0-799a1aa49fb7" ThisKey="IdCorriere" OtherKey="IdCorriere" Type="Corriere" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="gamestart_logic.torneo" Member="Torneos">
-    <Type Name="Torneo" ed:Guid="a7776a13-5c9c-4182-be22-98e6baa9a2e9">
-      <Column Name="DataTorneo" Type="System.DateTime" DbType="DATE NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="85a75dfc-25ea-4276-8862-464fd97052f7" />
-      <Column Name="Gioco" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="35460f8d-d202-4451-b7a2-d910445ccebd" />
-      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="198d327c-9743-4d1c-95a6-47734b2af001" />
-      <Column Name="nPartecipanti" Member="NPartecipanti" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="993204a2-c304-4b34-a7da-fb1c3d2df792" />
-      <Column Name="Premio" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="dd5fbeaf-8a49-4e58-b5b1-934c47bf28aa" />
-      <Association Name="Abbonamento_Torneo" ed:AssociationGuid="4c1e8308-44ff-4545-9fa4-2da582d4051a" Member="Abbonamento" ed:Guid="8d9a410f-ec4c-46d8-bd96-50536869f4c6" ThisKey="IdFiliale,DataTorneo" OtherKey="IdAbbonamento" Type="Abbonamento" LinkTableName="gamestart_logic.accesso" LinkThisKey="IdFiliale,DataTorneo" LinkOtherKey="IdAbbonamento" IsForeignKey="true" Cardinality="Many" />
-      <Association Name="Filiale_Torneo" ed:AssociationGuid="b5466f46-8f2e-4819-81b7-dd202a209419" Member="Filiale" ed:Guid="72d76868-37b6-4393-805d-5937b5de0298" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Filiale" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Torneo" ed:Guid="4a98dbd5-e0bb-4d63-8338-e27563a97458">
+      <Column Name="IdFiliale" Type="System.Int64" DbType="BIGINT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5fb3f3f5-362f-4b9b-b416-80756cfba9c4" />
+      <Column Name="Gioco" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="f390267d-8dbd-4a77-82e6-fc50077d58ab" />
+      <Column Name="Premio" Type="System.String" DbType="CHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ea2cc163-476c-4050-835c-d16b0679ad1e" />
+      <Column Name="DataTorneo" Type="System.DateTime" DbType="DATE NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="6e5c9e4b-e720-4fcc-aa36-2adde58bb745" />
+      <Column Name="nPartecipanti" Member="NPartecipanti" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="27898321-7f12-4a49-9e5f-18bee3edf4b5" />
+      <Association Name="Abbonamento_Torneo" ed:AssociationGuid="5f391d05-c2a8-4b41-b563-60cdcce2c245" Member="Abbonamento" ed:Guid="c7df94b9-4b98-4b8e-981d-2a2465ff4fd5" ThisKey="IdFiliale,DataTorneo" OtherKey="IdAbbonamento" Type="Abbonamento" LinkTableName="gamestart_logic.accesso" LinkThisKey="IdFiliale,DataTorneo" LinkOtherKey="IdAbbonamento" IsForeignKey="true" Cardinality="Many" />
+      <Association Name="Filiale_Torneo" ed:AssociationGuid="abb758d3-9bed-48cc-91f2-89dc0994f1f2" Member="Filiale" ed:Guid="04ad4b82-5a23-463c-9a69-e8bb2ea560d3" ThisKey="IdFiliale" OtherKey="IdFiliale" Type="Filiale" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

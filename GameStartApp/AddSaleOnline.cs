@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GamestartLogicContext;
 
@@ -92,40 +87,51 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                var acquisto = new AcquistoOnline();
-                acquisto.DataVendita = DateSaleOnline.Value;
-                acquisto.Cliente = ctx.Clientes.Where(c => c.CodFiscale == (String)CBSaleOnlineCodClient.SelectedItem)
-                    .FirstOrDefault();
-                acquisto.IdVendita = ctx.AcquistoOnlines.OrderByDescending(a => a.IdVendita).Select(a => a.IdVendita)
-                    .FirstOrDefault() + 1;
+                var acquisto = new AcquistoOnline
+                {
+                    DataVendita = DateSaleOnline.Value,
+                    Cliente = ctx.Clientes.Where(c => c.CodFiscale == (String)CBSaleOnlineCodClient.SelectedItem)
+                    .FirstOrDefault(),
+                    IdVendita = ctx.AcquistoOnlines.OrderByDescending(a => a.IdVendita).Select(a => a.IdVendita)
+                    .FirstOrDefault() + 1
+                };
                 if (CBSaleOnlinePromotion.Visible && CBSaleOnlinePromotion.SelectedItem != null)
                 {
                     var promozione = ctx.Promoziones.Where(p => p.IdPromozione == (int)CBSaleOnlinePromotion.SelectedItem)
                         .FirstOrDefault();
                     acquisto.Promozione = promozione;
-                    promozione.Abbonamento.Add(ctx.Abbonamentos.Where(a => a.CodFiscale == acquisto.CodFiscale).Single());
-
+                    var abbonamento = ctx.Abbonamentos.Where(a => a.CodFiscale == acquisto.CodFiscale).Single();
+                    var offerta = new Offerta
+                    {
+                        Abbonamento = abbonamento,
+                        Promozione = promozione,
+                        IdOfferta = ctx.Offertas.Select(o => o.IdOfferta).OrderByDescending(o => o).FirstOrDefault() + 1
+                    };
                 }
                 else
                 {
                     acquisto.Promozione = null;
                 }
                 ctx.AcquistoOnlines.InsertOnSubmit(acquisto);
-                Spedizione spedizione = new Spedizione();
-                spedizione.AcquistoOnline = acquisto;
-                spedizione.Corriere = ctx.Corrieres.Where(c => c.IdCorriere == (long)CBSaleOnlineShipper.SelectedItem).FirstOrDefault();
-                spedizione.DataOrdinazione = DateSaleOnline.Value;
+                Spedizione spedizione = new Spedizione
+                {
+                    AcquistoOnline = acquisto,
+                    Corriere = ctx.Corrieres.Where(c => c.IdCorriere == (long)CBSaleOnlineShipper.SelectedItem).FirstOrDefault(),
+                    DataOrdinazione = DateSaleOnline.Value
+                };
                 ctx.Spediziones.InsertOnSubmit(spedizione);
                 for (int index = 0; index < GVSaleOnlineProduct.Rows.Count; index++)
                 {
-                    var dettagli = new Dettaglivendita();
-                    dettagli.AcquistoInNegozio = null;
-                    dettagli.AcquistoOnline = acquisto;
-                    dettagli.Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == (int)GVSaleOnlineProduct.Rows[index].Cells["Id"].Value)
-                        .FirstOrDefault();
-                    dettagli.NProdotti = (int)GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value;
-                    dettagli.IdDettagli = ctx.Dettaglivenditas.OrderByDescending(d => d.IdDettagli)
-                        .Select(d => d.IdDettagli).FirstOrDefault() + index +1;
+                    var dettagli = new Dettaglivendita
+                    {
+                        AcquistoInNegozio = null,
+                        AcquistoOnline = acquisto,
+                        Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == (int)GVSaleOnlineProduct.Rows[index].Cells["Id"].Value)
+                        .FirstOrDefault(),
+                        NProdotti = (int)GVSaleOnlineProduct.Rows[index].Cells["Quantity"].Value,
+                        IdDettagli = ctx.Dettaglivenditas.OrderByDescending(d => d.IdDettagli)
+                        .Select(d => d.IdDettagli).FirstOrDefault() + index + 1
+                    };
                     ctx.Dettaglivenditas.InsertOnSubmit(dettagli);
                 }
                 ctx.SubmitChanges();
