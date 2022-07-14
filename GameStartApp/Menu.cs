@@ -211,6 +211,7 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
+                CBSubCod.Items.Clear();
                 CBSubCod.Items.AddRange(ctx.Clientes.Select(c => c.CodFiscale).ToArray());  
             }
         }
@@ -251,6 +252,7 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
+                CBTourId.Items.Clear();
                 CBTourId.Items.AddRange(ctx.Filiales.Select(f => f.IdFiliale.ToString()).ToArray());
             }
         }
@@ -264,9 +266,53 @@ namespace GameStartApp
                     .FirstOrDefault();
                 torneo.Gioco = TxtTourGame.Text;
                 torneo.Premio = TxtTourPrize.Text;
-                torneo.NPartecipanti = long.TryParse(TxtTournN.Text, out long n) ? n : 0;
+                torneo.NPartecipanti = 0;
                 torneo.DataTorneo = DateTournament.Value;
                 ctx.Torneos.InsertOnSubmit(torneo);
+                ctx.SubmitChanges();
+            }
+        }
+
+        private void CBTourPart_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourPart.Items.Clear();
+                CBTourPart.Items.AddRange(ctx.Abbonamentos.Select(a => a.CodFiscale).ToArray());
+            }
+        }
+
+        private void CBTourIdPart_Change(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourDate.Visible = true;
+                CBTourDate.Items.Clear();
+                CBTourDate.Items.AddRange(ctx.Torneos.Where(t => t.IdFiliale == long.Parse((string) CBTourIdPart.SelectedItem))
+                    .Select(t => t.DataTorneo.ToString()).ToArray());
+            }
+        }
+
+        private void CBTourIdPart_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourIdPart.Items.Clear();
+                CBTourIdPart.Items.AddRange(ctx.Filiales.Select(f => f.IdFiliale.ToString()).ToArray());
+            }
+        }
+
+        private void BtnTourAddPart_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                var torneo = ctx.Torneos
+                    .Where(t => t.IdFiliale == long.Parse(CBTourIdPart.Text) &&
+                    t.DataTorneo == DateTime.Parse(CBTourDate.Text))
+                    .Single();
+                torneo.Abbonamento.Add(ctx.Abbonamentos
+                    .Where(a => a.CodFiscale == CBTourPart.Text).Single());
+                torneo.NPartecipanti += 1;
                 ctx.SubmitChanges();
             }
         }
