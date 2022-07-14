@@ -100,8 +100,11 @@ namespace GameStartApp
                     .FirstOrDefault() + 1;
                 if (CBSaleOnlinePromotion.Visible && CBSaleOnlinePromotion.SelectedItem != null)
                 {
-                    acquisto.Promozione = ctx.Promoziones.Where(p => p.IdPromozione == (int)CBSaleOnlinePromotion.SelectedItem)
+                    var promozione = ctx.Promoziones.Where(p => p.IdPromozione == (int)CBSaleOnlinePromotion.SelectedItem)
                         .FirstOrDefault();
+                    acquisto.Promozione = promozione;
+                    promozione.Abbonamento.Add(ctx.Abbonamentos.Where(a => a.CodFiscale == acquisto.CodFiscale).Single());
+
                 }
                 else
                 {
