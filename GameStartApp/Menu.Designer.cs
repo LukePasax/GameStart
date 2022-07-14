@@ -115,6 +115,14 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filialeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabProduct = new System.Windows.Forms.TabPage();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.TxtProdPrice = new System.Windows.Forms.TextBox();
+            this.BtnProdAdd = new System.Windows.Forms.Button();
+            this.CBProdType = new System.Windows.Forms.ComboBox();
+            this.TxtProdName = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.GVProduct = new System.Windows.Forms.DataGridView();
             this.IdProdotto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -158,6 +166,9 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preordineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPromotion = new System.Windows.Forms.TabPage();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.BtnPromAdd = new System.Windows.Forms.Button();
             this.TxtPromSconto = new System.Windows.Forms.TextBox();
@@ -172,6 +183,37 @@ namespace GameStartApp
             this.dataInizioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataFineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.promozioneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabSubscription = new System.Windows.Forms.TabPage();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.DateSubEnd = new System.Windows.Forms.DateTimePicker();
+            this.BtnSubAdd = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.DateSubStart = new System.Windows.Forms.DateTimePicker();
+            this.label33 = new System.Windows.Forms.Label();
+            this.CBSubCod = new System.Windows.Forms.ComboBox();
+            this.GVSubscription = new System.Windows.Forms.DataGridView();
+            this.IdAbbonamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Validità = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbonamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabTournament = new System.Windows.Forms.TabPage();
+            this.TxtTournN = new System.Windows.Forms.TextBox();
+            this.TxtTourPrize = new System.Windows.Forms.TextBox();
+            this.TxtTourGame = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.BtnTourAdd = new System.Windows.Forms.Button();
+            this.DateTournament = new System.Windows.Forms.DateTimePicker();
+            this.CBTourId = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.GVTournament = new System.Windows.Forms.DataGridView();
+            this.idFilialeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.premioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTorneoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPartecipantiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.torneoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.clienteTableAdapter();
             this.filialeTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.filialeTableAdapter();
             this.dipendenteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.dipendenteTableAdapter();
@@ -181,33 +223,12 @@ namespace GameStartApp
             this.acquisto_onlineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_onlineTableAdapter();
             this.preordineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.preordineTableAdapter();
             this.promozioneTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.promozioneTableAdapter();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.tabSubscription = new System.Windows.Forms.TabPage();
-            this.GVSubscription = new System.Windows.Forms.DataGridView();
-            this.abbonamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abbonamentoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.abbonamentoTableAdapter();
-            this.IdAbbonamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Validità = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CBSubCod = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.DateSubStart = new System.Windows.Forms.DateTimePicker();
-            this.label34 = new System.Windows.Forms.Label();
-            this.BtnSubAdd = new System.Windows.Forms.Button();
-            this.DateSubEnd = new System.Windows.Forms.DateTimePicker();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.TxtProdName = new System.Windows.Forms.TextBox();
-            this.CBProdType = new System.Windows.Forms.ComboBox();
-            this.BtnProdAdd = new System.Windows.Forms.Button();
-            this.TxtProdPrice = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.torneoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.torneoTableAdapter();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
@@ -238,6 +259,9 @@ namespace GameStartApp
             this.tabSubscription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSubscription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).BeginInit();
+            this.tabTournament.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVTournament)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -254,6 +278,7 @@ namespace GameStartApp
             this.tabControl.Controls.Add(this.tabPreorders);
             this.tabControl.Controls.Add(this.tabPromotion);
             this.tabControl.Controls.Add(this.tabSubscription);
+            this.tabControl.Controls.Add(this.tabTournament);
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -1048,6 +1073,77 @@ namespace GameStartApp
             this.TabProduct.Text = "Products";
             this.TabProduct.UseVisualStyleBackColor = true;
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(420, 151);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(68, 29);
+            this.label40.TabIndex = 14;
+            this.label40.Text = "Type";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(420, 110);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(69, 29);
+            this.label39.TabIndex = 13;
+            this.label39.Text = "Price";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(420, 69);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(78, 29);
+            this.label38.TabIndex = 12;
+            this.label38.Text = "Name";
+            // 
+            // TxtProdPrice
+            // 
+            this.TxtProdPrice.Location = new System.Drawing.Point(6, 107);
+            this.TxtProdPrice.Name = "TxtProdPrice";
+            this.TxtProdPrice.Size = new System.Drawing.Size(408, 35);
+            this.TxtProdPrice.TabIndex = 11;
+            // 
+            // BtnProdAdd
+            // 
+            this.BtnProdAdd.Location = new System.Drawing.Point(6, 191);
+            this.BtnProdAdd.Name = "BtnProdAdd";
+            this.BtnProdAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnProdAdd.TabIndex = 10;
+            this.BtnProdAdd.Text = "Add Product";
+            this.BtnProdAdd.UseVisualStyleBackColor = true;
+            this.BtnProdAdd.Click += new System.EventHandler(this.BtnProdAdd_Click);
+            // 
+            // CBProdType
+            // 
+            this.CBProdType.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBProdType.BackColor = System.Drawing.Color.Azure;
+            this.CBProdType.FormattingEnabled = true;
+            this.CBProdType.Location = new System.Drawing.Point(6, 148);
+            this.CBProdType.Name = "CBProdType";
+            this.CBProdType.Size = new System.Drawing.Size(408, 37);
+            this.CBProdType.TabIndex = 9;
+            // 
+            // TxtProdName
+            // 
+            this.TxtProdName.Location = new System.Drawing.Point(6, 66);
+            this.TxtProdName.Name = "TxtProdName";
+            this.TxtProdName.Size = new System.Drawing.Size(408, 35);
+            this.TxtProdName.TabIndex = 4;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(6, 3);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(193, 40);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Operations";
+            // 
             // GVProduct
             // 
             this.GVProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1476,6 +1572,33 @@ namespace GameStartApp
             this.tabPromotion.Text = "Promotions";
             this.tabPromotion.UseVisualStyleBackColor = true;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(420, 225);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(112, 29);
+            this.label32.TabIndex = 23;
+            this.label32.Text = "End Date";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(420, 183);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(118, 29);
+            this.label31.TabIndex = 22;
+            this.label31.Text = "Start Date";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(420, 140);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(106, 29);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "Discount";
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -1596,6 +1719,306 @@ namespace GameStartApp
             this.promozioneBindingSource.DataMember = "promozione";
             this.promozioneBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
+            // tabSubscription
+            // 
+            this.tabSubscription.Controls.Add(this.label36);
+            this.tabSubscription.Controls.Add(this.label35);
+            this.tabSubscription.Controls.Add(this.DateSubEnd);
+            this.tabSubscription.Controls.Add(this.BtnSubAdd);
+            this.tabSubscription.Controls.Add(this.label34);
+            this.tabSubscription.Controls.Add(this.DateSubStart);
+            this.tabSubscription.Controls.Add(this.label33);
+            this.tabSubscription.Controls.Add(this.CBSubCod);
+            this.tabSubscription.Controls.Add(this.GVSubscription);
+            this.tabSubscription.Location = new System.Drawing.Point(10, 47);
+            this.tabSubscription.Name = "tabSubscription";
+            this.tabSubscription.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSubscription.Size = new System.Drawing.Size(1598, 852);
+            this.tabSubscription.TabIndex = 8;
+            this.tabSubscription.Text = "Subscriptions";
+            this.tabSubscription.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(420, 161);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(112, 29);
+            this.label36.TabIndex = 27;
+            this.label36.Text = "End Date";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(420, 120);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(118, 29);
+            this.label35.TabIndex = 26;
+            this.label35.Text = "Start Date";
+            // 
+            // DateSubEnd
+            // 
+            this.DateSubEnd.Location = new System.Drawing.Point(6, 156);
+            this.DateSubEnd.Name = "DateSubEnd";
+            this.DateSubEnd.Size = new System.Drawing.Size(408, 35);
+            this.DateSubEnd.TabIndex = 25;
+            // 
+            // BtnSubAdd
+            // 
+            this.BtnSubAdd.Location = new System.Drawing.Point(6, 195);
+            this.BtnSubAdd.Name = "BtnSubAdd";
+            this.BtnSubAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnSubAdd.TabIndex = 24;
+            this.BtnSubAdd.Text = "Add Subscription";
+            this.BtnSubAdd.UseVisualStyleBackColor = true;
+            this.BtnSubAdd.Click += new System.EventHandler(this.BtnSubAdd_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(420, 75);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(126, 29);
+            this.label34.TabIndex = 23;
+            this.label34.Text = "Cod Client";
+            // 
+            // DateSubStart
+            // 
+            this.DateSubStart.Location = new System.Drawing.Point(6, 115);
+            this.DateSubStart.Name = "DateSubStart";
+            this.DateSubStart.Size = new System.Drawing.Size(408, 35);
+            this.DateSubStart.TabIndex = 15;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(6, 3);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(193, 40);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "Operations";
+            // 
+            // CBSubCod
+            // 
+            this.CBSubCod.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBSubCod.BackColor = System.Drawing.Color.Azure;
+            this.CBSubCod.FormattingEnabled = true;
+            this.CBSubCod.Location = new System.Drawing.Point(6, 72);
+            this.CBSubCod.Name = "CBSubCod";
+            this.CBSubCod.Size = new System.Drawing.Size(408, 37);
+            this.CBSubCod.TabIndex = 13;
+            this.CBSubCod.Click += new System.EventHandler(this.CBSubCod_Click);
+            // 
+            // GVSubscription
+            // 
+            this.GVSubscription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVSubscription.AutoGenerateColumns = false;
+            this.GVSubscription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVSubscription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVSubscription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdAbbonamento,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn19,
+            this.Validità});
+            this.GVSubscription.DataSource = this.abbonamentoBindingSource;
+            this.GVSubscription.Location = new System.Drawing.Point(574, 6);
+            this.GVSubscription.Name = "GVSubscription";
+            this.GVSubscription.RowHeadersVisible = false;
+            this.GVSubscription.RowHeadersWidth = 92;
+            this.GVSubscription.RowTemplate.Height = 37;
+            this.GVSubscription.Size = new System.Drawing.Size(1018, 840);
+            this.GVSubscription.TabIndex = 9;
+            // 
+            // IdAbbonamento
+            // 
+            this.IdAbbonamento.DataPropertyName = "IdAbbonamento";
+            this.IdAbbonamento.HeaderText = "IdAbbonamento";
+            this.IdAbbonamento.MinimumWidth = 11;
+            this.IdAbbonamento.Name = "IdAbbonamento";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "CodFiscale";
+            this.dataGridViewTextBoxColumn16.HeaderText = "CodFiscale";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "DataInizio";
+            this.dataGridViewTextBoxColumn19.HeaderText = "DataInizio";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // Validità
+            // 
+            this.Validità.DataPropertyName = "Validità";
+            this.Validità.HeaderText = "Validità";
+            this.Validità.MinimumWidth = 11;
+            this.Validità.Name = "Validità";
+            // 
+            // abbonamentoBindingSource
+            // 
+            this.abbonamentoBindingSource.DataMember = "abbonamento";
+            this.abbonamentoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // tabTournament
+            // 
+            this.tabTournament.Controls.Add(this.label46);
+            this.tabTournament.Controls.Add(this.label45);
+            this.tabTournament.Controls.Add(this.label44);
+            this.tabTournament.Controls.Add(this.label43);
+            this.tabTournament.Controls.Add(this.TxtTournN);
+            this.tabTournament.Controls.Add(this.TxtTourPrize);
+            this.tabTournament.Controls.Add(this.TxtTourGame);
+            this.tabTournament.Controls.Add(this.label42);
+            this.tabTournament.Controls.Add(this.BtnTourAdd);
+            this.tabTournament.Controls.Add(this.DateTournament);
+            this.tabTournament.Controls.Add(this.CBTourId);
+            this.tabTournament.Controls.Add(this.label41);
+            this.tabTournament.Controls.Add(this.GVTournament);
+            this.tabTournament.Location = new System.Drawing.Point(10, 47);
+            this.tabTournament.Name = "tabTournament";
+            this.tabTournament.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTournament.Size = new System.Drawing.Size(1598, 852);
+            this.tabTournament.TabIndex = 9;
+            this.tabTournament.Text = "Tournaments";
+            this.tabTournament.UseVisualStyleBackColor = true;
+            // 
+            // TxtTournN
+            // 
+            this.TxtTournN.Location = new System.Drawing.Point(6, 247);
+            this.TxtTournN.Name = "TxtTournN";
+            this.TxtTournN.Size = new System.Drawing.Size(408, 35);
+            this.TxtTournN.TabIndex = 33;
+            // 
+            // TxtTourPrize
+            // 
+            this.TxtTourPrize.Location = new System.Drawing.Point(6, 165);
+            this.TxtTourPrize.Name = "TxtTourPrize";
+            this.TxtTourPrize.Size = new System.Drawing.Size(408, 35);
+            this.TxtTourPrize.TabIndex = 32;
+            // 
+            // TxtTourGame
+            // 
+            this.TxtTourGame.Location = new System.Drawing.Point(6, 124);
+            this.TxtTourGame.Name = "TxtTourGame";
+            this.TxtTourGame.Size = new System.Drawing.Size(408, 35);
+            this.TxtTourGame.TabIndex = 31;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(420, 127);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(78, 29);
+            this.label42.TabIndex = 30;
+            this.label42.Text = "Game";
+            // 
+            // BtnTourAdd
+            // 
+            this.BtnTourAdd.Location = new System.Drawing.Point(6, 288);
+            this.BtnTourAdd.Name = "BtnTourAdd";
+            this.BtnTourAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnTourAdd.TabIndex = 29;
+            this.BtnTourAdd.Text = "Add Tournament";
+            this.BtnTourAdd.UseVisualStyleBackColor = true;
+            this.BtnTourAdd.Click += new System.EventHandler(this.BtnTourAdd_Click);
+            // 
+            // DateTournament
+            // 
+            this.DateTournament.Location = new System.Drawing.Point(6, 206);
+            this.DateTournament.Name = "DateTournament";
+            this.DateTournament.Size = new System.Drawing.Size(408, 35);
+            this.DateTournament.TabIndex = 28;
+            // 
+            // CBTourId
+            // 
+            this.CBTourId.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourId.BackColor = System.Drawing.Color.Azure;
+            this.CBTourId.FormattingEnabled = true;
+            this.CBTourId.Location = new System.Drawing.Point(6, 81);
+            this.CBTourId.Name = "CBTourId";
+            this.CBTourId.Size = new System.Drawing.Size(408, 37);
+            this.CBTourId.TabIndex = 16;
+            this.CBTourId.Click += new System.EventHandler(this.CBTourId_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(6, 6);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(193, 40);
+            this.label41.TabIndex = 15;
+            this.label41.Text = "Operations";
+            // 
+            // GVTournament
+            // 
+            this.GVTournament.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GVTournament.AutoGenerateColumns = false;
+            this.GVTournament.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVTournament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVTournament.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idFilialeDataGridViewTextBoxColumn2,
+            this.giocoDataGridViewTextBoxColumn,
+            this.premioDataGridViewTextBoxColumn,
+            this.dataTorneoDataGridViewTextBoxColumn,
+            this.nPartecipantiDataGridViewTextBoxColumn});
+            this.GVTournament.DataSource = this.torneoBindingSource;
+            this.GVTournament.Location = new System.Drawing.Point(574, 6);
+            this.GVTournament.Name = "GVTournament";
+            this.GVTournament.RowHeadersVisible = false;
+            this.GVTournament.RowHeadersWidth = 92;
+            this.GVTournament.RowTemplate.Height = 37;
+            this.GVTournament.Size = new System.Drawing.Size(1018, 840);
+            this.GVTournament.TabIndex = 10;
+            // 
+            // idFilialeDataGridViewTextBoxColumn2
+            // 
+            this.idFilialeDataGridViewTextBoxColumn2.DataPropertyName = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn2.HeaderText = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.idFilialeDataGridViewTextBoxColumn2.Name = "idFilialeDataGridViewTextBoxColumn2";
+            // 
+            // giocoDataGridViewTextBoxColumn
+            // 
+            this.giocoDataGridViewTextBoxColumn.DataPropertyName = "Gioco";
+            this.giocoDataGridViewTextBoxColumn.HeaderText = "Gioco";
+            this.giocoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.giocoDataGridViewTextBoxColumn.Name = "giocoDataGridViewTextBoxColumn";
+            // 
+            // premioDataGridViewTextBoxColumn
+            // 
+            this.premioDataGridViewTextBoxColumn.DataPropertyName = "Premio";
+            this.premioDataGridViewTextBoxColumn.HeaderText = "Premio";
+            this.premioDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.premioDataGridViewTextBoxColumn.Name = "premioDataGridViewTextBoxColumn";
+            // 
+            // dataTorneoDataGridViewTextBoxColumn
+            // 
+            this.dataTorneoDataGridViewTextBoxColumn.DataPropertyName = "DataTorneo";
+            this.dataTorneoDataGridViewTextBoxColumn.HeaderText = "DataTorneo";
+            this.dataTorneoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataTorneoDataGridViewTextBoxColumn.Name = "dataTorneoDataGridViewTextBoxColumn";
+            // 
+            // nPartecipantiDataGridViewTextBoxColumn
+            // 
+            this.nPartecipantiDataGridViewTextBoxColumn.DataPropertyName = "nPartecipanti";
+            this.nPartecipantiDataGridViewTextBoxColumn.HeaderText = "nPartecipanti";
+            this.nPartecipantiDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.nPartecipantiDataGridViewTextBoxColumn.Name = "nPartecipantiDataGridViewTextBoxColumn";
+            // 
+            // torneoBindingSource
+            // 
+            this.torneoBindingSource.DataMember = "torneo";
+            this.torneoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
             // clienteTableAdapter
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
@@ -1632,253 +2055,49 @@ namespace GameStartApp
             // 
             this.promozioneTableAdapter.ClearBeforeFill = true;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(420, 140);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(106, 29);
-            this.label30.TabIndex = 21;
-            this.label30.Text = "Discount";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(420, 183);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(118, 29);
-            this.label31.TabIndex = 22;
-            this.label31.Text = "Start Date";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(420, 225);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(112, 29);
-            this.label32.TabIndex = 23;
-            this.label32.Text = "End Date";
-            // 
-            // tabSubscription
-            // 
-            this.tabSubscription.Controls.Add(this.label36);
-            this.tabSubscription.Controls.Add(this.label35);
-            this.tabSubscription.Controls.Add(this.DateSubEnd);
-            this.tabSubscription.Controls.Add(this.BtnSubAdd);
-            this.tabSubscription.Controls.Add(this.label34);
-            this.tabSubscription.Controls.Add(this.DateSubStart);
-            this.tabSubscription.Controls.Add(this.label33);
-            this.tabSubscription.Controls.Add(this.CBSubCod);
-            this.tabSubscription.Controls.Add(this.GVSubscription);
-            this.tabSubscription.Location = new System.Drawing.Point(10, 47);
-            this.tabSubscription.Name = "tabSubscription";
-            this.tabSubscription.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSubscription.Size = new System.Drawing.Size(1598, 852);
-            this.tabSubscription.TabIndex = 8;
-            this.tabSubscription.Text = "Subscriptions";
-            this.tabSubscription.UseVisualStyleBackColor = true;
-            // 
-            // GVSubscription
-            // 
-            this.GVSubscription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GVSubscription.AutoGenerateColumns = false;
-            this.GVSubscription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GVSubscription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GVSubscription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdAbbonamento,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn19,
-            this.Validità});
-            this.GVSubscription.DataSource = this.abbonamentoBindingSource;
-            this.GVSubscription.Location = new System.Drawing.Point(574, 6);
-            this.GVSubscription.Name = "GVSubscription";
-            this.GVSubscription.RowHeadersVisible = false;
-            this.GVSubscription.RowHeadersWidth = 92;
-            this.GVSubscription.RowTemplate.Height = 37;
-            this.GVSubscription.Size = new System.Drawing.Size(1018, 840);
-            this.GVSubscription.TabIndex = 9;
-            // 
-            // abbonamentoBindingSource
-            // 
-            this.abbonamentoBindingSource.DataMember = "abbonamento";
-            this.abbonamentoBindingSource.DataSource = this.gamestart_logicDataSet;
-            // 
             // abbonamentoTableAdapter
             // 
             this.abbonamentoTableAdapter.ClearBeforeFill = true;
             // 
-            // IdAbbonamento
+            // torneoTableAdapter
             // 
-            this.IdAbbonamento.DataPropertyName = "IdAbbonamento";
-            this.IdAbbonamento.HeaderText = "IdAbbonamento";
-            this.IdAbbonamento.MinimumWidth = 11;
-            this.IdAbbonamento.Name = "IdAbbonamento";
+            this.torneoTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn16
+            // label43
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "CodFiscale";
-            this.dataGridViewTextBoxColumn16.HeaderText = "CodFiscale";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(420, 84);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(88, 29);
+            this.label43.TabIndex = 34;
+            this.label43.Text = "Branch";
             // 
-            // dataGridViewTextBoxColumn19
+            // label44
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "DataInizio";
-            this.dataGridViewTextBoxColumn19.HeaderText = "DataInizio";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(420, 168);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(68, 29);
+            this.label44.TabIndex = 35;
+            this.label44.Text = "Prize";
             // 
-            // Validità
+            // label45
             // 
-            this.Validità.DataPropertyName = "Validità";
-            this.Validità.HeaderText = "Validità";
-            this.Validità.MinimumWidth = 11;
-            this.Validità.Name = "Validità";
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(420, 211);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(63, 29);
+            this.label45.TabIndex = 36;
+            this.label45.Text = "Date";
             // 
-            // CBSubCod
+            // label46
             // 
-            this.CBSubCod.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.CBSubCod.BackColor = System.Drawing.Color.Azure;
-            this.CBSubCod.FormattingEnabled = true;
-            this.CBSubCod.Location = new System.Drawing.Point(6, 132);
-            this.CBSubCod.Name = "CBSubCod";
-            this.CBSubCod.Size = new System.Drawing.Size(408, 37);
-            this.CBSubCod.TabIndex = 13;
-            this.CBSubCod.Click += new System.EventHandler(this.CBSubCod_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(6, 3);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(193, 40);
-            this.label33.TabIndex = 14;
-            this.label33.Text = "Operations";
-            // 
-            // DateSubStart
-            // 
-            this.DateSubStart.Location = new System.Drawing.Point(6, 175);
-            this.DateSubStart.Name = "DateSubStart";
-            this.DateSubStart.Size = new System.Drawing.Size(408, 35);
-            this.DateSubStart.TabIndex = 15;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(420, 135);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(126, 29);
-            this.label34.TabIndex = 23;
-            this.label34.Text = "Cod Client";
-            // 
-            // BtnSubAdd
-            // 
-            this.BtnSubAdd.Location = new System.Drawing.Point(6, 257);
-            this.BtnSubAdd.Name = "BtnSubAdd";
-            this.BtnSubAdd.Size = new System.Drawing.Size(408, 55);
-            this.BtnSubAdd.TabIndex = 24;
-            this.BtnSubAdd.Text = "Add Subscription";
-            this.BtnSubAdd.UseVisualStyleBackColor = true;
-            this.BtnSubAdd.Click += new System.EventHandler(this.BtnSubAdd_Click);
-            // 
-            // DateSubEnd
-            // 
-            this.DateSubEnd.Location = new System.Drawing.Point(6, 216);
-            this.DateSubEnd.Name = "DateSubEnd";
-            this.DateSubEnd.Size = new System.Drawing.Size(408, 35);
-            this.DateSubEnd.TabIndex = 25;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(420, 180);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(118, 29);
-            this.label35.TabIndex = 26;
-            this.label35.Text = "Start Date";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(420, 221);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(112, 29);
-            this.label36.TabIndex = 27;
-            this.label36.Text = "End Date";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(6, 3);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(193, 40);
-            this.label37.TabIndex = 3;
-            this.label37.Text = "Operations";
-            // 
-            // TxtProdName
-            // 
-            this.TxtProdName.Location = new System.Drawing.Point(6, 66);
-            this.TxtProdName.Name = "TxtProdName";
-            this.TxtProdName.Size = new System.Drawing.Size(408, 35);
-            this.TxtProdName.TabIndex = 4;
-            // 
-            // CBProdType
-            // 
-            this.CBProdType.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.CBProdType.BackColor = System.Drawing.Color.Azure;
-            this.CBProdType.FormattingEnabled = true;
-            this.CBProdType.Location = new System.Drawing.Point(6, 148);
-            this.CBProdType.Name = "CBProdType";
-            this.CBProdType.Size = new System.Drawing.Size(408, 37);
-            this.CBProdType.TabIndex = 9;
-            // 
-            // BtnProdAdd
-            // 
-            this.BtnProdAdd.Location = new System.Drawing.Point(6, 191);
-            this.BtnProdAdd.Name = "BtnProdAdd";
-            this.BtnProdAdd.Size = new System.Drawing.Size(408, 55);
-            this.BtnProdAdd.TabIndex = 10;
-            this.BtnProdAdd.Text = "Add Product";
-            this.BtnProdAdd.UseVisualStyleBackColor = true;
-            this.BtnProdAdd.Click += new System.EventHandler(this.BtnProdAdd_Click);
-            // 
-            // TxtProdPrice
-            // 
-            this.TxtProdPrice.Location = new System.Drawing.Point(6, 107);
-            this.TxtProdPrice.Name = "TxtProdPrice";
-            this.TxtProdPrice.Size = new System.Drawing.Size(408, 35);
-            this.TxtProdPrice.TabIndex = 11;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(420, 69);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(78, 29);
-            this.label38.TabIndex = 12;
-            this.label38.Text = "Name";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(420, 110);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(69, 29);
-            this.label39.TabIndex = 13;
-            this.label39.Text = "Price";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(420, 151);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(68, 29);
-            this.label40.TabIndex = 14;
-            this.label40.Text = "Type";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(420, 250);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(146, 29);
+            this.label46.TabIndex = 37;
+            this.label46.Text = "Partecipants";
             // 
             // Menu
             // 
@@ -1928,6 +2147,10 @@ namespace GameStartApp
             this.tabSubscription.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSubscription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).EndInit();
+            this.tabTournament.ResumeLayout(false);
+            this.tabTournament.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVTournament)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2112,6 +2335,27 @@ namespace GameStartApp
         private System.Windows.Forms.Button BtnProdAdd;
         private System.Windows.Forms.ComboBox CBProdType;
         private System.Windows.Forms.TextBox TxtProdName;
+        private System.Windows.Forms.TabPage tabTournament;
+        private System.Windows.Forms.DataGridView GVTournament;
+        private System.Windows.Forms.BindingSource torneoBindingSource;
+        private gamestart_logicDataSetTableAdapters.torneoTableAdapter torneoTableAdapter;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFilialeDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn premioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataTorneoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPartecipantiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox TxtTournN;
+        private System.Windows.Forms.TextBox TxtTourPrize;
+        private System.Windows.Forms.TextBox TxtTourGame;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Button BtnTourAdd;
+        private System.Windows.Forms.DateTimePicker DateTournament;
+        private System.Windows.Forms.ComboBox CBTourId;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
     }
 }
 

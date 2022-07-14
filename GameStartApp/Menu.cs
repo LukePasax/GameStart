@@ -22,6 +22,8 @@ namespace GameStartApp
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gamestart_logicDataSet.torneo' table. You can move, or remove it, as needed.
+            this.torneoTableAdapter.Fill(this.gamestart_logicDataSet.torneo);
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.abbonamento' table. You can move, or remove it, as needed.
             this.abbonamentoTableAdapter.Fill(this.gamestart_logicDataSet.abbonamento);
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.promozione' table. You can move, or remove it, as needed.
@@ -242,6 +244,30 @@ namespace GameStartApp
                     ctx.Prodottos.InsertOnSubmit(prodotto);
                     ctx.SubmitChanges();
                 }
+            }
+        }
+
+        private void CBTourId_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourId.Items.AddRange(ctx.Filiales.Select(f => f.IdFiliale.ToString()).ToArray());
+            }
+        }
+
+        private void BtnTourAdd_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                Torneo torneo = new Torneo();
+                torneo.Filiale = ctx.Filiales.Where(f => f.IdFiliale == long.Parse((String)CBTourId.SelectedItem))
+                    .FirstOrDefault();
+                torneo.Gioco = TxtTourGame.Text;
+                torneo.Premio = TxtTourPrize.Text;
+                torneo.NPartecipanti = long.TryParse(TxtTournN.Text, out long n) ? n : 0;
+                torneo.DataTorneo = DateTournament.Value;
+                ctx.Torneos.InsertOnSubmit(torneo);
+                ctx.SubmitChanges();
             }
         }
     }
