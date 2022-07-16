@@ -247,6 +247,21 @@ namespace GameStartApp
             this.label54 = new System.Windows.Forms.Label();
             this.DateBranchMost = new System.Windows.Forms.DateTimePicker();
             this.BtnBranchShowMost = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.BtnClientAdd = new System.Windows.Forms.Button();
+            this.TxtClientCivic = new System.Windows.Forms.TextBox();
+            this.TxtClientStreet = new System.Windows.Forms.TextBox();
+            this.TxtClientCity = new System.Windows.Forms.TextBox();
+            this.DateClientBirth = new System.Windows.Forms.DateTimePicker();
+            this.TxtClientCod = new System.Windows.Forms.TextBox();
+            this.TxtClientSurname = new System.Windows.Forms.TextBox();
+            this.TxtClientName = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
@@ -305,6 +320,21 @@ namespace GameStartApp
             // 
             // tabClient
             // 
+            this.tabClient.Controls.Add(this.label55);
+            this.tabClient.Controls.Add(this.label56);
+            this.tabClient.Controls.Add(this.label57);
+            this.tabClient.Controls.Add(this.label58);
+            this.tabClient.Controls.Add(this.label59);
+            this.tabClient.Controls.Add(this.label60);
+            this.tabClient.Controls.Add(this.label61);
+            this.tabClient.Controls.Add(this.BtnClientAdd);
+            this.tabClient.Controls.Add(this.TxtClientCivic);
+            this.tabClient.Controls.Add(this.TxtClientStreet);
+            this.tabClient.Controls.Add(this.TxtClientCity);
+            this.tabClient.Controls.Add(this.DateClientBirth);
+            this.tabClient.Controls.Add(this.TxtClientCod);
+            this.tabClient.Controls.Add(this.TxtClientSurname);
+            this.tabClient.Controls.Add(this.TxtClientName);
             this.tabClient.Controls.Add(this.label1);
             this.tabClient.Controls.Add(this.GVClient);
             this.tabClient.Location = new System.Drawing.Point(10, 47);
@@ -2307,6 +2337,127 @@ namespace GameStartApp
             this.BtnBranchShowMost.UseVisualStyleBackColor = true;
             this.BtnBranchShowMost.Click += new System.EventHandler(this.BtnBranchShowMost_Click);
             // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(419, 304);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(65, 29);
+            this.label55.TabIndex = 33;
+            this.label55.Text = "Civic";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(420, 263);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(77, 29);
+            this.label56.TabIndex = 32;
+            this.label56.Text = "Street";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(419, 222);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(53, 29);
+            this.label57.TabIndex = 31;
+            this.label57.Text = "City";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(420, 181);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(58, 29);
+            this.label58.TabIndex = 30;
+            this.label58.Text = "Cod";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(420, 142);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(100, 29);
+            this.label59.TabIndex = 29;
+            this.label59.Text = "Birthday";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(419, 99);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(110, 29);
+            this.label60.TabIndex = 28;
+            this.label60.Text = "Surname";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(420, 61);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(78, 29);
+            this.label61.TabIndex = 27;
+            this.label61.Text = "Name";
+            // 
+            // BtnClientAdd
+            // 
+            this.BtnClientAdd.Location = new System.Drawing.Point(6, 343);
+            this.BtnClientAdd.Name = "BtnClientAdd";
+            this.BtnClientAdd.Size = new System.Drawing.Size(408, 55);
+            this.BtnClientAdd.TabIndex = 26;
+            this.BtnClientAdd.Text = "Add Client";
+            this.BtnClientAdd.UseVisualStyleBackColor = true;
+            // 
+            // TxtClientCivic
+            // 
+            this.TxtClientCivic.Location = new System.Drawing.Point(5, 301);
+            this.TxtClientCivic.Name = "TxtClientCivic";
+            this.TxtClientCivic.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientCivic.TabIndex = 25;
+            // 
+            // TxtClientStreet
+            // 
+            this.TxtClientStreet.Location = new System.Drawing.Point(6, 260);
+            this.TxtClientStreet.Name = "TxtClientStreet";
+            this.TxtClientStreet.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientStreet.TabIndex = 24;
+            // 
+            // TxtClientCity
+            // 
+            this.TxtClientCity.Location = new System.Drawing.Point(5, 219);
+            this.TxtClientCity.Name = "TxtClientCity";
+            this.TxtClientCity.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientCity.TabIndex = 23;
+            // 
+            // DateClientBirth
+            // 
+            this.DateClientBirth.Location = new System.Drawing.Point(6, 137);
+            this.DateClientBirth.Name = "DateClientBirth";
+            this.DateClientBirth.Size = new System.Drawing.Size(408, 35);
+            this.DateClientBirth.TabIndex = 22;
+            // 
+            // TxtClientCod
+            // 
+            this.TxtClientCod.Location = new System.Drawing.Point(6, 178);
+            this.TxtClientCod.Name = "TxtClientCod";
+            this.TxtClientCod.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientCod.TabIndex = 21;
+            // 
+            // TxtClientSurname
+            // 
+            this.TxtClientSurname.Location = new System.Drawing.Point(5, 96);
+            this.TxtClientSurname.Name = "TxtClientSurname";
+            this.TxtClientSurname.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientSurname.TabIndex = 20;
+            // 
+            // TxtClientName
+            // 
+            this.TxtClientName.Location = new System.Drawing.Point(6, 55);
+            this.TxtClientName.Name = "TxtClientName";
+            this.TxtClientName.Size = new System.Drawing.Size(408, 35);
+            this.TxtClientName.TabIndex = 19;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -2582,6 +2733,21 @@ namespace GameStartApp
         private System.Windows.Forms.Button BtnBranchShowMost;
         private System.Windows.Forms.DateTimePicker DateBranchMost;
         private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Button BtnClientAdd;
+        private System.Windows.Forms.TextBox TxtClientCivic;
+        private System.Windows.Forms.TextBox TxtClientStreet;
+        private System.Windows.Forms.TextBox TxtClientCity;
+        private System.Windows.Forms.DateTimePicker DateClientBirth;
+        private System.Windows.Forms.TextBox TxtClientCod;
+        private System.Windows.Forms.TextBox TxtClientSurname;
+        private System.Windows.Forms.TextBox TxtClientName;
     }
 }
 
