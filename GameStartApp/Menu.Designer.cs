@@ -262,6 +262,9 @@ namespace GameStartApp
             this.TxtClientCod = new System.Windows.Forms.TextBox();
             this.TxtClientSurname = new System.Windows.Forms.TextBox();
             this.TxtClientName = new System.Windows.Forms.TextBox();
+            this.BtnEmpShowMost = new System.Windows.Forms.Button();
+            this.DateEmpMost = new System.Windows.Forms.DateTimePicker();
+            this.label62 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
@@ -689,6 +692,9 @@ namespace GameStartApp
             // 
             // tabEmployee
             // 
+            this.tabEmployee.Controls.Add(this.BtnEmpShowMost);
+            this.tabEmployee.Controls.Add(this.DateEmpMost);
+            this.tabEmployee.Controls.Add(this.label62);
             this.tabEmployee.Controls.Add(this.label14);
             this.tabEmployee.Controls.Add(this.label13);
             this.tabEmployee.Controls.Add(this.label12);
@@ -2333,7 +2339,7 @@ namespace GameStartApp
             this.BtnBranchShowMost.Name = "BtnBranchShowMost";
             this.BtnBranchShowMost.Size = new System.Drawing.Size(408, 55);
             this.BtnBranchShowMost.TabIndex = 49;
-            this.BtnBranchShowMost.Text = "Show the branch who sold the most";
+            this.BtnBranchShowMost.Text = "Branch who sold the most";
             this.BtnBranchShowMost.UseVisualStyleBackColor = true;
             this.BtnBranchShowMost.Click += new System.EventHandler(this.BtnBranchShowMost_Click);
             // 
@@ -2458,6 +2464,31 @@ namespace GameStartApp
             this.TxtClientName.Name = "TxtClientName";
             this.TxtClientName.Size = new System.Drawing.Size(408, 35);
             this.TxtClientName.TabIndex = 19;
+            // 
+            // BtnEmpShowMost
+            // 
+            this.BtnEmpShowMost.Location = new System.Drawing.Point(6, 493);
+            this.BtnEmpShowMost.Name = "BtnEmpShowMost";
+            this.BtnEmpShowMost.Size = new System.Drawing.Size(408, 55);
+            this.BtnEmpShowMost.TabIndex = 52;
+            this.BtnEmpShowMost.Text = "Employee who sold the most";
+            this.BtnEmpShowMost.UseVisualStyleBackColor = true;
+            this.BtnEmpShowMost.Click += new System.EventHandler(this.BtnEmpShowMost_Click);
+            // 
+            // DateEmpMost
+            // 
+            this.DateEmpMost.Location = new System.Drawing.Point(6, 452);
+            this.DateEmpMost.Name = "DateEmpMost";
+            this.DateEmpMost.Size = new System.Drawing.Size(408, 35);
+            this.DateEmpMost.TabIndex = 51;
+            // 
+            // label62
+            // 
+            this.label62.BackColor = System.Drawing.Color.DimGray;
+            this.label62.Location = new System.Drawing.Point(6, 417);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(500, 2);
+            this.label62.TabIndex = 50;
             // 
             // Menu
             // 
@@ -2749,6 +2780,9 @@ namespace GameStartApp
         private System.Windows.Forms.TextBox TxtClientCod;
         private System.Windows.Forms.TextBox TxtClientSurname;
         private System.Windows.Forms.TextBox TxtClientName;
+        private System.Windows.Forms.Button BtnEmpShowMost;
+        private System.Windows.Forms.DateTimePicker DateEmpMost;
+        private System.Windows.Forms.Label label62;
     }
 }
 

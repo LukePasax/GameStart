@@ -419,7 +419,8 @@ namespace GameStartApp
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
                 var nProd = ctx.Dettaglivenditas
-                    .Where(d => d.AcquistoInNegozio != null)
+                    .Where(d => d.AcquistoInNegozio != null && 
+                    d.AcquistoInNegozio.DataVendita.Month == DateBranchMost.Value.Month)
                     .Select(d => new
                     {
                         d.AcquistoInNegozio.Dipendente.Filiale.IdFiliale,
@@ -464,6 +465,37 @@ namespace GameStartApp
                 };
                 ctx.Clientes.InsertOnSubmit(cliente);
                 ctx.SubmitChanges();
+            }
+        }
+
+        private void BtnEmpShowMost_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                var startDate = DateEmpMost.Value.AddDays(-7);
+                var endDate = DateEmpMost.Value;
+                var nProd = ctx.Dettaglivenditas
+                    .Where(d => d.AcquistoInNegozio != null &&
+                    d.AcquistoInNegozio.DataVendita.CompareTo(startDate) >= 0 &&
+                    d.AcquistoInNegozio.DataVendita.CompareTo(endDate) <= 0)
+                    .Select(d => new
+                    {
+                        d.AcquistoInNegozio.Dipendente.CodFiscale,
+                        d.AcquistoInNegozio.Dipendente.Nome,
+                        d.AcquistoInNegozio.Dipendente.Cognome,
+                        d.NProdotti
+                    })
+                    .GroupBy(d => d.CodFiscale)
+                    .Select(d => new
+                    {
+                        CodFiscale = d.Key,
+                        Nome = ctx.Dipendentes.Where(f => f.CodFiscale == d.Key).Select(f => f.Nome).Single(),
+                        Cognome = ctx.Dipendentes.Where(f => f.CodFiscale == d.Key).Select(f => f.Cognome).Single(),
+                        n = d.Sum(i => i.NProdotti)
+                    });
+                var max = nProd.Max(n => n.n);
+                var finalEmp = nProd.Where(n => n.n == max);
+                ShowResults(finalEmp);
             }
         }
     }
