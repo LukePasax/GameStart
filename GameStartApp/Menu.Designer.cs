@@ -2408,6 +2408,7 @@ namespace GameStartApp
             this.BtnClientAdd.TabIndex = 26;
             this.BtnClientAdd.Text = "Add Client";
             this.BtnClientAdd.UseVisualStyleBackColor = true;
+            this.BtnClientAdd.Click += new System.EventHandler(this.BtnClientAdd_Click);
             // 
             // TxtClientCivic
             // 

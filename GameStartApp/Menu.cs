@@ -118,12 +118,14 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Filiale filiale = new Filiale();
-                filiale.CittÃ = TxtBranchCity.Text;
-                filiale.Gestore = ctx.Gestores.Where(g => g.CodFiscale == (string)CBBranchesManager.SelectedItem)
-                    .FirstOrDefault();
-                filiale.Via = TxtBranchesStreet.Text == "" ? null : TxtBranchesStreet.Text;
-                filiale.NCivico = TxtBranchesCivic.Text == "" ? null : TxtBranchesCivic.Text;
+                Filiale filiale = new Filiale
+                {
+                    CittÃ = TxtBranchCity.Text,
+                    Gestore = ctx.Gestores.Where(g => g.CodFiscale == (string)CBBranchesManager.SelectedItem)
+                    .FirstOrDefault(),
+                    Via = TxtBranchesStreet.Text == "" ? null : TxtBranchesStreet.Text,
+                    NCivico = TxtBranchesCivic.Text == "" ? null : TxtBranchesCivic.Text
+                };
                 ctx.Filiales.InsertOnSubmit(filiale);
                 ctx.SubmitChanges();
             }
@@ -133,14 +135,16 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Gestore gestore = new Gestore();
-                gestore.CittÃ = TxtManCity.Text;
-                gestore.Via = TxtManCity.Text == "" ? null : TxtManCity.Text;
-                gestore.NCivico = TxtManCivic.Text == "" ? null : TxtManCivic.Text;
-                gestore.CodFiscale = TxtManCod.Text;
-                gestore.Nome = TxtManName.Text;
-                gestore.Cognome = TxtManSurname.Text;
-                gestore.DataNascita = DateManBirth.Value;
+                Gestore gestore = new Gestore
+                {
+                    CittÃ = TxtManCity.Text,
+                    Via = TxtManCity.Text == "" ? null : TxtManCity.Text,
+                    NCivico = TxtManCivic.Text == "" ? null : TxtManCivic.Text,
+                    CodFiscale = TxtManCod.Text,
+                    Nome = TxtManName.Text,
+                    Cognome = TxtManSurname.Text,
+                    DataNascita = DateManBirth.Value
+                };
                 ctx.Gestores.InsertOnSubmit(gestore);
                 ctx.SubmitChanges();
             }
@@ -150,14 +154,16 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Dipendente dipendente = new Dipendente();
-                dipendente.CittÃ = TxtEmpCity.Text;
-                dipendente.Via = TxtEmpCity.Text == "" ? null : TxtEmpCity.Text;
-                dipendente.NCivico = TxtEmpCivic.Text == "" ? null : TxtEmpCivic.Text;
-                dipendente.CodFiscale = TxtEmpCod.Text;
-                dipendente.Nome = TxtEmpName.Text;
-                dipendente.Cognome = TxtEmpSurname.Text;
-                dipendente.DataNascita = DateEmpBirth.Value;
+                Dipendente dipendente = new Dipendente
+                {
+                    CittÃ = TxtEmpCity.Text,
+                    Via = TxtEmpCity.Text == "" ? null : TxtEmpCity.Text,
+                    NCivico = TxtEmpCivic.Text == "" ? null : TxtEmpCivic.Text,
+                    CodFiscale = TxtEmpCod.Text,
+                    Nome = TxtEmpName.Text,
+                    Cognome = TxtEmpSurname.Text,
+                    DataNascita = DateEmpBirth.Value
+                };
                 ctx.Dipendentes.InsertOnSubmit(dipendente);
                 ctx.SubmitChanges();
             }
@@ -185,14 +191,16 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Preordine preordine = new Preordine();
-                preordine.Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == long.Parse((string)CBPreProd.SelectedItem))
-                    .FirstOrDefault();
-                preordine.Cliente = ctx.Clientes.Where(c => c.CodFiscale == (string) CBPreCodCli.SelectedItem).FirstOrDefault();
-                preordine.DataVendita = DatePreorder.Value;
-                preordine.DataUscitaProdotto = DatePreArrival.Value;
-                preordine.IdPreordine = ctx.Preordines.OrderByDescending(p => p.IdPreordine).Select(p => p.IdPreordine)
-                    .FirstOrDefault() + 1;
+                Preordine preordine = new Preordine
+                {
+                    Prodotto = ctx.Prodottos.Where(p => p.IdProdotto == long.Parse((string)CBPreProd.SelectedItem))
+                    .FirstOrDefault(),
+                    Cliente = ctx.Clientes.Where(c => c.CodFiscale == (string)CBPreCodCli.SelectedItem).FirstOrDefault(),
+                    DataVendita = DatePreorder.Value,
+                    DataUscitaProdotto = DatePreArrival.Value,
+                    IdPreordine = ctx.Preordines.OrderByDescending(p => p.IdPreordine).Select(p => p.IdPreordine)
+                    .FirstOrDefault() + 1
+                };
                 ctx.Preordines.InsertOnSubmit(preordine);
                 ctx.SubmitChanges();
             }
@@ -202,9 +210,11 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Promozione promozione = new Promozione();
-                promozione.Descrizione = TxtPromDesc.Text;
-                promozione.Sconto = long.TryParse(TxtPromSconto.Text, out long sconto) ? sconto : -1;
+                Promozione promozione = new Promozione
+                {
+                    Descrizione = TxtPromDesc.Text,
+                    Sconto = long.TryParse(TxtPromSconto.Text, out long sconto) ? sconto : -1
+                };
                 if (sconto > 0)
                 {
                     promozione.DataInizio = DatePromStart.Value;
@@ -230,12 +240,14 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Abbonamento abbonamento = new Abbonamento();
-                abbonamento.Cliente = ctx.Clientes.Where(c => c.CodFiscale == (string) CBSubCod.SelectedItem).FirstOrDefault();
-                abbonamento.DataInizio = DateSubStart.Value;
-                abbonamento.ValiditÃ = DateSubEnd.Value;
-                abbonamento.IdAbbonamento = ctx.Abbonamentos.OrderByDescending(a => a.IdAbbonamento).Select(a => a.IdAbbonamento)
-                    .FirstOrDefault() + 1;
+                Abbonamento abbonamento = new Abbonamento
+                {
+                    Cliente = ctx.Clientes.Where(c => c.CodFiscale == (string)CBSubCod.SelectedItem).FirstOrDefault(),
+                    DataInizio = DateSubStart.Value,
+                    ValiditÃ = DateSubEnd.Value,
+                    IdAbbonamento = ctx.Abbonamentos.OrderByDescending(a => a.IdAbbonamento).Select(a => a.IdAbbonamento)
+                    .FirstOrDefault() + 1
+                };
                 ctx.Abbonamentos.InsertOnSubmit(abbonamento);
                 ctx.SubmitChanges();
             }
@@ -245,9 +257,11 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Prodotto prodotto = new Prodotto();
-                prodotto.Nome = TxtProdName.Text;
-                prodotto.Prezzo = double.TryParse(TxtProdPrice.Text, out double prezzo) ? prezzo : -1;
+                Prodotto prodotto = new Prodotto
+                {
+                    Nome = TxtProdName.Text,
+                    Prezzo = double.TryParse(TxtProdPrice.Text, out double prezzo) ? prezzo : -1
+                };
                 if (prezzo > 0)
                 {
                     prodotto.IdProdotto = ctx.Prodottos.OrderByDescending(p => p.IdProdotto).Select(p => p.IdProdotto)
@@ -271,13 +285,15 @@ namespace GameStartApp
         {
             using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
             {
-                Torneo torneo = new Torneo();
-                torneo.Filiale = ctx.Filiales.Where(f => f.IdFiliale == long.Parse((String)CBTourId.SelectedItem))
-                    .FirstOrDefault();
-                torneo.Gioco = TxtTourGame.Text;
-                torneo.Premio = TxtTourPrize.Text;
-                torneo.NPartecipanti = 0;
-                torneo.DataTorneo = DateTournament.Value;
+                Torneo torneo = new Torneo
+                {
+                    Filiale = ctx.Filiales.Where(f => f.IdFiliale == long.Parse((String)CBTourId.SelectedItem))
+                    .FirstOrDefault(),
+                    Gioco = TxtTourGame.Text,
+                    Premio = TxtTourPrize.Text,
+                    NPartecipanti = 0,
+                    DataTorneo = DateTournament.Value
+                };
                 ctx.Torneos.InsertOnSubmit(torneo);
                 ctx.SubmitChanges();
             }
@@ -430,6 +446,25 @@ namespace GameStartApp
                 Text = "Result"
             };
             result.ShowDialog();
+        }
+
+        private void BtnClientAdd_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                Cliente cliente = new Cliente
+                {
+                    CittÃ = TxtManCity.Text,
+                    Via = TxtManCity.Text == "" ? null : TxtManCity.Text,
+                    NCivico = TxtManCivic.Text == "" ? null : TxtManCivic.Text,
+                    CodFiscale = TxtManCod.Text,
+                    Nome = TxtManName.Text,
+                    Cognome = TxtManSurname.Text,
+                    DataNascita = DateManBirth.Value
+                };
+                ctx.Clientes.InsertOnSubmit(cliente);
+                ctx.SubmitChanges();
+            }
         }
     }
 }
