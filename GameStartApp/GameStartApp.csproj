@@ -140,6 +140,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataContext1.lqml</DependentUpon>
     </Compile>
+    <Compile Include="ResultGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultGrid.Designer.cs">
+      <DependentUpon>ResultGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="gamestart_logicDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddSaleStore.resx">
       <DependentUpon>AddSaleStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultGrid.resx">
+      <DependentUpon>ResultGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

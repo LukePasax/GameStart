@@ -1,12 +1,9 @@
-﻿using GamestartLogicContext;
+﻿using Devart.Data.Linq;
+using GamestartLogicContext;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Data.Linq;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameStartApp
@@ -22,6 +19,7 @@ namespace GameStartApp
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            this.Text = "GameStart";
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.torneo' table. You can move, or remove it, as needed.
             this.torneoTableAdapter.Fill(this.gamestart_logicDataSet.torneo);
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.abbonamento' table. You can move, or remove it, as needed.
@@ -41,10 +39,16 @@ namespace GameStartApp
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.prodotto' table. You can move, or remove it, as needed.
             this.prodottoTableAdapter.Fill(this.gamestart_logicDataSet.prodotto);
             CBProdType.Items.AddRange(new string[] { "Videogioco", "Pupazzo", "Codice" });
+            DateProdMost.Format = DateTimePickerFormat.Custom;
+            DateProdMost.CustomFormat = "MMM yyy";
+            DateProdMost.ShowUpDown = true;
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.dipendente' table. You can move, or remove it, as needed.
             this.dipendenteTableAdapter.Fill(this.gamestart_logicDataSet.dipendente);
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.filiale' table. You can move, or remove it, as needed.
             this.filialeTableAdapter.Fill(this.gamestart_logicDataSet.filiale);
+            DateBranchMost.Format = DateTimePickerFormat.Custom;
+            DateBranchMost.CustomFormat = "MMM yyy";
+            DateBranchMost.ShowUpDown = true;
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.cliente' table. You can move, or remove it, as needed.
             this.clienteTableAdapter.Fill(this.gamestart_logicDataSet.cliente);
         }
@@ -80,16 +84,22 @@ namespace GameStartApp
         {
             if (!_online)
             {
-                var form = new AddSaleStore();
-                form.Height = 400;
-                form.Width = 350;
+                var form = new AddSaleStore
+                {
+                    Text = "Add Sale in Store",
+                    Height = 400,
+                    Width = 350
+                };
                 form.ShowDialog();
                 form.FormClosed += (s, ea) => RefreshGrid(GVSaleStore);
             } else
             {
-                var form = new AddSaleOnline();
-                form.Height = 400;
-                form.Width = 350;
+                var form = new AddSaleOnline
+                {
+                    Text = "Add Sale Online",
+                    Height = 400,
+                    Width = 350
+                };
                 form.ShowDialog();
                 form.FormClosed += (s, ea) => RefreshGrid(GVSaleOnline);
             }
@@ -317,5 +327,110 @@ namespace GameStartApp
             }
         }
 
+        private void CBTourIdShow_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourIdShow.Items.Clear();
+                CBTourIdShow.Items.AddRange(ctx.Filiales.Select(f => f.IdFiliale.ToString()).ToArray());
+            }
+        }
+
+        private void CBTourIdShow_Change(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                CBTourDateShow.Visible = true;
+                CBTourDateShow.Items.Clear();
+                CBTourDateShow.Items.AddRange(ctx.Torneos.Where(t => t.IdFiliale == long.Parse((string)CBTourIdShow.SelectedItem))
+                    .Select(t => t.DataTorneo.ToString()).ToArray());
+            }
+        }
+
+        private void BtnTourShow_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                var torneo = ctx.Torneos.Where(t => t.IdFiliale == long.Parse(CBTourIdShow.Text) && 
+                t.DataTorneo == DateTime.Parse(CBTourDateShow.Text)).Single();
+                var query = ctx.Abbonamentos.Where(a => a.Torneo.Contains(torneo))
+                    .Select(a => new
+                    {
+                        a.CodFiscale,
+                        a.Cliente.Nome,
+                        a.Cliente.Cognome,
+                        a.Cliente.DataNascita,
+                        a.IdAbbonamento
+                    });
+                ShowResults(query);
+            }
+        }
+
+        private void BtnProdShowMost_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                var dateProd = from d in ctx.Dettaglivenditas
+                               where d.AcquistoInNegozio.DataVendita.Month == DateProdMost.Value.Month ||
+                               d.AcquistoOnline.DataVendita.Month == DateProdMost.Value.Month
+                               select new
+                               {
+                                   d.IdProdotto,
+                                   d.NProdotti
+                               };
+                var nProd = dateProd.GroupBy(d => d.IdProdotto)
+                    .Select(d => new
+                    {
+                        IdProdotto = d.Key,
+                        n = d.Sum(v => v.NProdotti)
+                    });
+                var max = nProd.Max(n => n.n);
+                var maxProd = nProd.Where(n => n.n == max);
+                var finalProd = maxProd.Join(ctx.Prodottos, o => o.IdProdotto, i => i.IdProdotto, (o,i) => new
+                {
+                    i.IdProdotto,
+                    i.Nome,
+                    i.Prezzo,
+                    i.Tipologia,
+                    o.n
+                });
+                ShowResults(finalProd);
+            }
+        }
+
+        private void BtnBranchShowMost_Click(object sender, EventArgs e)
+        {
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext())
+            {
+                var nProd = ctx.Dettaglivenditas
+                    .Where(d => d.AcquistoInNegozio != null)
+                    .Select(d => new
+                    {
+                        d.AcquistoInNegozio.Dipendente.Filiale.IdFiliale,
+                        Città = d.AcquistoInNegozio.Dipendente.Filiale.CittÃ,
+                        d.NProdotti
+                    })
+                    .GroupBy(d => d.IdFiliale)
+                    .Select(i => new
+                    {
+                        IdFiliale = i.Key,
+                        Città = ctx.Filiales.Where(f => f.IdFiliale == i.Key).Select(f => f.CittÃ).Single(),
+                        n = i.Sum(d => d.NProdotti)
+                    });
+                var max = nProd.Max(n => n.n);
+                var finalBranch = nProd.Where(b => b.n == max);
+                ShowResults(finalBranch);
+            }
+        }
+
+        private void ShowResults(IQueryable<object> query)
+        {
+            var result = new ResultGrid(query)
+            {
+                Text = "Result"
+            };
+            result.ShowDialog();
+        }
     }
 }
+ 

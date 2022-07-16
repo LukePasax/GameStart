@@ -115,6 +115,9 @@ namespace GameStartApp
             this.nCivicoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filialeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabProduct = new System.Windows.Forms.TabPage();
+            this.BtnProdShowMost = new System.Windows.Forms.Button();
+            this.DateProdMost = new System.Windows.Forms.DateTimePicker();
+            this.label53 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -199,6 +202,20 @@ namespace GameStartApp
             this.Validità = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abbonamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabTournament = new System.Windows.Forms.TabPage();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.BtnTourShow = new System.Windows.Forms.Button();
+            this.CBTourDateShow = new System.Windows.Forms.ComboBox();
+            this.CBTourIdShow = new System.Windows.Forms.ComboBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.CBTourPart = new System.Windows.Forms.ComboBox();
+            this.CBTourDate = new System.Windows.Forms.ComboBox();
+            this.CBTourIdPart = new System.Windows.Forms.ComboBox();
+            this.BtnTourAddPart = new System.Windows.Forms.Button();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -227,13 +244,9 @@ namespace GameStartApp
             this.promozioneTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.promozioneTableAdapter();
             this.abbonamentoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.abbonamentoTableAdapter();
             this.torneoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.torneoTableAdapter();
-            this.BtnTourAddPart = new System.Windows.Forms.Button();
-            this.CBTourIdPart = new System.Windows.Forms.ComboBox();
-            this.CBTourDate = new System.Windows.Forms.ComboBox();
-            this.CBTourPart = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.DateBranchMost = new System.Windows.Forms.DateTimePicker();
+            this.BtnBranchShowMost = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
@@ -888,6 +901,9 @@ namespace GameStartApp
             // 
             // tabBranch
             // 
+            this.tabBranch.Controls.Add(this.BtnBranchShowMost);
+            this.tabBranch.Controls.Add(this.DateBranchMost);
+            this.tabBranch.Controls.Add(this.label54);
             this.tabBranch.Controls.Add(this.label5);
             this.tabBranch.Controls.Add(this.BtnBranchAdd);
             this.tabBranch.Controls.Add(this.CBBranchesManager);
@@ -1061,6 +1077,9 @@ namespace GameStartApp
             // 
             // TabProduct
             // 
+            this.TabProduct.Controls.Add(this.BtnProdShowMost);
+            this.TabProduct.Controls.Add(this.DateProdMost);
+            this.TabProduct.Controls.Add(this.label53);
             this.TabProduct.Controls.Add(this.label40);
             this.TabProduct.Controls.Add(this.label39);
             this.TabProduct.Controls.Add(this.label38);
@@ -1077,6 +1096,31 @@ namespace GameStartApp
             this.TabProduct.TabIndex = 3;
             this.TabProduct.Text = "Products";
             this.TabProduct.UseVisualStyleBackColor = true;
+            // 
+            // BtnProdShowMost
+            // 
+            this.BtnProdShowMost.Location = new System.Drawing.Point(6, 350);
+            this.BtnProdShowMost.Name = "BtnProdShowMost";
+            this.BtnProdShowMost.Size = new System.Drawing.Size(408, 55);
+            this.BtnProdShowMost.TabIndex = 48;
+            this.BtnProdShowMost.Text = "Show most selled product";
+            this.BtnProdShowMost.UseVisualStyleBackColor = true;
+            this.BtnProdShowMost.Click += new System.EventHandler(this.BtnProdShowMost_Click);
+            // 
+            // DateProdMost
+            // 
+            this.DateProdMost.Location = new System.Drawing.Point(6, 309);
+            this.DateProdMost.Name = "DateProdMost";
+            this.DateProdMost.Size = new System.Drawing.Size(408, 35);
+            this.DateProdMost.TabIndex = 47;
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.DimGray;
+            this.label53.Location = new System.Drawing.Point(6, 268);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(500, 2);
+            this.label53.TabIndex = 46;
             // 
             // label40
             // 
@@ -1872,6 +1916,13 @@ namespace GameStartApp
             // 
             // tabTournament
             // 
+            this.tabTournament.Controls.Add(this.label52);
+            this.tabTournament.Controls.Add(this.label51);
+            this.tabTournament.Controls.Add(this.BtnTourShow);
+            this.tabTournament.Controls.Add(this.CBTourDateShow);
+            this.tabTournament.Controls.Add(this.CBTourIdShow);
+            this.tabTournament.Controls.Add(this.label50);
+            this.tabTournament.Controls.Add(this.label46);
             this.tabTournament.Controls.Add(this.label49);
             this.tabTournament.Controls.Add(this.label48);
             this.tabTournament.Controls.Add(this.label47);
@@ -1897,6 +1948,144 @@ namespace GameStartApp
             this.tabTournament.TabIndex = 9;
             this.tabTournament.Text = "Tournaments";
             this.tabTournament.UseVisualStyleBackColor = true;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(420, 656);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(63, 29);
+            this.label52.TabIndex = 51;
+            this.label52.Text = "Date";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(420, 613);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(88, 29);
+            this.label51.TabIndex = 50;
+            this.label51.Text = "Branch";
+            // 
+            // BtnTourShow
+            // 
+            this.BtnTourShow.Location = new System.Drawing.Point(6, 696);
+            this.BtnTourShow.Name = "BtnTourShow";
+            this.BtnTourShow.Size = new System.Drawing.Size(408, 55);
+            this.BtnTourShow.TabIndex = 49;
+            this.BtnTourShow.Text = "Show Partecipants";
+            this.BtnTourShow.UseVisualStyleBackColor = true;
+            this.BtnTourShow.Click += new System.EventHandler(this.BtnTourShow_Click);
+            // 
+            // CBTourDateShow
+            // 
+            this.CBTourDateShow.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourDateShow.BackColor = System.Drawing.Color.Azure;
+            this.CBTourDateShow.FormattingEnabled = true;
+            this.CBTourDateShow.Location = new System.Drawing.Point(6, 653);
+            this.CBTourDateShow.Name = "CBTourDateShow";
+            this.CBTourDateShow.Size = new System.Drawing.Size(408, 37);
+            this.CBTourDateShow.TabIndex = 48;
+            this.CBTourDateShow.Visible = false;
+            // 
+            // CBTourIdShow
+            // 
+            this.CBTourIdShow.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourIdShow.BackColor = System.Drawing.Color.Azure;
+            this.CBTourIdShow.FormattingEnabled = true;
+            this.CBTourIdShow.Location = new System.Drawing.Point(6, 610);
+            this.CBTourIdShow.Name = "CBTourIdShow";
+            this.CBTourIdShow.Size = new System.Drawing.Size(408, 37);
+            this.CBTourIdShow.TabIndex = 47;
+            this.CBTourIdShow.SelectedValueChanged += new System.EventHandler(this.CBTourIdShow_Change);
+            this.CBTourIdShow.Click += new System.EventHandler(this.CBTourIdShow_Click);
+            // 
+            // label50
+            // 
+            this.label50.BackColor = System.Drawing.Color.DimGray;
+            this.label50.Location = new System.Drawing.Point(6, 567);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(500, 2);
+            this.label50.TabIndex = 46;
+            // 
+            // label46
+            // 
+            this.label46.BackColor = System.Drawing.Color.DimGray;
+            this.label46.Location = new System.Drawing.Point(8, 325);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(500, 2);
+            this.label46.TabIndex = 45;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(420, 435);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(134, 29);
+            this.label49.TabIndex = 44;
+            this.label49.Text = "Partecipant";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(420, 392);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(63, 29);
+            this.label48.TabIndex = 43;
+            this.label48.Text = "Date";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(420, 349);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(88, 29);
+            this.label47.TabIndex = 42;
+            this.label47.Text = "Branch";
+            // 
+            // CBTourPart
+            // 
+            this.CBTourPart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourPart.BackColor = System.Drawing.Color.Azure;
+            this.CBTourPart.FormattingEnabled = true;
+            this.CBTourPart.Location = new System.Drawing.Point(6, 432);
+            this.CBTourPart.Name = "CBTourPart";
+            this.CBTourPart.Size = new System.Drawing.Size(408, 37);
+            this.CBTourPart.TabIndex = 41;
+            this.CBTourPart.Click += new System.EventHandler(this.CBTourPart_Click);
+            // 
+            // CBTourDate
+            // 
+            this.CBTourDate.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourDate.BackColor = System.Drawing.Color.Azure;
+            this.CBTourDate.FormattingEnabled = true;
+            this.CBTourDate.Location = new System.Drawing.Point(6, 389);
+            this.CBTourDate.Name = "CBTourDate";
+            this.CBTourDate.Size = new System.Drawing.Size(408, 37);
+            this.CBTourDate.TabIndex = 40;
+            this.CBTourDate.Visible = false;
+            // 
+            // CBTourIdPart
+            // 
+            this.CBTourIdPart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CBTourIdPart.BackColor = System.Drawing.Color.Azure;
+            this.CBTourIdPart.FormattingEnabled = true;
+            this.CBTourIdPart.Location = new System.Drawing.Point(6, 346);
+            this.CBTourIdPart.Name = "CBTourIdPart";
+            this.CBTourIdPart.Size = new System.Drawing.Size(408, 37);
+            this.CBTourIdPart.TabIndex = 39;
+            this.CBTourIdPart.SelectedValueChanged += new System.EventHandler(this.CBTourIdPart_Change);
+            this.CBTourIdPart.Click += new System.EventHandler(this.CBTourIdPart_Click);
+            // 
+            // BtnTourAddPart
+            // 
+            this.BtnTourAddPart.Location = new System.Drawing.Point(6, 475);
+            this.BtnTourAddPart.Name = "BtnTourAddPart";
+            this.BtnTourAddPart.Size = new System.Drawing.Size(408, 55);
+            this.BtnTourAddPart.TabIndex = 38;
+            this.BtnTourAddPart.Text = "Add Partecipant";
+            this.BtnTourAddPart.UseVisualStyleBackColor = true;
+            this.BtnTourAddPart.Click += new System.EventHandler(this.BtnTourAddPart_Click);
             // 
             // label45
             // 
@@ -2093,76 +2282,30 @@ namespace GameStartApp
             // 
             this.torneoTableAdapter.ClearBeforeFill = true;
             // 
-            // BtnTourAddPart
+            // label54
             // 
-            this.BtnTourAddPart.Location = new System.Drawing.Point(6, 546);
-            this.BtnTourAddPart.Name = "BtnTourAddPart";
-            this.BtnTourAddPart.Size = new System.Drawing.Size(408, 55);
-            this.BtnTourAddPart.TabIndex = 38;
-            this.BtnTourAddPart.Text = "Add Partecipant";
-            this.BtnTourAddPart.UseVisualStyleBackColor = true;
-            this.BtnTourAddPart.Click += new System.EventHandler(this.BtnTourAddPart_Click);
+            this.label54.BackColor = System.Drawing.Color.DimGray;
+            this.label54.Location = new System.Drawing.Point(6, 301);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(500, 2);
+            this.label54.TabIndex = 47;
             // 
-            // CBTourIdPart
+            // DateBranchMost
             // 
-            this.CBTourIdPart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.CBTourIdPart.BackColor = System.Drawing.Color.Azure;
-            this.CBTourIdPart.FormattingEnabled = true;
-            this.CBTourIdPart.Location = new System.Drawing.Point(6, 417);
-            this.CBTourIdPart.Name = "CBTourIdPart";
-            this.CBTourIdPart.Size = new System.Drawing.Size(408, 37);
-            this.CBTourIdPart.TabIndex = 39;
-            this.CBTourIdPart.SelectedValueChanged += new System.EventHandler(this.CBTourIdPart_Change);
-            this.CBTourIdPart.Click += new System.EventHandler(this.CBTourIdPart_Click);
+            this.DateBranchMost.Location = new System.Drawing.Point(6, 336);
+            this.DateBranchMost.Name = "DateBranchMost";
+            this.DateBranchMost.Size = new System.Drawing.Size(408, 35);
+            this.DateBranchMost.TabIndex = 48;
             // 
-            // CBTourDate
+            // BtnBranchShowMost
             // 
-            this.CBTourDate.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.CBTourDate.BackColor = System.Drawing.Color.Azure;
-            this.CBTourDate.FormattingEnabled = true;
-            this.CBTourDate.Location = new System.Drawing.Point(6, 460);
-            this.CBTourDate.Name = "CBTourDate";
-            this.CBTourDate.Size = new System.Drawing.Size(408, 37);
-            this.CBTourDate.TabIndex = 40;
-            this.CBTourDate.Visible = false;
-            // 
-            // CBTourPart
-            // 
-            this.CBTourPart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.CBTourPart.BackColor = System.Drawing.Color.Azure;
-            this.CBTourPart.FormattingEnabled = true;
-            this.CBTourPart.Location = new System.Drawing.Point(6, 503);
-            this.CBTourPart.Name = "CBTourPart";
-            this.CBTourPart.Size = new System.Drawing.Size(408, 37);
-            this.CBTourPart.TabIndex = 41;
-            this.CBTourPart.Click += new System.EventHandler(this.CBTourPart_Click);
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(420, 425);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(88, 29);
-            this.label47.TabIndex = 42;
-            this.label47.Text = "Branch";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(420, 463);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(63, 29);
-            this.label48.TabIndex = 43;
-            this.label48.Text = "Date";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(420, 506);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(134, 29);
-            this.label49.TabIndex = 44;
-            this.label49.Text = "Partecipant";
+            this.BtnBranchShowMost.Location = new System.Drawing.Point(6, 377);
+            this.BtnBranchShowMost.Name = "BtnBranchShowMost";
+            this.BtnBranchShowMost.Size = new System.Drawing.Size(408, 55);
+            this.BtnBranchShowMost.TabIndex = 49;
+            this.BtnBranchShowMost.Text = "Show the branch who sold the most";
+            this.BtnBranchShowMost.UseVisualStyleBackColor = true;
+            this.BtnBranchShowMost.Click += new System.EventHandler(this.BtnBranchShowMost_Click);
             // 
             // Menu
             // 
@@ -2426,6 +2569,19 @@ namespace GameStartApp
         private System.Windows.Forms.ComboBox CBTourDate;
         private System.Windows.Forms.ComboBox CBTourIdPart;
         private System.Windows.Forms.Button BtnTourAddPart;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button BtnTourShow;
+        private System.Windows.Forms.ComboBox CBTourDateShow;
+        private System.Windows.Forms.ComboBox CBTourIdShow;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.DateTimePicker DateProdMost;
+        private System.Windows.Forms.Button BtnProdShowMost;
+        private System.Windows.Forms.Button BtnBranchShowMost;
+        private System.Windows.Forms.DateTimePicker DateBranchMost;
+        private System.Windows.Forms.Label label54;
     }
 }
 
