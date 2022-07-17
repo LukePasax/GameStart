@@ -60,7 +60,7 @@ namespace GameStartApp
             this.TxtManSurname = new System.Windows.Forms.TextBox();
             this.TxtManName = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GVManager = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -271,7 +271,7 @@ namespace GameStartApp
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).BeginInit();
             this.tabManager.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).BeginInit();
             this.tabEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).BeginInit();
@@ -461,7 +461,7 @@ namespace GameStartApp
             this.tabManager.Controls.Add(this.TxtManSurname);
             this.tabManager.Controls.Add(this.TxtManName);
             this.tabManager.Controls.Add(this.label22);
-            this.tabManager.Controls.Add(this.dataGridView1);
+            this.tabManager.Controls.Add(this.GVManager);
             this.tabManager.Location = new System.Drawing.Point(10, 47);
             this.tabManager.Name = "tabManager";
             this.tabManager.Padding = new System.Windows.Forms.Padding(3);
@@ -602,16 +602,16 @@ namespace GameStartApp
             this.label22.TabIndex = 3;
             this.label22.Text = "Operations";
             // 
-            // dataGridView1
+            // GVManager
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GVManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GVManager.AutoGenerateColumns = false;
+            this.GVManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GVManager.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.GVManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn7,
@@ -620,14 +620,14 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            this.dataGridView1.DataSource = this.dipendenteBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(574, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 92;
-            this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(1018, 840);
-            this.dataGridView1.TabIndex = 0;
+            this.GVManager.DataSource = this.dipendenteBindingSource;
+            this.GVManager.Location = new System.Drawing.Point(574, 6);
+            this.GVManager.Name = "GVManager";
+            this.GVManager.RowHeadersVisible = false;
+            this.GVManager.RowHeadersWidth = 92;
+            this.GVManager.RowTemplate.Height = 37;
+            this.GVManager.Size = new System.Drawing.Size(1018, 840);
+            this.GVManager.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -2507,7 +2507,7 @@ namespace GameStartApp
             ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).EndInit();
             this.tabManager.ResumeLayout(false);
             this.tabManager.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).EndInit();
             this.tabEmployee.ResumeLayout(false);
             this.tabEmployee.PerformLayout();
@@ -2655,7 +2655,7 @@ namespace GameStartApp
         private System.Windows.Forms.TextBox TxtManSurname;
         private System.Windows.Forms.TextBox TxtManName;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GVManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;

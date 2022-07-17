@@ -82,36 +82,35 @@ namespace GameStartApp
 
         private void BtnSaleAdd_Click(object sender, EventArgs e)
         {
-            if (!_online)
-            {
-                var form = new AddSaleStore
+            using (GamestartLogicDataContext ctx = new GamestartLogicDataContext()) {
+                if (!_online)
                 {
-                    Text = "Add Sale in Store",
-                    Height = 400,
-                    Width = 350
-                };
-                form.ShowDialog();
-                form.FormClosed += (s, ea) => RefreshGrid(GVSaleStore);
-            } else
-            {
-                var form = new AddSaleOnline
+                    var form = new AddSaleStore
+                    {
+                        Text = "Add Sale in Store",
+                        Height = 400,
+                        Width = 350
+                    };
+                    form.ShowDialog();
+                    form.FormClosed += (s, ea) =>
+                    {
+                        GVSaleStore.DataSource = ctx.AcquistoInNegozios.ToList();
+                    };
+                } else
                 {
-                    Text = "Add Sale Online",
-                    Height = 400,
-                    Width = 350
-                };
-                form.ShowDialog();
-                form.FormClosed += (s, ea) => RefreshGrid(GVSaleOnline);
+                    var form = new AddSaleOnline
+                    {
+                        Text = "Add Sale Online",
+                        Height = 400,
+                        Width = 350
+                    };
+                    form.ShowDialog();
+                    form.FormClosed += (s, ea) =>
+                    {
+                        GVSaleOnline.DataSource = ctx.AcquistoOnlines.ToList();
+                    };
+                }
             }
-        }
-
-        private void RefreshGrid(DataGridView gridView)
-        {
-            acquistoinnegozioBindingSource.ResetBindings(true);
-            var src = gridView.DataSource;
-            gridView.DataSource = null;
-            gridView.DataSource = src;
-            gridView.Refresh();
         }
 
         private void BtnBranchAdd_Click(object sender, EventArgs e)
@@ -128,6 +127,7 @@ namespace GameStartApp
                 };
                 ctx.Filiales.InsertOnSubmit(filiale);
                 ctx.SubmitChanges();
+                GVBranches.DataSource = ctx.Filiales.ToList();
             }
         }
 
@@ -147,6 +147,7 @@ namespace GameStartApp
                 };
                 ctx.Gestores.InsertOnSubmit(gestore);
                 ctx.SubmitChanges();
+                GVManager.DataSource = ctx.Gestores.ToList();
             }
         }
 
@@ -166,6 +167,7 @@ namespace GameStartApp
                 };
                 ctx.Dipendentes.InsertOnSubmit(dipendente);
                 ctx.SubmitChanges();
+                GVEmployee.DataSource = ctx.Dipendentes.ToList();
             }
         }
 
@@ -203,6 +205,7 @@ namespace GameStartApp
                 };
                 ctx.Preordines.InsertOnSubmit(preordine);
                 ctx.SubmitChanges();
+                GVPreorder.DataSource = ctx.Preordines.ToList();
             }
         }
 
@@ -223,6 +226,7 @@ namespace GameStartApp
                         .FirstOrDefault() + 1;
                     ctx.Promoziones.InsertOnSubmit(promozione);
                     ctx.SubmitChanges();
+                    GVPromozione.DataSource = ctx.Promoziones.ToList();
                 }
             }
         }
@@ -250,6 +254,7 @@ namespace GameStartApp
                 };
                 ctx.Abbonamentos.InsertOnSubmit(abbonamento);
                 ctx.SubmitChanges();
+                GVSubscription.DataSource = ctx.Abbonamentos.ToList();
             }
         }
 
@@ -268,6 +273,7 @@ namespace GameStartApp
                         .FirstOrDefault() + 1;
                     ctx.Prodottos.InsertOnSubmit(prodotto);
                     ctx.SubmitChanges();
+                    GVProduct.DataSource = ctx.Prodottos.ToList();
                 }
             }
         }
@@ -296,6 +302,7 @@ namespace GameStartApp
                 };
                 ctx.Torneos.InsertOnSubmit(torneo);
                 ctx.SubmitChanges();
+                GVTournament.DataSource = ctx.Torneos.ToList();
             }
         }
 
@@ -340,6 +347,7 @@ namespace GameStartApp
                     .Where(a => a.CodFiscale == CBTourPart.Text).Single());
                 torneo.NPartecipanti += 1;
                 ctx.SubmitChanges();
+                GVTournament.DataSource = ctx.Torneos.ToList();
             }
         }
 
@@ -465,6 +473,7 @@ namespace GameStartApp
                 };
                 ctx.Clientes.InsertOnSubmit(cliente);
                 ctx.SubmitChanges();
+                GVClient.DataSource = ctx.Clientes.ToList();
             }
         }
 
