@@ -34,15 +34,6 @@ namespace GameStartApp
             this.tabClient = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.GVClient = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cognomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataNascitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codFiscaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cittàDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCivicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gamestart_logicDataSet = new GameStartApp.gamestart_logicDataSet();
             this.tabManager = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -61,15 +52,6 @@ namespace GameStartApp
             this.TxtManName = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.GVManager = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dipendenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabEmployee = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -88,14 +70,6 @@ namespace GameStartApp
             this.TxtEmpName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.GVEmployee = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cognomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataNascitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codFiscaleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cittàDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCivicoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idFilialeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBranch = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnBranchAdd = new System.Windows.Forms.Button();
@@ -108,12 +82,6 @@ namespace GameStartApp
             this.LabelBranches = new System.Windows.Forms.Label();
             this.TxtBranchCity = new System.Windows.Forms.TextBox();
             this.GVBranches = new System.Windows.Forms.DataGridView();
-            this.idFilialeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codFiscaleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cittàDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCivicoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filialeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabProduct = new System.Windows.Forms.TabPage();
             this.BtnProdShowMost = new System.Windows.Forms.Button();
             this.DateProdMost = new System.Windows.Forms.DateTimePicker();
@@ -128,28 +96,18 @@ namespace GameStartApp
             this.label37 = new System.Windows.Forms.Label();
             this.GVProduct = new System.Windows.Forms.DataGridView();
             this.IdProdotto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipologia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodottoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabSale = new System.Windows.Forms.TabPage();
             this.BtnSaleAdd = new System.Windows.Forms.Button();
             this.GVSaleOnline = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodFiscale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acquistoonlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.BtnSaleDispOnline = new System.Windows.Forms.Button();
             this.BtnSaleDispStore = new System.Windows.Forms.Button();
             this.GVSaleStore = new System.Windows.Forms.DataGridView();
-            this.idVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodFiscaleDipendente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodFiscaleCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPromozioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acquistoinnegozioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPreorders = new System.Windows.Forms.TabPage();
             this.BtnPreAdd = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -164,10 +122,8 @@ namespace GameStartApp
             this.GVPreorder = new System.Windows.Forms.DataGridView();
             this.IdPreordine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataUscitaProdotto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preordineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPromotion = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -180,12 +136,6 @@ namespace GameStartApp
             this.DatePromStart = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.GVPromozione = new System.Windows.Forms.DataGridView();
-            this.descrizioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPromozioneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInizioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataFineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promozioneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabSubscription = new System.Windows.Forms.TabPage();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -198,9 +148,7 @@ namespace GameStartApp
             this.GVSubscription = new System.Windows.Forms.DataGridView();
             this.IdAbbonamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Validità = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abbonamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabTournament = new System.Windows.Forms.TabPage();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -227,23 +175,6 @@ namespace GameStartApp
             this.CBTourId = new System.Windows.Forms.ComboBox();
             this.label41 = new System.Windows.Forms.Label();
             this.GVTournament = new System.Windows.Forms.DataGridView();
-            this.idFilialeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.premioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataTorneoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nPartecipantiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.torneoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.clienteTableAdapter();
-            this.filialeTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.filialeTableAdapter();
-            this.dipendenteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.dipendenteTableAdapter();
-            this.prodottoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.prodottoTableAdapter();
-            this.acquisto_in_negozioTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_in_negozioTableAdapter();
-            this.dettaglivenditaTableAdapter1 = new GameStartApp.gamestart_logicDataSetTableAdapters.dettaglivenditaTableAdapter();
-            this.acquisto_onlineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_onlineTableAdapter();
-            this.preordineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.preordineTableAdapter();
-            this.promozioneTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.promozioneTableAdapter();
-            this.abbonamentoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.abbonamentoTableAdapter();
-            this.torneoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.torneoTableAdapter();
             this.label54 = new System.Windows.Forms.Label();
             this.DateBranchMost = new System.Windows.Forms.DateTimePicker();
             this.BtnBranchShowMost = new System.Windows.Forms.Button();
@@ -265,39 +196,110 @@ namespace GameStartApp
             this.BtnEmpShowMost = new System.Windows.Forms.Button();
             this.DateEmpMost = new System.Windows.Forms.DateTimePicker();
             this.label62 = new System.Windows.Forms.Label();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cognomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataNascitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codFiscaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cittàDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCivicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gamestart_logicDataSet = new GameStartApp.gamestart_logicDataSet();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dipendenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cognomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataNascitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codFiscaleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cittàDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCivicoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idFilialeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idFilialeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codFiscaleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cittàDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCivicoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filialeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodottoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acquistoonlineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVenditaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPromozioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acquistoinnegozioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preordineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descrizioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPromozioneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInizioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataFineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promozioneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbonamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idFilialeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.premioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTorneoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPartecipantiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.torneoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.clienteTableAdapter();
+            this.filialeTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.filialeTableAdapter();
+            this.dipendenteTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.dipendenteTableAdapter();
+            this.prodottoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.prodottoTableAdapter();
+            this.acquisto_in_negozioTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_in_negozioTableAdapter();
+            this.dettaglivenditaTableAdapter1 = new GameStartApp.gamestart_logicDataSetTableAdapters.dettaglivenditaTableAdapter();
+            this.acquisto_onlineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.acquisto_onlineTableAdapter();
+            this.preordineTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.preordineTableAdapter();
+            this.promozioneTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.promozioneTableAdapter();
+            this.abbonamentoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.abbonamentoTableAdapter();
+            this.torneoTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.torneoTableAdapter();
+            this.gestoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gestoreTableAdapter = new GameStartApp.gamestart_logicDataSetTableAdapters.gestoreTableAdapter();
             this.tabControl.SuspendLayout();
             this.tabClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).BeginInit();
             this.tabManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).BeginInit();
             this.tabEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).BeginInit();
             this.tabBranch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVBranches)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filialeBindingSource)).BeginInit();
             this.TabProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).BeginInit();
             this.TabSale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSaleOnline)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVSaleStore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).BeginInit();
             this.tabPreorders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVPreorder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preordineBindingSource)).BeginInit();
             this.tabPromotion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVPromozione)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promozioneBindingSource)).BeginInit();
             this.tabSubscription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSubscription)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).BeginInit();
             this.tabTournament.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVTournament)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filialeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preordineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promozioneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestoreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -383,65 +385,6 @@ namespace GameStartApp
             this.GVClient.RowTemplate.Height = 37;
             this.GVClient.Size = new System.Drawing.Size(1028, 840);
             this.GVClient.TabIndex = 0;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // cognomeDataGridViewTextBoxColumn
-            // 
-            this.cognomeDataGridViewTextBoxColumn.DataPropertyName = "Cognome";
-            this.cognomeDataGridViewTextBoxColumn.HeaderText = "Cognome";
-            this.cognomeDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.cognomeDataGridViewTextBoxColumn.Name = "cognomeDataGridViewTextBoxColumn";
-            // 
-            // dataNascitaDataGridViewTextBoxColumn
-            // 
-            this.dataNascitaDataGridViewTextBoxColumn.DataPropertyName = "DataNascita";
-            this.dataNascitaDataGridViewTextBoxColumn.HeaderText = "DataNascita";
-            this.dataNascitaDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.dataNascitaDataGridViewTextBoxColumn.Name = "dataNascitaDataGridViewTextBoxColumn";
-            // 
-            // codFiscaleDataGridViewTextBoxColumn
-            // 
-            this.codFiscaleDataGridViewTextBoxColumn.DataPropertyName = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn.HeaderText = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.codFiscaleDataGridViewTextBoxColumn.Name = "codFiscaleDataGridViewTextBoxColumn";
-            // 
-            // cittàDataGridViewTextBoxColumn
-            // 
-            this.cittàDataGridViewTextBoxColumn.DataPropertyName = "Città";
-            this.cittàDataGridViewTextBoxColumn.HeaderText = "Città";
-            this.cittàDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.cittàDataGridViewTextBoxColumn.Name = "cittàDataGridViewTextBoxColumn";
-            // 
-            // viaDataGridViewTextBoxColumn
-            // 
-            this.viaDataGridViewTextBoxColumn.DataPropertyName = "Via";
-            this.viaDataGridViewTextBoxColumn.HeaderText = "Via";
-            this.viaDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.viaDataGridViewTextBoxColumn.Name = "viaDataGridViewTextBoxColumn";
-            // 
-            // nCivicoDataGridViewTextBoxColumn
-            // 
-            this.nCivicoDataGridViewTextBoxColumn.DataPropertyName = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn.HeaderText = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.nCivicoDataGridViewTextBoxColumn.Name = "nCivicoDataGridViewTextBoxColumn";
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.gamestart_logicDataSet;
-            // 
-            // gamestart_logicDataSet
-            // 
-            this.gamestart_logicDataSet.DataSetName = "gamestart_logicDataSet";
-            this.gamestart_logicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabManager
             // 
@@ -618,9 +561,8 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.GVManager.DataSource = this.dipendenteBindingSource;
+            this.dataGridViewTextBoxColumn11});
+            this.GVManager.DataSource = this.gestoreBindingSource;
             this.GVManager.Location = new System.Drawing.Point(574, 6);
             this.GVManager.Name = "GVManager";
             this.GVManager.RowHeadersVisible = false;
@@ -628,67 +570,6 @@ namespace GameStartApp
             this.GVManager.RowTemplate.Height = 37;
             this.GVManager.Size = new System.Drawing.Size(1018, 840);
             this.GVManager.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cognome";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cognome";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "DataNascita";
-            this.dataGridViewTextBoxColumn7.HeaderText = "DataNascita";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "CodFiscale";
-            this.dataGridViewTextBoxColumn8.HeaderText = "CodFiscale";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Città";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Città";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Via";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Via";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "nCivico";
-            this.dataGridViewTextBoxColumn11.HeaderText = "nCivico";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "IdFiliale";
-            this.dataGridViewTextBoxColumn12.HeaderText = "IdFiliale";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dipendenteBindingSource
-            // 
-            this.dipendenteBindingSource.DataMember = "dipendente";
-            this.dipendenteBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // tabEmployee
             // 
@@ -879,62 +760,6 @@ namespace GameStartApp
             this.GVEmployee.Size = new System.Drawing.Size(1018, 840);
             this.GVEmployee.TabIndex = 0;
             // 
-            // nomeDataGridViewTextBoxColumn1
-            // 
-            this.nomeDataGridViewTextBoxColumn1.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
-            // 
-            // cognomeDataGridViewTextBoxColumn1
-            // 
-            this.cognomeDataGridViewTextBoxColumn1.DataPropertyName = "Cognome";
-            this.cognomeDataGridViewTextBoxColumn1.HeaderText = "Cognome";
-            this.cognomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.cognomeDataGridViewTextBoxColumn1.Name = "cognomeDataGridViewTextBoxColumn1";
-            // 
-            // dataNascitaDataGridViewTextBoxColumn1
-            // 
-            this.dataNascitaDataGridViewTextBoxColumn1.DataPropertyName = "DataNascita";
-            this.dataNascitaDataGridViewTextBoxColumn1.HeaderText = "DataNascita";
-            this.dataNascitaDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.dataNascitaDataGridViewTextBoxColumn1.Name = "dataNascitaDataGridViewTextBoxColumn1";
-            // 
-            // codFiscaleDataGridViewTextBoxColumn2
-            // 
-            this.codFiscaleDataGridViewTextBoxColumn2.DataPropertyName = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn2.HeaderText = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.codFiscaleDataGridViewTextBoxColumn2.Name = "codFiscaleDataGridViewTextBoxColumn2";
-            // 
-            // cittàDataGridViewTextBoxColumn2
-            // 
-            this.cittàDataGridViewTextBoxColumn2.DataPropertyName = "Città";
-            this.cittàDataGridViewTextBoxColumn2.HeaderText = "Città";
-            this.cittàDataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.cittàDataGridViewTextBoxColumn2.Name = "cittàDataGridViewTextBoxColumn2";
-            // 
-            // viaDataGridViewTextBoxColumn2
-            // 
-            this.viaDataGridViewTextBoxColumn2.DataPropertyName = "Via";
-            this.viaDataGridViewTextBoxColumn2.HeaderText = "Via";
-            this.viaDataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.viaDataGridViewTextBoxColumn2.Name = "viaDataGridViewTextBoxColumn2";
-            // 
-            // nCivicoDataGridViewTextBoxColumn2
-            // 
-            this.nCivicoDataGridViewTextBoxColumn2.DataPropertyName = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn2.HeaderText = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.nCivicoDataGridViewTextBoxColumn2.Name = "nCivicoDataGridViewTextBoxColumn2";
-            // 
-            // idFilialeDataGridViewTextBoxColumn1
-            // 
-            this.idFilialeDataGridViewTextBoxColumn1.DataPropertyName = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn1.HeaderText = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.idFilialeDataGridViewTextBoxColumn1.Name = "idFilialeDataGridViewTextBoxColumn1";
-            // 
             // tabBranch
             // 
             this.tabBranch.Controls.Add(this.BtnBranchShowMost);
@@ -1070,46 +895,6 @@ namespace GameStartApp
             this.GVBranches.RowTemplate.Height = 37;
             this.GVBranches.Size = new System.Drawing.Size(1029, 840);
             this.GVBranches.TabIndex = 0;
-            // 
-            // idFilialeDataGridViewTextBoxColumn
-            // 
-            this.idFilialeDataGridViewTextBoxColumn.DataPropertyName = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn.HeaderText = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.idFilialeDataGridViewTextBoxColumn.Name = "idFilialeDataGridViewTextBoxColumn";
-            // 
-            // codFiscaleDataGridViewTextBoxColumn1
-            // 
-            this.codFiscaleDataGridViewTextBoxColumn1.DataPropertyName = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn1.HeaderText = "CodFiscale";
-            this.codFiscaleDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.codFiscaleDataGridViewTextBoxColumn1.Name = "codFiscaleDataGridViewTextBoxColumn1";
-            // 
-            // cittàDataGridViewTextBoxColumn1
-            // 
-            this.cittàDataGridViewTextBoxColumn1.DataPropertyName = "Città";
-            this.cittàDataGridViewTextBoxColumn1.HeaderText = "Città";
-            this.cittàDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.cittàDataGridViewTextBoxColumn1.Name = "cittàDataGridViewTextBoxColumn1";
-            // 
-            // viaDataGridViewTextBoxColumn1
-            // 
-            this.viaDataGridViewTextBoxColumn1.DataPropertyName = "Via";
-            this.viaDataGridViewTextBoxColumn1.HeaderText = "Via";
-            this.viaDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.viaDataGridViewTextBoxColumn1.Name = "viaDataGridViewTextBoxColumn1";
-            // 
-            // nCivicoDataGridViewTextBoxColumn1
-            // 
-            this.nCivicoDataGridViewTextBoxColumn1.DataPropertyName = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn1.HeaderText = "nCivico";
-            this.nCivicoDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.nCivicoDataGridViewTextBoxColumn1.Name = "nCivicoDataGridViewTextBoxColumn1";
-            // 
-            // filialeBindingSource
-            // 
-            this.filialeBindingSource.DataMember = "filiale";
-            this.filialeBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // TabProduct
             // 
@@ -1259,13 +1044,6 @@ namespace GameStartApp
             this.IdProdotto.MinimumWidth = 11;
             this.IdProdotto.Name = "IdProdotto";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
             // Prezzo
             // 
             this.Prezzo.DataPropertyName = "Prezzo";
@@ -1279,11 +1057,6 @@ namespace GameStartApp
             this.Tipologia.HeaderText = "Tipologia";
             this.Tipologia.MinimumWidth = 11;
             this.Tipologia.Name = "Tipologia";
-            // 
-            // prodottoBindingSource
-            // 
-            this.prodottoBindingSource.DataMember = "prodotto";
-            this.prodottoBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // TabSale
             // 
@@ -1334,38 +1107,12 @@ namespace GameStartApp
             this.GVSaleOnline.TabIndex = 6;
             this.GVSaleOnline.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdVendita";
-            this.dataGridViewTextBoxColumn2.HeaderText = "IdVendita";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // CodFiscale
             // 
             this.CodFiscale.DataPropertyName = "CodFiscale";
             this.CodFiscale.HeaderText = "CodFiscale";
             this.CodFiscale.MinimumWidth = 11;
             this.CodFiscale.Name = "CodFiscale";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DataVendita";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DataVendita";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "IdPromozione";
-            this.dataGridViewTextBoxColumn6.HeaderText = "IdPromozione";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // acquistoonlineBindingSource
-            // 
-            this.acquistoonlineBindingSource.DataMember = "acquisto_online";
-            this.acquistoonlineBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // label7
             // 
@@ -1420,13 +1167,6 @@ namespace GameStartApp
             this.GVSaleStore.Size = new System.Drawing.Size(1018, 840);
             this.GVSaleStore.TabIndex = 2;
             // 
-            // idVenditaDataGridViewTextBoxColumn
-            // 
-            this.idVenditaDataGridViewTextBoxColumn.DataPropertyName = "IdVendita";
-            this.idVenditaDataGridViewTextBoxColumn.HeaderText = "IdVendita";
-            this.idVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.idVenditaDataGridViewTextBoxColumn.Name = "idVenditaDataGridViewTextBoxColumn";
-            // 
             // CodFiscaleDipendente
             // 
             this.CodFiscaleDipendente.DataPropertyName = "CodFiscaleDipendente";
@@ -1440,25 +1180,6 @@ namespace GameStartApp
             this.CodFiscaleCliente.HeaderText = "CodFiscaleCliente";
             this.CodFiscaleCliente.MinimumWidth = 11;
             this.CodFiscaleCliente.Name = "CodFiscaleCliente";
-            // 
-            // dataVenditaDataGridViewTextBoxColumn
-            // 
-            this.dataVenditaDataGridViewTextBoxColumn.DataPropertyName = "DataVendita";
-            this.dataVenditaDataGridViewTextBoxColumn.HeaderText = "DataVendita";
-            this.dataVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.dataVenditaDataGridViewTextBoxColumn.Name = "dataVenditaDataGridViewTextBoxColumn";
-            // 
-            // idPromozioneDataGridViewTextBoxColumn
-            // 
-            this.idPromozioneDataGridViewTextBoxColumn.DataPropertyName = "IdPromozione";
-            this.idPromozioneDataGridViewTextBoxColumn.HeaderText = "IdPromozione";
-            this.idPromozioneDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.idPromozioneDataGridViewTextBoxColumn.Name = "idPromozioneDataGridViewTextBoxColumn";
-            // 
-            // acquistoinnegozioBindingSource
-            // 
-            this.acquistoinnegozioBindingSource.DataMember = "acquisto_in_negozio";
-            this.acquistoinnegozioBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // tabPreorders
             // 
@@ -1610,13 +1331,6 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn14.MinimumWidth = 11;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "DataVendita";
-            this.dataGridViewTextBoxColumn15.HeaderText = "DataVendita";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
             // DataUscitaProdotto
             // 
             this.DataUscitaProdotto.DataPropertyName = "DataUscitaProdotto";
@@ -1630,11 +1344,6 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn13.HeaderText = "IdProdotto";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 11;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // preordineBindingSource
-            // 
-            this.preordineBindingSource.DataMember = "preordine";
-            this.preordineBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // tabPromotion
             // 
@@ -1764,46 +1473,6 @@ namespace GameStartApp
             this.GVPromozione.Size = new System.Drawing.Size(1018, 840);
             this.GVPromozione.TabIndex = 8;
             // 
-            // descrizioneDataGridViewTextBoxColumn
-            // 
-            this.descrizioneDataGridViewTextBoxColumn.DataPropertyName = "Descrizione";
-            this.descrizioneDataGridViewTextBoxColumn.HeaderText = "Descrizione";
-            this.descrizioneDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.descrizioneDataGridViewTextBoxColumn.Name = "descrizioneDataGridViewTextBoxColumn";
-            // 
-            // idPromozioneDataGridViewTextBoxColumn1
-            // 
-            this.idPromozioneDataGridViewTextBoxColumn1.DataPropertyName = "IdPromozione";
-            this.idPromozioneDataGridViewTextBoxColumn1.HeaderText = "IdPromozione";
-            this.idPromozioneDataGridViewTextBoxColumn1.MinimumWidth = 11;
-            this.idPromozioneDataGridViewTextBoxColumn1.Name = "idPromozioneDataGridViewTextBoxColumn1";
-            // 
-            // scontoDataGridViewTextBoxColumn
-            // 
-            this.scontoDataGridViewTextBoxColumn.DataPropertyName = "Sconto";
-            this.scontoDataGridViewTextBoxColumn.HeaderText = "Sconto";
-            this.scontoDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.scontoDataGridViewTextBoxColumn.Name = "scontoDataGridViewTextBoxColumn";
-            // 
-            // dataInizioDataGridViewTextBoxColumn
-            // 
-            this.dataInizioDataGridViewTextBoxColumn.DataPropertyName = "DataInizio";
-            this.dataInizioDataGridViewTextBoxColumn.HeaderText = "DataInizio";
-            this.dataInizioDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.dataInizioDataGridViewTextBoxColumn.Name = "dataInizioDataGridViewTextBoxColumn";
-            // 
-            // dataFineDataGridViewTextBoxColumn
-            // 
-            this.dataFineDataGridViewTextBoxColumn.DataPropertyName = "DataFine";
-            this.dataFineDataGridViewTextBoxColumn.HeaderText = "DataFine";
-            this.dataFineDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.dataFineDataGridViewTextBoxColumn.Name = "dataFineDataGridViewTextBoxColumn";
-            // 
-            // promozioneBindingSource
-            // 
-            this.promozioneBindingSource.DataMember = "promozione";
-            this.promozioneBindingSource.DataSource = this.gamestart_logicDataSet;
-            // 
             // tabSubscription
             // 
             this.tabSubscription.Controls.Add(this.label36);
@@ -1931,24 +1600,12 @@ namespace GameStartApp
             this.dataGridViewTextBoxColumn16.MinimumWidth = 11;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "DataInizio";
-            this.dataGridViewTextBoxColumn19.HeaderText = "DataInizio";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 11;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
             // Validità
             // 
             this.Validità.DataPropertyName = "Validità";
             this.Validità.HeaderText = "Validità";
             this.Validità.MinimumWidth = 11;
             this.Validità.Name = "Validità";
-            // 
-            // abbonamentoBindingSource
-            // 
-            this.abbonamentoBindingSource.DataMember = "abbonamento";
-            this.abbonamentoBindingSource.DataSource = this.gamestart_logicDataSet;
             // 
             // tabTournament
             // 
@@ -2234,90 +1891,6 @@ namespace GameStartApp
             this.GVTournament.Size = new System.Drawing.Size(1018, 840);
             this.GVTournament.TabIndex = 10;
             // 
-            // idFilialeDataGridViewTextBoxColumn2
-            // 
-            this.idFilialeDataGridViewTextBoxColumn2.DataPropertyName = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn2.HeaderText = "IdFiliale";
-            this.idFilialeDataGridViewTextBoxColumn2.MinimumWidth = 11;
-            this.idFilialeDataGridViewTextBoxColumn2.Name = "idFilialeDataGridViewTextBoxColumn2";
-            // 
-            // giocoDataGridViewTextBoxColumn
-            // 
-            this.giocoDataGridViewTextBoxColumn.DataPropertyName = "Gioco";
-            this.giocoDataGridViewTextBoxColumn.HeaderText = "Gioco";
-            this.giocoDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.giocoDataGridViewTextBoxColumn.Name = "giocoDataGridViewTextBoxColumn";
-            // 
-            // premioDataGridViewTextBoxColumn
-            // 
-            this.premioDataGridViewTextBoxColumn.DataPropertyName = "Premio";
-            this.premioDataGridViewTextBoxColumn.HeaderText = "Premio";
-            this.premioDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.premioDataGridViewTextBoxColumn.Name = "premioDataGridViewTextBoxColumn";
-            // 
-            // dataTorneoDataGridViewTextBoxColumn
-            // 
-            this.dataTorneoDataGridViewTextBoxColumn.DataPropertyName = "DataTorneo";
-            this.dataTorneoDataGridViewTextBoxColumn.HeaderText = "DataTorneo";
-            this.dataTorneoDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.dataTorneoDataGridViewTextBoxColumn.Name = "dataTorneoDataGridViewTextBoxColumn";
-            // 
-            // nPartecipantiDataGridViewTextBoxColumn
-            // 
-            this.nPartecipantiDataGridViewTextBoxColumn.DataPropertyName = "nPartecipanti";
-            this.nPartecipantiDataGridViewTextBoxColumn.HeaderText = "nPartecipanti";
-            this.nPartecipantiDataGridViewTextBoxColumn.MinimumWidth = 11;
-            this.nPartecipantiDataGridViewTextBoxColumn.Name = "nPartecipantiDataGridViewTextBoxColumn";
-            // 
-            // torneoBindingSource
-            // 
-            this.torneoBindingSource.DataMember = "torneo";
-            this.torneoBindingSource.DataSource = this.gamestart_logicDataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // filialeTableAdapter
-            // 
-            this.filialeTableAdapter.ClearBeforeFill = true;
-            // 
-            // dipendenteTableAdapter
-            // 
-            this.dipendenteTableAdapter.ClearBeforeFill = true;
-            // 
-            // prodottoTableAdapter
-            // 
-            this.prodottoTableAdapter.ClearBeforeFill = true;
-            // 
-            // acquisto_in_negozioTableAdapter
-            // 
-            this.acquisto_in_negozioTableAdapter.ClearBeforeFill = true;
-            // 
-            // dettaglivenditaTableAdapter1
-            // 
-            this.dettaglivenditaTableAdapter1.ClearBeforeFill = true;
-            // 
-            // acquisto_onlineTableAdapter
-            // 
-            this.acquisto_onlineTableAdapter.ClearBeforeFill = true;
-            // 
-            // preordineTableAdapter
-            // 
-            this.preordineTableAdapter.ClearBeforeFill = true;
-            // 
-            // promozioneTableAdapter
-            // 
-            this.promozioneTableAdapter.ClearBeforeFill = true;
-            // 
-            // abbonamentoTableAdapter
-            // 
-            this.abbonamentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // torneoTableAdapter
-            // 
-            this.torneoTableAdapter.ClearBeforeFill = true;
-            // 
             // label54
             // 
             this.label54.BackColor = System.Drawing.Color.DimGray;
@@ -2490,6 +2063,436 @@ namespace GameStartApp
             this.label62.Size = new System.Drawing.Size(500, 2);
             this.label62.TabIndex = 50;
             // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // cognomeDataGridViewTextBoxColumn
+            // 
+            this.cognomeDataGridViewTextBoxColumn.DataPropertyName = "Cognome";
+            this.cognomeDataGridViewTextBoxColumn.HeaderText = "Cognome";
+            this.cognomeDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.cognomeDataGridViewTextBoxColumn.Name = "cognomeDataGridViewTextBoxColumn";
+            // 
+            // dataNascitaDataGridViewTextBoxColumn
+            // 
+            this.dataNascitaDataGridViewTextBoxColumn.DataPropertyName = "DataNascita";
+            this.dataNascitaDataGridViewTextBoxColumn.HeaderText = "DataNascita";
+            this.dataNascitaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataNascitaDataGridViewTextBoxColumn.Name = "dataNascitaDataGridViewTextBoxColumn";
+            // 
+            // codFiscaleDataGridViewTextBoxColumn
+            // 
+            this.codFiscaleDataGridViewTextBoxColumn.DataPropertyName = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn.HeaderText = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.codFiscaleDataGridViewTextBoxColumn.Name = "codFiscaleDataGridViewTextBoxColumn";
+            // 
+            // cittàDataGridViewTextBoxColumn
+            // 
+            this.cittàDataGridViewTextBoxColumn.DataPropertyName = "Città";
+            this.cittàDataGridViewTextBoxColumn.HeaderText = "Città";
+            this.cittàDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.cittàDataGridViewTextBoxColumn.Name = "cittàDataGridViewTextBoxColumn";
+            // 
+            // viaDataGridViewTextBoxColumn
+            // 
+            this.viaDataGridViewTextBoxColumn.DataPropertyName = "Via";
+            this.viaDataGridViewTextBoxColumn.HeaderText = "Via";
+            this.viaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.viaDataGridViewTextBoxColumn.Name = "viaDataGridViewTextBoxColumn";
+            // 
+            // nCivicoDataGridViewTextBoxColumn
+            // 
+            this.nCivicoDataGridViewTextBoxColumn.DataPropertyName = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn.HeaderText = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.nCivicoDataGridViewTextBoxColumn.Name = "nCivicoDataGridViewTextBoxColumn";
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // gamestart_logicDataSet
+            // 
+            this.gamestart_logicDataSet.DataSetName = "gamestart_logicDataSet";
+            this.gamestart_logicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cognome";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cognome";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "DataNascita";
+            this.dataGridViewTextBoxColumn7.HeaderText = "DataNascita";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "CodFiscale";
+            this.dataGridViewTextBoxColumn8.HeaderText = "CodFiscale";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Città";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Città";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Via";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Via";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "nCivico";
+            this.dataGridViewTextBoxColumn11.HeaderText = "nCivico";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dipendenteBindingSource
+            // 
+            this.dipendenteBindingSource.DataMember = "dipendente";
+            this.dipendenteBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // nomeDataGridViewTextBoxColumn1
+            // 
+            this.nomeDataGridViewTextBoxColumn1.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
+            // 
+            // cognomeDataGridViewTextBoxColumn1
+            // 
+            this.cognomeDataGridViewTextBoxColumn1.DataPropertyName = "Cognome";
+            this.cognomeDataGridViewTextBoxColumn1.HeaderText = "Cognome";
+            this.cognomeDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.cognomeDataGridViewTextBoxColumn1.Name = "cognomeDataGridViewTextBoxColumn1";
+            // 
+            // dataNascitaDataGridViewTextBoxColumn1
+            // 
+            this.dataNascitaDataGridViewTextBoxColumn1.DataPropertyName = "DataNascita";
+            this.dataNascitaDataGridViewTextBoxColumn1.HeaderText = "DataNascita";
+            this.dataNascitaDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.dataNascitaDataGridViewTextBoxColumn1.Name = "dataNascitaDataGridViewTextBoxColumn1";
+            // 
+            // codFiscaleDataGridViewTextBoxColumn2
+            // 
+            this.codFiscaleDataGridViewTextBoxColumn2.DataPropertyName = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn2.HeaderText = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.codFiscaleDataGridViewTextBoxColumn2.Name = "codFiscaleDataGridViewTextBoxColumn2";
+            // 
+            // cittàDataGridViewTextBoxColumn2
+            // 
+            this.cittàDataGridViewTextBoxColumn2.DataPropertyName = "Città";
+            this.cittàDataGridViewTextBoxColumn2.HeaderText = "Città";
+            this.cittàDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.cittàDataGridViewTextBoxColumn2.Name = "cittàDataGridViewTextBoxColumn2";
+            // 
+            // viaDataGridViewTextBoxColumn2
+            // 
+            this.viaDataGridViewTextBoxColumn2.DataPropertyName = "Via";
+            this.viaDataGridViewTextBoxColumn2.HeaderText = "Via";
+            this.viaDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.viaDataGridViewTextBoxColumn2.Name = "viaDataGridViewTextBoxColumn2";
+            // 
+            // nCivicoDataGridViewTextBoxColumn2
+            // 
+            this.nCivicoDataGridViewTextBoxColumn2.DataPropertyName = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn2.HeaderText = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.nCivicoDataGridViewTextBoxColumn2.Name = "nCivicoDataGridViewTextBoxColumn2";
+            // 
+            // idFilialeDataGridViewTextBoxColumn1
+            // 
+            this.idFilialeDataGridViewTextBoxColumn1.DataPropertyName = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn1.HeaderText = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.idFilialeDataGridViewTextBoxColumn1.Name = "idFilialeDataGridViewTextBoxColumn1";
+            // 
+            // idFilialeDataGridViewTextBoxColumn
+            // 
+            this.idFilialeDataGridViewTextBoxColumn.DataPropertyName = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn.HeaderText = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.idFilialeDataGridViewTextBoxColumn.Name = "idFilialeDataGridViewTextBoxColumn";
+            // 
+            // codFiscaleDataGridViewTextBoxColumn1
+            // 
+            this.codFiscaleDataGridViewTextBoxColumn1.DataPropertyName = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn1.HeaderText = "CodFiscale";
+            this.codFiscaleDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.codFiscaleDataGridViewTextBoxColumn1.Name = "codFiscaleDataGridViewTextBoxColumn1";
+            // 
+            // cittàDataGridViewTextBoxColumn1
+            // 
+            this.cittàDataGridViewTextBoxColumn1.DataPropertyName = "Città";
+            this.cittàDataGridViewTextBoxColumn1.HeaderText = "Città";
+            this.cittàDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.cittàDataGridViewTextBoxColumn1.Name = "cittàDataGridViewTextBoxColumn1";
+            // 
+            // viaDataGridViewTextBoxColumn1
+            // 
+            this.viaDataGridViewTextBoxColumn1.DataPropertyName = "Via";
+            this.viaDataGridViewTextBoxColumn1.HeaderText = "Via";
+            this.viaDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.viaDataGridViewTextBoxColumn1.Name = "viaDataGridViewTextBoxColumn1";
+            // 
+            // nCivicoDataGridViewTextBoxColumn1
+            // 
+            this.nCivicoDataGridViewTextBoxColumn1.DataPropertyName = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn1.HeaderText = "nCivico";
+            this.nCivicoDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.nCivicoDataGridViewTextBoxColumn1.Name = "nCivicoDataGridViewTextBoxColumn1";
+            // 
+            // filialeBindingSource
+            // 
+            this.filialeBindingSource.DataMember = "filiale";
+            this.filialeBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // prodottoBindingSource
+            // 
+            this.prodottoBindingSource.DataMember = "prodotto";
+            this.prodottoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdVendita";
+            this.dataGridViewTextBoxColumn2.HeaderText = "IdVendita";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DataVendita";
+            this.dataGridViewTextBoxColumn5.HeaderText = "DataVendita";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "IdPromozione";
+            this.dataGridViewTextBoxColumn6.HeaderText = "IdPromozione";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // acquistoonlineBindingSource
+            // 
+            this.acquistoonlineBindingSource.DataMember = "acquisto_online";
+            this.acquistoonlineBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // idVenditaDataGridViewTextBoxColumn
+            // 
+            this.idVenditaDataGridViewTextBoxColumn.DataPropertyName = "IdVendita";
+            this.idVenditaDataGridViewTextBoxColumn.HeaderText = "IdVendita";
+            this.idVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.idVenditaDataGridViewTextBoxColumn.Name = "idVenditaDataGridViewTextBoxColumn";
+            // 
+            // dataVenditaDataGridViewTextBoxColumn
+            // 
+            this.dataVenditaDataGridViewTextBoxColumn.DataPropertyName = "DataVendita";
+            this.dataVenditaDataGridViewTextBoxColumn.HeaderText = "DataVendita";
+            this.dataVenditaDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataVenditaDataGridViewTextBoxColumn.Name = "dataVenditaDataGridViewTextBoxColumn";
+            // 
+            // idPromozioneDataGridViewTextBoxColumn
+            // 
+            this.idPromozioneDataGridViewTextBoxColumn.DataPropertyName = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn.HeaderText = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.idPromozioneDataGridViewTextBoxColumn.Name = "idPromozioneDataGridViewTextBoxColumn";
+            // 
+            // acquistoinnegozioBindingSource
+            // 
+            this.acquistoinnegozioBindingSource.DataMember = "acquisto_in_negozio";
+            this.acquistoinnegozioBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "DataVendita";
+            this.dataGridViewTextBoxColumn15.HeaderText = "DataVendita";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // preordineBindingSource
+            // 
+            this.preordineBindingSource.DataMember = "preordine";
+            this.preordineBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // descrizioneDataGridViewTextBoxColumn
+            // 
+            this.descrizioneDataGridViewTextBoxColumn.DataPropertyName = "Descrizione";
+            this.descrizioneDataGridViewTextBoxColumn.HeaderText = "Descrizione";
+            this.descrizioneDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.descrizioneDataGridViewTextBoxColumn.Name = "descrizioneDataGridViewTextBoxColumn";
+            // 
+            // idPromozioneDataGridViewTextBoxColumn1
+            // 
+            this.idPromozioneDataGridViewTextBoxColumn1.DataPropertyName = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn1.HeaderText = "IdPromozione";
+            this.idPromozioneDataGridViewTextBoxColumn1.MinimumWidth = 11;
+            this.idPromozioneDataGridViewTextBoxColumn1.Name = "idPromozioneDataGridViewTextBoxColumn1";
+            // 
+            // scontoDataGridViewTextBoxColumn
+            // 
+            this.scontoDataGridViewTextBoxColumn.DataPropertyName = "Sconto";
+            this.scontoDataGridViewTextBoxColumn.HeaderText = "Sconto";
+            this.scontoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.scontoDataGridViewTextBoxColumn.Name = "scontoDataGridViewTextBoxColumn";
+            // 
+            // dataInizioDataGridViewTextBoxColumn
+            // 
+            this.dataInizioDataGridViewTextBoxColumn.DataPropertyName = "DataInizio";
+            this.dataInizioDataGridViewTextBoxColumn.HeaderText = "DataInizio";
+            this.dataInizioDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataInizioDataGridViewTextBoxColumn.Name = "dataInizioDataGridViewTextBoxColumn";
+            // 
+            // dataFineDataGridViewTextBoxColumn
+            // 
+            this.dataFineDataGridViewTextBoxColumn.DataPropertyName = "DataFine";
+            this.dataFineDataGridViewTextBoxColumn.HeaderText = "DataFine";
+            this.dataFineDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataFineDataGridViewTextBoxColumn.Name = "dataFineDataGridViewTextBoxColumn";
+            // 
+            // promozioneBindingSource
+            // 
+            this.promozioneBindingSource.DataMember = "promozione";
+            this.promozioneBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "DataInizio";
+            this.dataGridViewTextBoxColumn19.HeaderText = "DataInizio";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 11;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // abbonamentoBindingSource
+            // 
+            this.abbonamentoBindingSource.DataMember = "abbonamento";
+            this.abbonamentoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // idFilialeDataGridViewTextBoxColumn2
+            // 
+            this.idFilialeDataGridViewTextBoxColumn2.DataPropertyName = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn2.HeaderText = "IdFiliale";
+            this.idFilialeDataGridViewTextBoxColumn2.MinimumWidth = 11;
+            this.idFilialeDataGridViewTextBoxColumn2.Name = "idFilialeDataGridViewTextBoxColumn2";
+            // 
+            // giocoDataGridViewTextBoxColumn
+            // 
+            this.giocoDataGridViewTextBoxColumn.DataPropertyName = "Gioco";
+            this.giocoDataGridViewTextBoxColumn.HeaderText = "Gioco";
+            this.giocoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.giocoDataGridViewTextBoxColumn.Name = "giocoDataGridViewTextBoxColumn";
+            // 
+            // premioDataGridViewTextBoxColumn
+            // 
+            this.premioDataGridViewTextBoxColumn.DataPropertyName = "Premio";
+            this.premioDataGridViewTextBoxColumn.HeaderText = "Premio";
+            this.premioDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.premioDataGridViewTextBoxColumn.Name = "premioDataGridViewTextBoxColumn";
+            // 
+            // dataTorneoDataGridViewTextBoxColumn
+            // 
+            this.dataTorneoDataGridViewTextBoxColumn.DataPropertyName = "DataTorneo";
+            this.dataTorneoDataGridViewTextBoxColumn.HeaderText = "DataTorneo";
+            this.dataTorneoDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.dataTorneoDataGridViewTextBoxColumn.Name = "dataTorneoDataGridViewTextBoxColumn";
+            // 
+            // nPartecipantiDataGridViewTextBoxColumn
+            // 
+            this.nPartecipantiDataGridViewTextBoxColumn.DataPropertyName = "nPartecipanti";
+            this.nPartecipantiDataGridViewTextBoxColumn.HeaderText = "nPartecipanti";
+            this.nPartecipantiDataGridViewTextBoxColumn.MinimumWidth = 11;
+            this.nPartecipantiDataGridViewTextBoxColumn.Name = "nPartecipantiDataGridViewTextBoxColumn";
+            // 
+            // torneoBindingSource
+            // 
+            this.torneoBindingSource.DataMember = "torneo";
+            this.torneoBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // filialeTableAdapter
+            // 
+            this.filialeTableAdapter.ClearBeforeFill = true;
+            // 
+            // dipendenteTableAdapter
+            // 
+            this.dipendenteTableAdapter.ClearBeforeFill = true;
+            // 
+            // prodottoTableAdapter
+            // 
+            this.prodottoTableAdapter.ClearBeforeFill = true;
+            // 
+            // acquisto_in_negozioTableAdapter
+            // 
+            this.acquisto_in_negozioTableAdapter.ClearBeforeFill = true;
+            // 
+            // dettaglivenditaTableAdapter1
+            // 
+            this.dettaglivenditaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // acquisto_onlineTableAdapter
+            // 
+            this.acquisto_onlineTableAdapter.ClearBeforeFill = true;
+            // 
+            // preordineTableAdapter
+            // 
+            this.preordineTableAdapter.ClearBeforeFill = true;
+            // 
+            // promozioneTableAdapter
+            // 
+            this.promozioneTableAdapter.ClearBeforeFill = true;
+            // 
+            // abbonamentoTableAdapter
+            // 
+            this.abbonamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // torneoTableAdapter
+            // 
+            this.torneoTableAdapter.ClearBeforeFill = true;
+            // 
+            // gestoreBindingSource
+            // 
+            this.gestoreBindingSource.DataMember = "gestore";
+            this.gestoreBindingSource.DataSource = this.gamestart_logicDataSet;
+            // 
+            // gestoreTableAdapter
+            // 
+            this.gestoreTableAdapter.ClearBeforeFill = true;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -2503,45 +2506,46 @@ namespace GameStartApp
             this.tabClient.ResumeLayout(false);
             this.tabClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVClient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).EndInit();
             this.tabManager.ResumeLayout(false);
             this.tabManager.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).EndInit();
             this.tabEmployee.ResumeLayout(false);
             this.tabEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).EndInit();
             this.tabBranch.ResumeLayout(false);
             this.tabBranch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVBranches)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filialeBindingSource)).EndInit();
             this.TabProduct.ResumeLayout(false);
             this.TabProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).EndInit();
             this.TabSale.ResumeLayout(false);
             this.TabSale.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSaleOnline)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVSaleStore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).EndInit();
             this.tabPreorders.ResumeLayout(false);
             this.tabPreorders.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVPreorder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.preordineBindingSource)).EndInit();
             this.tabPromotion.ResumeLayout(false);
             this.tabPromotion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVPromozione)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promozioneBindingSource)).EndInit();
             this.tabSubscription.ResumeLayout(false);
             this.tabSubscription.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVSubscription)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).EndInit();
             this.tabTournament.ResumeLayout(false);
             this.tabTournament.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVTournament)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamestart_logicDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dipendenteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filialeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodottoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoonlineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acquistoinnegozioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preordineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promozioneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abbonamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torneoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestoreBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2663,7 +2667,6 @@ namespace GameStartApp
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.TabPage tabPreorders;
         private System.Windows.Forms.DataGridView GVPreorder;
         private System.Windows.Forms.BindingSource preordineBindingSource;
@@ -2783,6 +2786,8 @@ namespace GameStartApp
         private System.Windows.Forms.Button BtnEmpShowMost;
         private System.Windows.Forms.DateTimePicker DateEmpMost;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.BindingSource gestoreBindingSource;
+        private gamestart_logicDataSetTableAdapters.gestoreTableAdapter gestoreTableAdapter;
     }
 }
 

@@ -19,6 +19,8 @@ namespace GameStartApp
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gamestart_logicDataSet.gestore' table. You can move, or remove it, as needed.
+            this.gestoreTableAdapter.Fill(this.gamestart_logicDataSet.gestore);
             this.Text = "GameStart";
             // TODO: This line of code loads data into the 'gamestart_logicDataSet.torneo' table. You can move, or remove it, as needed.
             this.torneoTableAdapter.Fill(this.gamestart_logicDataSet.torneo);
